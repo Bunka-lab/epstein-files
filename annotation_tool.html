@@ -27,7 +27,8 @@
         .prompt-section pre { white-space: pre-wrap; font-size: 12px; line-height: 1.5; }
 
         .sample { background: #fff; border: 1px solid #ddd; margin-bottom: 15px; }
-        .sample-header { padding: 10px 15px; background: #f5f5f5; border-bottom: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
+        .sample-header { padding: 10px 15px; background: #f5f5f5; border-bottom: 1px solid #ddd; }
+        .sample-footer { padding: 10px 15px; background: #f5f5f5; border-top: 1px solid #ddd; display: flex; justify-content: flex-end; }
         .sample-num { font-weight: bold; }
 
         .sample-content { padding: 15px; }
@@ -164,11 +165,6 @@
                 let html = `
                     <div class="sample-header">
                         <span class="sample-num">#${i + 1}</span>
-                        <div class="buttons">
-                            <button class="btn btn-correct" onclick="annotate(${i},'correct')">Correct</button>
-                            <button class="btn btn-incorrect" onclick="annotate(${i},'incorrect')">Incorrect</button>
-                            <button class="btn btn-skip" onclick="annotate(${i},'skip')">Skip</button>
-                        </div>
                     </div>
                     <div class="sample-content">
                 `;
@@ -187,7 +183,16 @@
                     }
                 });
 
-                html += '</div>';
+                html += `
+                    </div>
+                    <div class="sample-footer">
+                        <div class="buttons">
+                            <button class="btn btn-correct" onclick="annotate(${i},'correct')">Correct</button>
+                            <button class="btn btn-incorrect" onclick="annotate(${i},'incorrect')">Incorrect</button>
+                            <button class="btn btn-skip" onclick="annotate(${i},'skip')">Skip</button>
+                        </div>
+                    </div>
+                `;
                 div.innerHTML = html;
                 container.appendChild(div);
             });
