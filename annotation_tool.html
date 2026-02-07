@@ -433,12 +433,39 @@
         let samples = [];
         let annotations = {};
 
-        // Initialize SQL.js
+        // Initialize SQL.js and auto-load database
         let SQL;
         initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}` })
-            .then(sql => { SQL = sql; });
+            .then(async sql => {
+                SQL = sql;
+                // Auto-load the database
+                await autoLoadDatabase();
+            });
 
-        // Load database file
+        async function autoLoadDatabase() {
+            const dbPath = 'epstein_analysis.db';
+            const statusEl = document.getElementById('samplesContainer');
+            statusEl.innerHTML = '<div class="loading">Loading database...</div>';
+
+            try {
+                const response = await fetch(dbPath);
+                if (!response.ok) throw new Error('Database not found. Use file picker or run: python -m http.server 8001');
+
+                const buffer = await response.arrayBuffer();
+                db = new SQL.Database(new Uint8Array(buffer));
+
+                document.getElementById('dbFile').parentElement.innerHTML =
+                    '<label>Database</label><div style="padding:10px;background:#e8f5e9;border-radius:6px;color:#2e7d32;">✓ epstein_analysis.db loaded</div>';
+
+                loadClassificationRuns();
+                statusEl.innerHTML = '<div class="no-data">Select a classification run to begin annotation</div>';
+            } catch (err) {
+                console.log('Auto-load failed, falling back to file picker:', err.message);
+                statusEl.innerHTML = '<div class="no-data">Load a SQLite database to begin annotation</div>';
+            }
+        }
+
+        // Manual load database file (fallback)
         document.getElementById('dbFile').addEventListener('change', async (e) => {
             const file = e.target.files[0];
             if (!file) return;
