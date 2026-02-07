@@ -164,6 +164,146 @@ python scripts/build_network.py               # ~5 sec
 
 ---
 
+---
+
+## SQLite Database (`epstein_analysis.db`)
+
+All data is consolidated in a SQLite database with full traceability of AI classifications.
+
+### AI Classification Dependency Graph
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    AI CLASSIFICATION DEPENDENCY GRAPH                        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+    ┌──────────────────────┐
+    │  1_discussion_messages│  (RAW DATA - no AI)
+    └──────────┬───────────┘
+               │
+       ┌───────┴───────┐
+       │               │
+       ▼               ▼
+┌──────────────┐  ┌──────────────┐
+│     C1       │  │     C3       │
+│ name_extract │  │ journalist   │
+│              │  │   filter     │
+└──────┬───────┘  └──────────────┘
+       │                 │
+       │            (independent,
+       ▼             filters data)
+┌──────────────┐
+│     C2       │
+│    name      │
+│consolidation │
+└──────┬───────┘
+       │
+       ├────────────────────────┐
+       │                        │
+       ▼                        ▼
+┌──────────────┐        ┌──────────────┐
+│     C4       │        │ 5_network    │
+│ relationship │        │    edges     │
+│  extraction  │        │  (computed)  │
+└──────┬───────┘        └──────┬───────┘
+       │                        │
+       └───────────┬────────────┘
+                   │
+                   ▼
+           ┌──────────────┐
+           │     C5       │
+           │   cluster    │
+           │   analysis   │
+           └──────────────┘
+```
+
+### Impact Analysis
+
+| If you CHANGE | You must RE-RUN |
+|---------------|-----------------|
+| C1 (name_extraction) | C2 → C4 → C5 + rebuild 5_network_edges |
+| C2 (name_consolidation) | C4 → C5 + rebuild 5_network_edges |
+| C3 (journalist_filter) | None (independent, but affects dataset) |
+| C4 (relationship) | C5 |
+| C5 (cluster_analysis) | None (terminal node) |
+
+### Database Tables
+
+| Table | Rows | Description |
+|-------|------|-------------|
+| `1_discussion_messages` | 16447 | Raw email data (sender, receiver, cc, body) |
+| `2_people_mentioned` | 995 | People mentioned per discussion |
+| `3_name_mentioned_to_name_id` | 3313 | Maps raw names to canonical names |
+| `4_person_relationships` | 490 | Relationship descriptions with Epstein |
+| `5_network_edges` | 1818 | Co-occurrence network edges |
+| `6_network_clusters` | 21 | Leiden community clusters |
+| `7_network_cluster_members` | 416 | Cluster membership |
+| `ai_classification_runs` | 5 | AI run metadata with prompts |
+
+### Column Naming Convention
+
+All AI-classified columns are tagged with `[CX]` suffix for traceability:
+
+| Suffix | Classification Run | Columns |
+|--------|-------------------|---------|
+| `[C1]` | name_extraction | `name_mentioned [C1]`, `mention_count [C1]` |
+| `[C2]` | name_consolidation | `name_id [C2]`, `removed [C2]`, `source_name_id [C2]`, `target_name_id [C2]` |
+| `[C4]` | relationship_extraction | `relationship_description [C4]`, `appearance_count [C4]`, `thread_ids [C4]` |
+| `[C5]` | cluster_analysis | `cluster_name [C5]`, `cluster_size [C5]`, `analysis_text [C5]` |
+
+### Table Schemas
+
+```sql
+-- Raw email messages
+1_discussion_messages (
+    id, thread_id, message_index,
+    sender, receiver, cc, date, body
+)
+
+-- People mentioned in each discussion (C1 output)
+2_people_mentioned (
+    thread_id, sender, receiver, cc, body,
+    "name_mentioned [C1]", "mention_count [C1]"
+)
+
+-- Name consolidation mapping (C2 output)
+3_name_mentioned_to_name_id (
+    "name_mentioned [C1]",
+    "name_id [C2]", "removed [C2]"
+)
+
+-- Relationship descriptions (C4 output)
+4_person_relationships (
+    id, "name_id [C2]",
+    "relationship_description [C4]", "appearance_count [C4]", "thread_ids [C4]"
+)
+
+-- Network edges (computed from C2)
+5_network_edges (
+    id, "source_name_id [C2]", "target_name_id [C2]",
+    "weight [C2]", "examples [C2]"
+)
+
+-- Cluster definitions (C5 output)
+6_network_clusters (
+    cluster_id, "cluster_name [C5]", "cluster_size [C5]", "analysis_text [C5]"
+)
+
+-- Cluster membership
+7_network_cluster_members (
+    id, cluster_id, "name_id [C2]"
+)
+
+-- AI classification run metadata
+ai_classification_runs (
+    run_id, run_name, run_type, model_used,
+    prompt_used, input_tables, input_columns,
+    output_tables, output_columns, created_at, notes
+)
+```
+
+---
+
 ## Source
 
 Dataset: [notesbymuneeb/epstein-emails](https://huggingface.co/datasets/notesbymuneeb/epstein-emails)
