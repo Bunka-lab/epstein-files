@@ -20,25 +20,34 @@
         button:hover { background: #444; }
         button:disabled { background: #ccc; }
 
-        .main { padding: 20px; max-width: 1000px; }
+        .main { padding: 20px; max-width: 1200px; }
 
         .prompt-section { background: #f0f0f0; padding: 15px; margin-bottom: 20px; border-left: 3px solid #222; }
         .prompt-section h2 { font-size: 12px; text-transform: uppercase; color: #666; margin-bottom: 10px; }
         .prompt-section pre { white-space: pre-wrap; font-size: 12px; line-height: 1.5; }
 
-        .sample { background: #fff; border: 1px solid #ddd; margin-bottom: 15px; }
-        .sample-header { padding: 10px 15px; background: #f5f5f5; border-bottom: 1px solid #ddd; }
+        .sample { background: #fff; border: 1px solid #ddd; margin-bottom: 20px; }
+        .sample-header { padding: 10px 15px; background: #f5f5f5; border-bottom: 1px solid #ddd; font-weight: bold; }
         .sample-footer { padding: 10px 15px; background: #f5f5f5; border-top: 1px solid #ddd; display: flex; justify-content: flex-end; }
-        .sample-num { font-weight: bold; }
 
         .sample-content { padding: 15px; }
-        .field { margin-bottom: 12px; }
-        .field-label { font-size: 11px; text-transform: uppercase; color: #888; margin-bottom: 4px; }
-        .field-value { background: #f8f8f8; padding: 10px; border: 1px solid #eee; white-space: pre-wrap; word-break: break-word; max-height: 300px; overflow-y: auto; }
-        .field-value.output { background: #e8f4e8; border-color: #c8e6c8; }
+
+        .section-title { font-size: 11px; text-transform: uppercase; color: #fff; background: #666; padding: 5px 10px; margin: 15px 0 10px 0; }
+        .section-title.input { background: #555; }
+        .section-title.output { background: #2a6; }
+        .section-title:first-child { margin-top: 0; }
+
+        .field { margin-bottom: 10px; padding-left: 10px; border-left: 2px solid #ddd; }
+        .field-label { font-size: 11px; color: #888; margin-bottom: 3px; }
+        .field-value { background: #f8f8f8; padding: 8px; font-size: 13px; white-space: pre-wrap; word-break: break-word; max-height: 400px; overflow-y: auto; }
+        .field.output .field-value { background: #e8f4e8; }
+
+        .email-block { background: #f5f5f5; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+        .email-meta { font-size: 12px; color: #666; margin-bottom: 5px; }
+        .email-body { white-space: pre-wrap; font-size: 13px; max-height: 300px; overflow-y: auto; }
 
         .buttons { display: flex; gap: 8px; }
-        .btn { padding: 6px 14px; border: 2px solid; background: #fff; cursor: pointer; font-family: monospace; font-size: 13px; }
+        .btn { padding: 8px 20px; border: 2px solid; background: #fff; cursor: pointer; font-family: monospace; font-size: 14px; }
         .btn-correct { border-color: #4a4; color: #4a4; }
         .btn-correct.selected { background: #4a4; color: #fff; }
         .btn-incorrect { border-color: #a44; color: #a44; }
@@ -63,7 +72,8 @@
     <div class="controls">
         <select id="runSelect" disabled><option>Loading...</option></select>
         <select id="sampleSize">
-            <option value="20">20 samples</option>
+            <option value="10">10 samples</option>
+            <option value="20" selected>20 samples</option>
             <option value="50">50 samples</option>
         </select>
         <button id="loadBtn" disabled>Load</button>
@@ -114,7 +124,7 @@
             document.getElementById('samples').innerHTML = '<div class="status">Select a run and click Load</div>';
         }
 
-        document.getElementById('loadBtn').onclick = () => {
+        document.getElementById('loadBtn').onclick = async () => {
             currentRun = JSON.parse(document.getElementById('runSelect').value);
             annotations = {};
 
@@ -124,32 +134,100 @@
                 document.getElementById('promptSection').style.display = 'block';
             }
 
+            // Parse input columns
+            let inputCols = [];
+            try {
+                inputCols = JSON.parse(currentRun.input_columns || '[]');
+            } catch(e) {
+                inputCols = (currentRun.input_columns || '').split(',').map(s => s.trim());
+            }
+
             // Get output table
-            let table = currentRun.output_tables?.split(',')[0]?.trim();
-            if (!table) return;
+            let outputTable = currentRun.output_tables?.split(',')[0]?.trim();
+            if (!outputTable || outputTable.includes('filtered')) {
+                document.getElementById('samples').innerHTML = '<div class="status">No output table for this run</div>';
+                return;
+            }
 
             const size = document.getElementById('sampleSize').value;
-            const result = db.exec(`SELECT * FROM "${table}" ORDER BY RANDOM() LIMIT ${size}`);
 
+            // Fetch samples from output table
+            const result = db.exec(`SELECT * FROM "${outputTable}" ORDER BY RANDOM() LIMIT ${size}`);
             if (!result[0]) {
                 document.getElementById('samples').innerHTML = '<div class="status">No data</div>';
                 return;
             }
 
             const cols = result[0].columns;
-            const outputCols = (currentRun.output_columns || '').split(',').map(c => c.trim().replace(/"/g, '').replace(/\s*\[C\d+\]/g, ''));
+            const outputColNames = (currentRun.output_columns || '').split(',').map(c => c.trim());
 
             samples = result[0].values.map((row, i) => {
-                const s = { _idx: i };
+                const s = { _idx: i, _cols: cols, _outputCols: outputColNames };
                 cols.forEach((c, j) => s[c] = row[j]);
                 return s;
             });
 
-            render(cols, outputCols);
+            // For each sample, fetch related input data
+            await enrichSamplesWithInput(samples, inputCols, currentRun.run_id);
+
+            render();
             document.getElementById('exportBtn').disabled = false;
         };
 
-        function render(cols, outputCols) {
+        async function enrichSamplesWithInput(samples, inputCols, runId) {
+            for (const sample of samples) {
+                sample._inputData = {};
+
+                // For C4: fetch emails from thread_ids
+                if (runId === 'C4') {
+                    let threadIds = [];
+                    try {
+                        threadIds = JSON.parse(sample['thread_ids [C4]'] || '[]');
+                    } catch(e) {}
+
+                    if (threadIds.length > 0) {
+                        // Get first 3 threads for context
+                        const limitedIds = threadIds.slice(0, 3);
+                        const placeholders = limitedIds.map(() => '?').join(',');
+                        const msgs = db.exec(`SELECT thread_id, sender, receiver, cc, body FROM "1_discussion_messages" WHERE thread_id IN (${placeholders}) LIMIT 10`, limitedIds);
+
+                        if (msgs[0]) {
+                            sample._inputData.emails = msgs[0].values.map(row => ({
+                                thread_id: row[0],
+                                sender: row[1],
+                                receiver: row[2],
+                                cc: row[3],
+                                body: row[4]
+                            }));
+                        }
+                    }
+                }
+
+                // For C2: the input is already in the output table (name_mentioned [C1])
+                // For C5: fetch cluster members and their relationships
+                if (runId === 'C5') {
+                    const clusterId = sample['cluster_id'];
+                    if (clusterId !== undefined) {
+                        const members = db.exec(`SELECT "name_id [C2]" FROM "7_network_cluster_members" WHERE cluster_id = ?`, [clusterId]);
+                        if (members[0]) {
+                            sample._inputData.members = members[0].values.map(r => r[0]);
+
+                            // Get relationships for top members
+                            const topMembers = sample._inputData.members.slice(0, 5);
+                            if (topMembers.length > 0) {
+                                const placeholders = topMembers.map(() => '?').join(',');
+                                const rels = db.exec(`SELECT "name_id [C2]", "relationship_description [C4]" FROM "4_person_relationships" WHERE "name_id [C2]" IN (${placeholders})`, topMembers);
+                                if (rels[0]) {
+                                    sample._inputData.relationships = rels[0].values.map(r => ({ name: r[0], rel: r[1] }));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function render() {
             const container = document.getElementById('samples');
             container.innerHTML = '';
 
@@ -158,41 +236,74 @@
                 div.className = 'sample';
                 div.id = `s${i}`;
 
+                const cols = s._cols;
+                const outputColNames = s._outputCols;
+
                 // Separate input vs output columns
-                const inputFields = cols.filter(c => !outputCols.some(oc => c.toLowerCase().includes(oc.toLowerCase())));
-                const outputFields = cols.filter(c => outputCols.some(oc => c.toLowerCase().includes(oc.toLowerCase())));
+                const inputFields = cols.filter(c => !outputColNames.some(oc => c.includes(oc.replace(/\[.*\]/, '').trim())));
+                const outputFields = cols.filter(c => outputColNames.some(oc => c.includes(oc.replace(/\[.*\]/, '').trim())));
 
-                let html = `
-                    <div class="sample-header">
-                        <span class="sample-num">#${i + 1}</span>
-                    </div>
-                    <div class="sample-content">
-                `;
+                let html = `<div class="sample-header">#${i + 1}</div><div class="sample-content">`;
 
-                // Input fields
+                // INPUT SECTION
+                html += `<div class="section-title input">INPUT DATA</div>`;
+
+                // Show enriched input data first
+                if (s._inputData.emails) {
+                    html += `<div class="field"><div class="field-label">Source Emails (${s._inputData.emails.length} shown)</div>`;
+                    s._inputData.emails.forEach(email => {
+                        html += `<div class="email-block">
+                            <div class="email-meta"><b>From:</b> ${esc(email.sender || '')} <b>To:</b> ${esc(email.receiver || '')} ${email.cc ? `<b>CC:</b> ${esc(email.cc)}` : ''}</div>
+                            <div class="email-body">${esc(email.body || '')}</div>
+                        </div>`;
+                    });
+                    html += `</div>`;
+                }
+
+                if (s._inputData.members) {
+                    html += `<div class="field"><div class="field-label">Cluster Members (${s._inputData.members.length})</div>
+                        <div class="field-value">${esc(s._inputData.members.join(', '))}</div></div>`;
+                }
+
+                if (s._inputData.relationships) {
+                    html += `<div class="field"><div class="field-label">Member Relationships</div>`;
+                    s._inputData.relationships.forEach(r => {
+                        html += `<div class="email-block">
+                            <div class="email-meta"><b>${esc(r.name)}</b></div>
+                            <div class="email-body">${esc(r.rel || '')}</div>
+                        </div>`;
+                    });
+                    html += `</div>`;
+                }
+
+                // Show input columns from the table itself
                 inputFields.forEach(c => {
-                    if (s[c] != null && s[c] !== '') {
-                        html += `<div class="field"><div class="field-label">${c}</div><div class="field-value">${esc(String(s[c]))}</div></div>`;
+                    if (s[c] != null && s[c] !== '' && !c.startsWith('_')) {
+                        const val = String(s[c]);
+                        // Skip thread_ids in input since we show emails
+                        if (c.includes('thread_ids') && s._inputData.emails) return;
+                        html += `<div class="field"><div class="field-label">${c}</div><div class="field-value">${esc(val)}</div></div>`;
                     }
                 });
 
-                // Output fields (highlighted)
+                // OUTPUT SECTION
+                html += `<div class="section-title output">AI OUTPUT (to evaluate)</div>`;
+
                 outputFields.forEach(c => {
                     if (s[c] != null && s[c] !== '') {
-                        html += `<div class="field"><div class="field-label">${c} (AI output)</div><div class="field-value output">${esc(String(s[c]))}</div></div>`;
+                        html += `<div class="field output"><div class="field-label">${c}</div><div class="field-value">${esc(String(s[c]))}</div></div>`;
                     }
                 });
 
-                html += `
-                    </div>
+                html += `</div>
                     <div class="sample-footer">
                         <div class="buttons">
                             <button class="btn btn-correct" onclick="annotate(${i},'correct')">Correct</button>
                             <button class="btn btn-incorrect" onclick="annotate(${i},'incorrect')">Incorrect</button>
                             <button class="btn btn-skip" onclick="annotate(${i},'skip')">Skip</button>
                         </div>
-                    </div>
-                `;
+                    </div>`;
+
                 div.innerHTML = html;
                 container.appendChild(div);
             });
@@ -232,7 +343,14 @@
                 accuracy: correct / (correct + incorrect) || null,
                 correct, incorrect,
                 skipped: Object.values(annotations).filter(v => v === 'skip').length,
-                samples: samples.map((s, i) => ({ ...s, annotation: annotations[i] || null }))
+                samples: samples.map((s, i) => {
+                    const clean = { ...s };
+                    delete clean._idx;
+                    delete clean._cols;
+                    delete clean._outputCols;
+                    delete clean._inputData;
+                    return { ...clean, annotation: annotations[i] || null };
+                })
             };
 
             const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
