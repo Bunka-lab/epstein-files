@@ -126,6 +126,12 @@
             // Auto-load on change
             sel.onchange = () => document.getElementById('loadBtn').click();
             document.getElementById('sampleSize').onchange = () => document.getElementById('loadBtn').click();
+
+            // Auto-select first and load
+            if (sel.options.length > 0) {
+                sel.selectedIndex = 0;
+                document.getElementById('loadBtn').click();
+            }
         }
 
         document.getElementById('loadBtn').onclick = async () => {
