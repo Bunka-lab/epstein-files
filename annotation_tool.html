@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Classification Annotation Tool</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✓</text></svg>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: #1a1a2e;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .controls-row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        select, input[type="file"], button {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        button {
+            background: #1a1a2e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #2d2d4a;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-success {
+            background: #28a745;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .prompt-display {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .prompt-display.visible {
+            display: block;
+        }
+
+        .prompt-display h3 {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .prompt-display pre {
+            background: #1a1a2e;
+            color: #e0e0e0;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .samples-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .sample-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .sample-header {
+            background: #f8f9fa;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .sample-number {
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .annotation-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .annotation-btn {
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 2px solid transparent;
+        }
+
+        .annotation-btn.correct {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-color: #a5d6a7;
+        }
+
+        .annotation-btn.correct.selected {
+            background: #2e7d32;
+            color: white;
+        }
+
+        .annotation-btn.incorrect {
+            background: #ffebee;
+            color: #c62828;
+            border-color: #ef9a9a;
+        }
+
+        .annotation-btn.incorrect.selected {
+            background: #c62828;
+            color: white;
+        }
+
+        .annotation-btn.skip {
+            background: #fff3e0;
+            color: #e65100;
+            border-color: #ffcc80;
+        }
+
+        .annotation-btn.skip.selected {
+            background: #e65100;
+            color: white;
+        }
+
+        .sample-body {
+            padding: 15px;
+        }
+
+        .sample-section {
+            margin-bottom: 15px;
+        }
+
+        .sample-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .sample-section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .sample-section-content {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .sample-section-content.output {
+            background: #e3f2fd;
+            border-left: 3px solid #2196f3;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .input-label {
+            font-weight: 500;
+            color: #666;
+            min-width: 120px;
+        }
+
+        .input-value {
+            color: #333;
+            word-break: break-word;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .run-info {
+            background: #e3f2fd;
+            border-left: 3px solid #2196f3;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .run-info-title {
+            font-weight: 600;
+            color: #1565c0;
+        }
+
+        .run-info-details {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .notes-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+            font-size: 0.85rem;
+        }
+
+        .export-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #28a745;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎯 AI Classification Annotation Tool</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <div class="controls-row">
+                <div class="control-group">
+                    <label>SQLite Database</label>
+                    <input type="file" id="dbFile" accept=".db,.sqlite,.sqlite3">
+                </div>
+
+                <div class="control-group">
+                    <label>Classification Run</label>
+                    <select id="runSelect" disabled>
+                        <option value="">-- Load database first --</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Sample Size</label>
+                    <select id="sampleSize">
+                        <option value="10">10 samples</option>
+                        <option value="20" selected>20 samples</option>
+                        <option value="50">50 samples</option>
+                        <option value="100">100 samples</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>&nbsp;</label>
+                    <button id="loadSamples" disabled>Load Samples</button>
+                </div>
+
+                <div class="control-group">
+                    <label>&nbsp;</label>
+                    <button id="exportResults" class="btn-success" disabled>Export Results</button>
+                </div>
+            </div>
+
+            <div class="stats hidden" id="statsSection">
+                <div class="stat">
+                    <div class="stat-value" id="accuracyValue">--%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="annotatedValue">0</div>
+                    <div class="stat-label">Annotated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="correctValue">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="incorrectValue">0</div>
+                    <div class="stat-label">Incorrect</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="skippedValue">0</div>
+                    <div class="stat-label">Skipped</div>
+                </div>
+            </div>
+
+            <div class="progress-bar hidden" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="prompt-display" id="promptDisplay">
+            <h3>📝 Prompt Template Used</h3>
+            <pre id="promptText"></pre>
+        </div>
+
+        <div class="run-info hidden" id="runInfo">
+            <div class="run-info-title" id="runInfoTitle"></div>
+            <div class="run-info-details" id="runInfoDetails"></div>
+        </div>
+
+        <div id="samplesContainer" class="samples-container">
+            <div class="no-data">Load a SQLite database and select a classification run to begin annotation</div>
+        </div>
+    </div>
+
+    <script>
+        let db = null;
+        let currentRun = null;
+        let samples = [];
+        let annotations = {};
+
+        // Initialize SQL.js
+        let SQL;
+        initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}` })
+            .then(sql => { SQL = sql; });
+
+        // Load database file
+        document.getElementById('dbFile').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const buffer = await file.arrayBuffer();
+            db = new SQL.Database(new Uint8Array(buffer));
+
+            loadClassificationRuns();
+        });
+
+        function loadClassificationRuns() {
+            const select = document.getElementById('runSelect');
+            select.innerHTML = '<option value="">-- Select a run --</option>';
+
+            try {
+                // Try to find classification runs table
+                const tables = db.exec("SELECT name FROM sqlite_master WHERE type='table'");
+                const tableNames = tables[0]?.values.map(v => v[0]) || [];
+
+                // Look for ai_classification_runs or similar
+                let runsTable = tableNames.find(t => t.toLowerCase().includes('classification_run'));
+
+                if (runsTable) {
+                    const runs = db.exec(`SELECT * FROM "${runsTable}"`);
+                    if (runs[0]) {
+                        const columns = runs[0].columns;
+                        runs[0].values.forEach(row => {
+                            const run = {};
+                            columns.forEach((col, i) => run[col] = row[i]);
+
+                            const option = document.createElement('option');
+                            option.value = JSON.stringify(run);
+                            option.textContent = `${run.run_id || run.id}: ${run.run_name || run.name || 'Unknown'}`;
+                            select.appendChild(option);
+                        });
+                    }
+                } else {
+                    // No classification runs table, list all tables as options
+                    tableNames.forEach(table => {
+                        if (!table.startsWith('sqlite_')) {
+                            const option = document.createElement('option');
+                            option.value = JSON.stringify({ table_name: table, run_id: table });
+                            option.textContent = table;
+                            select.appendChild(option);
+                        }
+                    });
+                }
+
+                select.disabled = false;
+                document.getElementById('loadSamples').disabled = false;
+            } catch (err) {
+                console.error('Error loading runs:', err);
+                alert('Error loading database: ' + err.message);
+            }
+        }
+
+        document.getElementById('loadSamples').addEventListener('click', () => {
+            const runData = document.getElementById('runSelect').value;
+            if (!runData) {
+                alert('Please select a classification run');
+                return;
+            }
+
+            currentRun = JSON.parse(runData);
+            annotations = {};
+            loadSamplesForRun();
+        });
+
+        function loadSamplesForRun() {
+            const sampleSize = parseInt(document.getElementById('sampleSize').value);
+            const container = document.getElementById('samplesContainer');
+
+            // Show run info
+            const runInfo = document.getElementById('runInfo');
+            const runInfoTitle = document.getElementById('runInfoTitle');
+            const runInfoDetails = document.getElementById('runInfoDetails');
+
+            runInfoTitle.textContent = `${currentRun.run_id}: ${currentRun.run_name || currentRun.table_name || 'Unknown'}`;
+            runInfoDetails.textContent = `Model: ${currentRun.model_used || 'N/A'} | Type: ${currentRun.run_type || 'N/A'}`;
+            runInfo.classList.remove('hidden');
+
+            // Show prompt if available
+            const promptDisplay = document.getElementById('promptDisplay');
+            const promptText = document.getElementById('promptText');
+            if (currentRun.prompt_used) {
+                promptText.textContent = currentRun.prompt_used;
+                promptDisplay.classList.add('visible');
+            } else {
+                promptDisplay.classList.remove('visible');
+            }
+
+            // Determine which table to sample from
+            let outputTable = currentRun.output_tables || currentRun.table_name;
+            if (outputTable && outputTable.includes(',')) {
+                outputTable = outputTable.split(',')[0].trim();
+            }
+
+            // Get input columns info
+            const inputTables = currentRun.input_tables || '';
+            const inputColumns = currentRun.input_columns || '';
+            const outputColumns = currentRun.output_columns || '';
+
+            try {
+                // Get samples from output table
+                const result = db.exec(`SELECT * FROM "${outputTable}" ORDER BY RANDOM() LIMIT ${sampleSize}`);
+
+                if (!result[0] || result[0].values.length === 0) {
+                    container.innerHTML = '<div class="no-data">No data found in output table</div>';
+                    return;
+                }
+
+                const columns = result[0].columns;
+                samples = result[0].values.map((row, idx) => {
+                    const sample = { _index: idx };
+                    columns.forEach((col, i) => sample[col] = row[i]);
+                    return sample;
+                });
+
+                // Identify input vs output columns
+                const outputColNames = outputColumns.split(',').map(c => c.trim().replace(/"/g, ''));
+
+                renderSamples(samples, columns, outputColNames);
+
+                document.getElementById('statsSection').classList.remove('hidden');
+                document.getElementById('progressBar').classList.remove('hidden');
+                document.getElementById('exportResults').disabled = false;
+
+                updateStats();
+
+            } catch (err) {
+                console.error('Error loading samples:', err);
+                container.innerHTML = `<div class="no-data">Error: ${err.message}</div>`;
+            }
+        }
+
+        function renderSamples(samples, columns, outputColNames) {
+            const container = document.getElementById('samplesContainer');
+            container.innerHTML = '';
+
+            samples.forEach((sample, idx) => {
+                const card = document.createElement('div');
+                card.className = 'sample-card';
+                card.id = `sample-${idx}`;
+
+                // Separate input and output columns
+                const inputCols = columns.filter(c => !outputColNames.some(oc => c.includes(oc.replace(/\[.*\]/, '').trim())));
+                const outputCols = columns.filter(c => outputColNames.some(oc => c.includes(oc.replace(/\[.*\]/, '').trim())));
+
+                // If no clear separation, show all as output
+                if (outputCols.length === 0) {
+                    outputCols.push(...columns);
+                }
+
+                let inputHtml = '';
+                inputCols.forEach(col => {
+                    const value = sample[col];
+                    if (value !== null && value !== undefined && value !== '') {
+                        const displayValue = typeof value === 'string' && value.length > 300
+                            ? value.substring(0, 300) + '...'
+                            : value;
+                        inputHtml += `
+                            <div class="input-row">
+                                <span class="input-label">${col}:</span>
+                                <span class="input-value">${escapeHtml(String(displayValue))}</span>
+                            </div>
+                        `;
+                    }
+                });
+
+                let outputHtml = '';
+                outputCols.forEach(col => {
+                    const value = sample[col];
+                    if (value !== null && value !== undefined && value !== '') {
+                        outputHtml += `
+                            <div class="input-row">
+                                <span class="input-label">${col}:</span>
+                                <span class="input-value">${escapeHtml(String(value))}</span>
+                            </div>
+                        `;
+                    }
+                });
+
+                card.innerHTML = `
+                    <div class="sample-header">
+                        <span class="sample-number">Sample ${idx + 1} / ${samples.length}</span>
+                        <div class="annotation-buttons">
+                            <button class="annotation-btn correct" onclick="annotate(${idx}, 'correct')">✓ Correct</button>
+                            <button class="annotation-btn incorrect" onclick="annotate(${idx}, 'incorrect')">✗ Incorrect</button>
+                            <button class="annotation-btn skip" onclick="annotate(${idx}, 'skip')">⊘ Skip</button>
+                        </div>
+                    </div>
+                    <div class="sample-body">
+                        ${inputHtml ? `
+                        <div class="sample-section">
+                            <div class="sample-section-title">Input Data</div>
+                            <div class="sample-section-content">
+                                ${inputHtml}
+                            </div>
+                        </div>
+                        ` : ''}
+                        <div class="sample-section">
+                            <div class="sample-section-title">AI Output (to evaluate)</div>
+                            <div class="sample-section-content output">
+                                ${outputHtml}
+                            </div>
+                        </div>
+                        <div class="sample-section">
+                            <div class="sample-section-title">Notes (optional)</div>
+                            <input type="text" class="notes-input" id="notes-${idx}" placeholder="Add notes about this annotation...">
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function annotate(idx, value) {
+            annotations[idx] = {
+                value: value,
+                notes: document.getElementById(`notes-${idx}`)?.value || '',
+                sample: samples[idx],
+                timestamp: new Date().toISOString()
+            };
+
+            // Update button states
+            const card = document.getElementById(`sample-${idx}`);
+            card.querySelectorAll('.annotation-btn').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.classList.contains(value)) {
+                    btn.classList.add('selected');
+                }
+            });
+
+            updateStats();
+        }
+
+        function updateStats() {
+            const total = samples.length;
+            const annotated = Object.keys(annotations).length;
+            const correct = Object.values(annotations).filter(a => a.value === 'correct').length;
+            const incorrect = Object.values(annotations).filter(a => a.value === 'incorrect').length;
+            const skipped = Object.values(annotations).filter(a => a.value === 'skip').length;
+
+            const evaluated = correct + incorrect;
+            const accuracy = evaluated > 0 ? ((correct / evaluated) * 100).toFixed(1) : '--';
+
+            document.getElementById('accuracyValue').textContent = accuracy + '%';
+            document.getElementById('annotatedValue').textContent = annotated;
+            document.getElementById('correctValue').textContent = correct;
+            document.getElementById('incorrectValue').textContent = incorrect;
+            document.getElementById('skippedValue').textContent = skipped;
+
+            // Update progress bar
+            const progress = (annotated / total) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        document.getElementById('exportResults').addEventListener('click', () => {
+            const total = samples.length;
+            const correct = Object.values(annotations).filter(a => a.value === 'correct').length;
+            const incorrect = Object.values(annotations).filter(a => a.value === 'incorrect').length;
+            const skipped = Object.values(annotations).filter(a => a.value === 'skip').length;
+            const evaluated = correct + incorrect;
+
+            const result = {
+                run_id: currentRun.run_id,
+                run_name: currentRun.run_name,
+                run_type: currentRun.run_type,
+                model_used: currentRun.model_used,
+                annotation_date: new Date().toISOString(),
+                sample_size: total,
+                annotated_count: Object.keys(annotations).length,
+                correct_count: correct,
+                incorrect_count: incorrect,
+                skipped_count: skipped,
+                accuracy: evaluated > 0 ? (correct / evaluated) : null,
+                accuracy_percent: evaluated > 0 ? ((correct / evaluated) * 100).toFixed(2) + '%' : 'N/A',
+                annotations: Object.entries(annotations).map(([idx, ann]) => ({
+                    sample_index: parseInt(idx),
+                    annotation: ann.value,
+                    notes: ann.notes,
+                    timestamp: ann.timestamp,
+                    sample_data: ann.sample
+                }))
+            };
+
+            // Download as JSON
+            const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `annotation_${currentRun.run_id}_${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>
