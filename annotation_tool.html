@@ -262,7 +262,7 @@
 
                 if (s._inputData.members) {
                     html += `<div class="field"><div class="field-label">Cluster Members (${s._inputData.members.length})</div>
-                        <div class="field-value">${esc(s._inputData.members.join(', '))}</div></div>`;
+                        <div class="field-value">${s._inputData.members.map(m => esc(m)).join(',  ')}</div></div>`;
                 }
 
                 if (s._inputData.relationships) {
@@ -279,9 +279,16 @@
                 // Show input columns from the table itself
                 inputFields.forEach(c => {
                     if (s[c] != null && s[c] !== '' && !c.startsWith('_')) {
-                        const val = String(s[c]);
+                        let val = String(s[c]);
                         // Skip thread_ids in input since we show emails
                         if (c.includes('thread_ids') && s._inputData.emails) return;
+                        // Format JSON arrays with spacing
+                        if (val.startsWith('[') && val.endsWith(']')) {
+                            try {
+                                const arr = JSON.parse(val);
+                                val = arr.join(',  ');
+                            } catch(e) {}
+                        }
                         html += `<div class="field"><div class="field-label">${c}</div><div class="field-value">${esc(val)}</div></div>`;
                     }
                 });
@@ -291,7 +298,15 @@
 
                 outputFields.forEach(c => {
                     if (s[c] != null && s[c] !== '') {
-                        html += `<div class="field output"><div class="field-label">${c}</div><div class="field-value">${esc(String(s[c]))}</div></div>`;
+                        let val = String(s[c]);
+                        // Format JSON arrays with spacing
+                        if (val.startsWith('[') && val.endsWith(']')) {
+                            try {
+                                const arr = JSON.parse(val);
+                                val = arr.join(',  ');
+                            } catch(e) {}
+                        }
+                        html += `<div class="field output"><div class="field-label">${c}</div><div class="field-value">${esc(val)}</div></div>`;
                     }
                 });
 
