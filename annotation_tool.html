@@ -121,7 +121,11 @@
 
             sel.disabled = false;
             document.getElementById('loadBtn').disabled = false;
-            document.getElementById('samples').innerHTML = '<div class="status">Select a run and click Load</div>';
+            document.getElementById('samples').innerHTML = '<div class="status">Select a run</div>';
+
+            // Auto-load on change
+            sel.onchange = () => document.getElementById('loadBtn').click();
+            document.getElementById('sampleSize').onchange = () => document.getElementById('loadBtn').click();
         }
 
         document.getElementById('loadBtn').onclick = async () => {
