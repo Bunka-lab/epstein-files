@@ -1,0 +1,4 @@
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ I want to write a general mehtod for AI classification, and checking the quality and iteratioin, based in whta you undertsnad forl the strcture    
+  ofkthe sqlite3 tavle, writr a short description of the orgaisation method in classification.md. For instyancen when I create  anew classifier,     
+  ask what columlns to create in the ai_classifiaiton table and how to outputs the results in the sqlite3 tables etc   
