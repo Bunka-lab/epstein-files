@@ -1,34 +1,42 @@
 # Epstein Emails Network Analysis
 
-Analyse de réseau des emails d'Epstein: extraction de noms, détection de communautés, et exploration interactive des relations.
+Network analysis of the Epstein email dataset: AI-powered name extraction, multi-pass consolidation, relationship description, community detection, and interactive visualization.
 
 ---
 
-## Structure du Projet
+## Project Structure
 
 ```
 epstein-files/
 ├── data/
-│   ├── raw_data/                      # Données brutes (parquet)
-│   ├── epstein_discussions_names.json # Discussions avec noms extraits (5082)
-│   ├── epstein_discussions_filtered.json # Discussions filtrées (4735)
-│   ├── name_matching_table.json       # Table de correspondance des noms
-│   ├── names_to_remove.json           # Noms à exclure du réseau
-│   ├── journalist_request_ids.json    # IDs des demandes journalistes exclues
-│   ├── person_relationships.json      # Relations détaillées avec Epstein
-│   └── network_edges.csv              # Arêtes du réseau
+│   ├── raw_data/                           # Raw parquet data
+│   └── classification/                     # AI classification exports (JSON)
+│       ├── F1_name_extraction_final.json
+│       ├── F2_name_consolidation_final.json
+│       ├── F2b_name_consolidation_v2_final.json
+│       ├── F2c_name_consolidation_v3_final.json
+│       ├── F2d_name_consolidation_v4_final.json
+│       ├── F3_relationship_description_final.json
+│       └── F4_cluster_analysis_final.json
 │
-├── scripts/
-│   ├── annotate.py                    # 1. Extraction des noms (Gemini)
-│   ├── extract_names.py               # Extraction alternative
-│   ├── consolidate_names.py           # 2. Déduplication des noms
-│   ├── filter_journalist_requests.py  # 3. Filtrage demandes presse
-│   ├── extract_relationships.py       # 4. Analyse des relations (Gemini)
-│   └── build_network.py               # 5. Construction du réseau
+├── scripts/final/                          # Production pipeline
+│   ├── run_pipeline.py                     # Master pipeline runner
+│   ├── run_name_extraction.py              # F1: Extract names from emails
+│   ├── run_name_consolidation.py           # F2: Initial name consolidation
+│   ├── run_name_consolidation_v2.py        # F2b: Phonetic matching
+│   ├── run_name_consolidation_v3.py        # F2c: Token-based matching
+│   ├── run_name_consolidation_v4.py        # F2d: Suffix matching (Jr., Sr.)
+│   ├── create_unique_names.py              # Build unique names table
+│   ├── run_relationship_description.py    # F3: Describe relationships
+│   ├── build_network.py                    # Build co-occurrence network
+│   ├── analyze_clusters.py                 # F4: Analyze communities
+│   └── enrich_network_tables.py            # Enrich nodes with metadata
 │
-├── network.html                       # Visualisation réseau (Sigma.js)
-├── person_connections.html            # Explorateur de connexions
-├── .env                               # GEMINI_API_KEY
+├── visualization/
+│   └── FINAL_network.html                  # Interactive network (Sigma.js)
+│
+├── epstein_analysis.db                     # SQLite database
+├── .env                                    # ANTHROPIC_KEY
 └── README.md
 ```
 
@@ -37,276 +45,167 @@ epstein-files/
 ## Pipeline
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│  1. EXTRACTION DES NOMS                                             │
-│     scripts/annotate.py                                             │
-│     → Utilise Gemini pour extraire senders, receivers, mentioned    │
-│     → Sortie: epstein_discussions_names.json                        │
-└─────────────────────────────────────────────────────────────────────┘
-                                    ↓
-┌─────────────────────────────────────────────────────────────────────┐
-│  2. CONSOLIDATION DES NOMS                                          │
-│     scripts/consolidate_names.py                                    │
-│     → Fusionne les variantes ("Bill" → "Bill Clinton")              │
-│     → Sortie: name_matching_table.json                              │
-└─────────────────────────────────────────────────────────────────────┘
-                                    ↓
-┌─────────────────────────────────────────────────────────────────────┐
-│  3. FILTRAGE DES DEMANDES JOURNALISTES                              │
-│     scripts/filter_journalist_requests.py                           │
-│     → Exclut les demandes d'interview (pas d'interaction directe)   │
-│     → Sortie: journalist_request_ids.json                           │
-│     → Sortie: epstein_discussions_filtered.json                     │
-└─────────────────────────────────────────────────────────────────────┘
-                                    ↓
-┌─────────────────────────────────────────────────────────────────────┐
-│  4. EXTRACTION DES RELATIONS                                        │
-│     scripts/extract_relationships.py                                │
-│     → Analyse la nature de chaque relation avec Epstein             │
-│     → Sortie: person_relationships.json                             │
-└─────────────────────────────────────────────────────────────────────┘
-                                    ↓
-┌─────────────────────────────────────────────────────────────────────┐
-│  5. CONSTRUCTION DU RÉSEAU                                          │
-│     scripts/build_network.py                                        │
-│     → Co-occurrences + clustering Leiden                            │
-│     → Sortie: network.html, network_edges.csv                       │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Fichiers de Données
-
-| Fichier | Description | Taille |
-|---------|-------------|--------|
-| `epstein_discussions_names.json` | Toutes les discussions avec noms extraits | 5082 discussions |
-| `epstein_discussions_filtered.json` | Discussions sans demandes presse | 4735 discussions |
-| `name_matching_table.json` | Variante → nom canonique | ~2000 mappings |
-| `names_to_remove.json` | Noms exclus (génériques, incomplets) | 79 noms |
-| `journalist_request_ids.json` | IDs des demandes journalistes | 348 IDs |
-| `person_relationships.json` | Description de chaque relation | 490 personnes |
-| `network_edges.csv` | Arêtes avec poids | 1818 arêtes |
-
----
-
-## Visualisations
-
-### 1. Réseau Interactif (`network.html`)
-
-- **416 nœuds** (personnes)
-- **1818 arêtes** (co-occurrences)
-- **21 communautés** (clustering Leiden)
-- Taille des nœuds = nombre d'apparitions
-- Couleur = communauté
-
-### 2. Explorateur de Connexions (`person_connections.html`)
-
-- Sélection d'une personne → voir ses connexions
-- Affichage de la relation avec Epstein (générée par IA)
-- Liens vers les emails sources
-- Système de feedback pour validation manuelle
-
----
-
-## Utilisation
-
-```bash
-# Démarrer le serveur local
-cd epstein-files
-python -m http.server 8001
-
-# Ouvrir dans le navigateur
-open http://localhost:8001/network.html
-open http://localhost:8001/person_connections.html
-```
-
-### Reconstruire le réseau
-
-```bash
-# Activer l'environnement
-source .venv/bin/activate
-
-# Exécuter le pipeline complet
-python scripts/annotate.py                    # ~30 min
-python scripts/consolidate_names.py           # ~1 min
-python scripts/filter_journalist_requests.py  # ~15 sec
-python scripts/extract_relationships.py       # ~10 min
-python scripts/build_network.py               # ~5 sec
-```
-
----
-
-## Statistiques du Réseau
-
-| Métrique | Valeur |
-|----------|--------|
-| Discussions totales | 5082 |
-| Après filtrage | 4735 |
-| Personnes dans le réseau | 416 |
-| Connexions | 1818 |
-| Communautés | 21 |
-
-### Top 10 Connexions
-
-| Rang | Personne | Connexions |
-|------|----------|------------|
-| 1 | Donald Trump | 134 |
-| 2 | Bill Clinton | 63 |
-| 3 | Lawrence Summers | 50 |
-| 4 | Darren Indyke | 49 |
-| 5 | Kathy Ruemmler | 46 |
-| 6 | Steve Bannon | 46 |
-| 7 | Michael Wolff | 43 |
-| 8 | Richard Kahn | 40 |
-| 9 | Woody Allen | 40 |
-| 10 | Barack Obama | 38 |
-
----
-
----
-
-## SQLite Database (`epstein_analysis.db`)
-
-All data is consolidated in a SQLite database with full traceability of AI classifications.
-
-### AI Classification Dependency Graph
-
-```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    AI CLASSIFICATION DEPENDENCY GRAPH                        │
+│  F1. NAME EXTRACTION                                                         │
+│      run_name_extraction.py                                                  │
+│      → Claude Sonnet extracts person names from each email                   │
+│      → Output: FINAL_2_CLASSIFIER_name_extraction                            │
 └─────────────────────────────────────────────────────────────────────────────┘
-
-    ┌──────────────────────┐
-    │  1_discussion_messages│  (RAW DATA - no AI)
-    └──────────┬───────────┘
-               │
-       ┌───────┴───────┐
-       │               │
-       ▼               ▼
-┌──────────────┐  ┌──────────────┐
-│     C1       │  │     C3       │
-│ name_extract │  │ journalist   │
-│              │  │   filter     │
-└──────┬───────┘  └──────────────┘
-       │                 │
-       │            (independent,
-       ▼             filters data)
-┌──────────────┐
-│     C2       │
-│    name      │
-│consolidation │
-└──────┬───────┘
-       │
-       ├────────────────────────┐
-       │                        │
-       ▼                        ▼
-┌──────────────┐        ┌──────────────┐
-│     C4       │        │ 5_network    │
-│ relationship │        │    edges     │
-│  extraction  │        │  (computed)  │
-└──────┬───────┘        └──────┬───────┘
-       │                        │
-       └───────────┬────────────┘
-                   │
-                   ▼
-           ┌──────────────┐
-           │     C5       │
-           │   cluster    │
-           │   analysis   │
-           └──────────────┘
+                                       ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  F2. NAME CONSOLIDATION (4 passes)                                           │
+│      → F2:  Initial consolidation (variants → canonical)                     │
+│      → F2b: Phonetic matching (phonetic-only names)                          │
+│      → F2c: Token-based matching (reversed names: "Thomas Landon" → "Landon Thomas") │
+│      → F2d: Suffix matching ("Landon Thomas" → "Landon Thomas Jr.")          │
+│      → Output: FINAL_3_unique_names with columns [F2], [F2b], [F2c], [F2d]   │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                       ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  NETWORK BUILDING                                                            │
+│      build_network.py                                                        │
+│      → Filter: people appearing in 4+ discussions                            │
+│      → Co-occurrence edges + Leiden community detection                      │
+│      → Output: FINAL_5_network_nodes, FINAL_5_network_edges                  │
+│      → Output: visualization/FINAL_network.html                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                       ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  F3. RELATIONSHIP DESCRIPTION                                                │
+│      run_relationship_description.py                                         │
+│      → Claude Sonnet describes each person's relationship with Epstein       │
+│      → Output: FINAL_4_CLASSIFIER_relationship_description                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                       ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  F4. CLUSTER ANALYSIS                                                        │
+│      analyze_clusters.py                                                     │
+│      → Claude Sonnet analyzes each network community                         │
+│      → Output: FINAL_6_CLASSIFIER_cluster_analysis                           │
+│      → Output: FINAL_5_networks_community                                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                       ↓
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  ENRICHMENT                                                                  │
+│      enrich_network_tables.py                                                │
+│      → Adds relationship descriptions and discussion IDs to network nodes   │
+│      → Output: Updated FINAL_5_network_nodes                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Impact Analysis
+---
 
-| If you CHANGE | You must RE-RUN |
-|---------------|-----------------|
-| C1 (name_extraction) | C2 → C4 → C5 + rebuild 5_network_edges |
-| C2 (name_consolidation) | C4 → C5 + rebuild 5_network_edges |
-| C3 (journalist_filter) | None (independent, but affects dataset) |
-| C4 (relationship) | C5 |
-| C5 (cluster_analysis) | None (terminal node) |
+## Database Tables
 
-### Database Tables
+### FINAL Pipeline Tables
 
 | Table | Rows | Description |
 |-------|------|-------------|
-| `0_raw_data` | 5082 | Original parquet data (unchanged) |
-| `1_discussion_messages` | 16447 | Flattened email messages |
-| `2_CLASSIFIER_name_extraction` | 995 | People mentioned per discussion (C1) |
-| `3_CLASSIFIER_name_consolidation` | 3313 | Maps raw names to canonical names (C2) |
-| `4_CLASSIFIER_relationship_extraction` | 490 | Relationship descriptions with Epstein (C4) |
-| `5_network_edges` | 1818 | Co-occurrence network edges |
-| `6_CLASSIFIER_cluster_analysis` | 21 | Leiden community clusters (C5) |
-| `7_CLASSIFIER_cluster_members` | 416 | Cluster membership (C5) |
-| `ai_classification_runs` | 5 | AI run metadata with prompts |
+| `0_raw_data` | 5082 | Original parquet data |
+| `FINAL_2_CLASSIFIER_name_extraction` | 5082 | Names mentioned per discussion [F1] |
+| `FINAL_3_unique_names` | ~3300 | Unique names with 4 consolidation passes [F2-F2d] |
+| `FINAL_4_CLASSIFIER_relationship_description` | 560 | Relationship descriptions [F3] |
+| `FINAL_5_network_nodes` | 545 | Network nodes with metadata |
+| `FINAL_5_network_edges` | ~2500 | Co-occurrence edges |
+| `FINAL_5_networks_community` | 18 | Community descriptions [F4] |
+| `FINAL_6_CLASSIFIER_cluster_analysis` | 18 | Cluster analysis results [F4] |
+| `ai_classification_runs` | - | AI run metadata with prompts and costs |
 
 ### Column Naming Convention
 
-All AI-classified columns are tagged with `[CX]` suffix for traceability:
+All AI-classified columns are tagged with `[FX]` suffix for traceability:
 
-| Suffix | Classification Run | LLM Output Columns |
-|--------|-------------------|---------------------|
-| `[C1]` | name_extraction | `name_mentioned [C1]` |
-| `[C2]` | name_consolidation | `name_id [C2]` |
-| `[C4]` | relationship_extraction | `relationship_description [C4]` |
-| `[C5]` | cluster_analysis | `cluster_name [C5]`, `analysis_text [C5]` |
+| Suffix | Classification Run | Description |
+|--------|-------------------|-------------|
+| `[F1]` | name_extraction | Names mentioned in emails |
+| `[F2]` | name_consolidation | Initial consolidation |
+| `[F2b]` | name_consolidation_v2 | Phonetic matching |
+| `[F2c]` | name_consolidation_v3 | Token-based matching |
+| `[F2d]` | name_consolidation_v4 | Suffix matching |
+| `[F3]` | relationship_description | Relationship with Epstein |
+| `[F4]` | cluster_analysis | Community analysis |
 
-### Table Schemas
+---
 
-```sql
--- Original parquet data
-0_raw_data (
-    thread_id, subject, message_count, messages_json
-)
+## Network Statistics
 
--- Flattened email messages
-1_discussion_messages (
-    id, thread_id, message_index,
-    sender, receiver, cc, date, body
-)
+| Metric | Value |
+|--------|-------|
+| Total discussions | 5082 |
+| People in network | 545 |
+| Network edges | ~2500 |
+| Communities | 18 |
+| Min occurrences filter | 4 discussions |
 
--- People mentioned in each discussion (C1 output)
-2_CLASSIFIER_name_extraction (
-    thread_id, sender, receiver, cc, body,
-    "name_mentioned [C1]", "mention_count [C1]"
-)
+### Top Communities
 
--- Name consolidation mapping (C2 output)
-3_CLASSIFIER_name_consolidation (
-    "name_mentioned [C1]",
-    "name_id [C2]", "removed [C2]"
-)
+| Cluster | Size | Theme | Top Members |
+|---------|------|-------|-------------|
+| 0 | 105 | Political monitoring (2016-2020) | Donald Trump, Steve Bannon, Robert Mueller |
+| 1 | 89 | Legal/crisis management | Darren Indyke, Prince Andrew, Ghislaine Maxwell |
+| 2 | 74 | High-profile network (politics, tech, finance) | Bill Clinton, Peter Thiel, Bill Gates |
 
--- Relationship descriptions (C4 output)
-4_CLASSIFIER_relationship_extraction (
-    id, "name_id [C2]",
-    "relationship_description [C4]", "appearance_count [C4]", "thread_ids [C4]"
-)
+### Top 10 Most Connected
 
--- Network edges (computed from C2)
-5_network_edges (
-    id, "source_name_id [C2]", "target_name_id [C2]",
-    "weight [C2]", "examples [C2]"
-)
+| Rank | Person | Connections | Community |
+|------|--------|-------------|-----------|
+| 1 | Donald Trump | 254 | 0 |
+| 2 | Bill Clinton | 185 | 2 |
+| 3 | Barack Obama | 109 | 3 |
+| 4 | Darren K. Indyke | 95 | 1 |
+| 5 | Prince Andrew | 89 | 1 |
+| 6 | Hillary Clinton | 87 | 0 |
+| 7 | Ghislaine Maxwell | 85 | 1 |
+| 8 | Steve Bannon | 83 | 0 |
+| 9 | Bill Gates | 78 | 2 |
+| 10 | Alan Dershowitz | 75 | 1 |
 
--- Cluster definitions (C5 output)
-6_CLASSIFIER_cluster_analysis (
-    cluster_id, "cluster_name [C5]", "cluster_size [C5]", "analysis_text [C5]"
-)
+---
 
--- Cluster membership (C5 output)
-7_CLASSIFIER_cluster_members (
-    id, cluster_id, "name_id [C2]"
-)
+## Usage
 
--- AI classification run metadata
-ai_classification_runs (
-    run_id, run_name, run_type, model_used,
-    prompt_used, input_columns, output_columns,
-    created_at, notes
-)
+```bash
+# Activate environment
+source .venv/bin/activate
+
+# Run the full pipeline
+cd scripts/final
+python run_pipeline.py
+
+# Or run individual steps
+python run_name_extraction.py        # F1
+python run_name_consolidation.py     # F2
+python run_name_consolidation_v2.py  # F2b
+python run_name_consolidation_v3.py  # F2c
+python run_name_consolidation_v4.py  # F2d
+python create_unique_names.py
+python build_network.py
+python run_relationship_description.py  # F3
+python analyze_clusters.py              # F4
+python enrich_network_tables.py
 ```
+
+### View the network
+
+```bash
+# Start local server
+python -m http.server 8001
+
+# Open in browser
+open http://localhost:8001/visualization/FINAL_network.html
+```
+
+---
+
+## AI Classification Costs
+
+| Run | Model | Cost |
+|-----|-------|------|
+| F1 (name extraction) | Claude Sonnet | ~$8 |
+| F2-F2d (consolidation) | Claude Sonnet | ~$1 |
+| F3 (relationships) | Claude Sonnet | ~$2 |
+| F4 (clusters) | Claude Sonnet | ~$0.07 |
+| **Total** | | **~$11** |
 
 ---
 
