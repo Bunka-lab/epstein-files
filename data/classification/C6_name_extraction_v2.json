@@ -1,0 +1,975 @@
+{
+  "run_id": "C6",
+  "run_name": "name_extraction_v2",
+  "model": "claude-sonnet-4-20250514",
+  "timestamp": "2026-02-08T14:39:13.079518",
+  "total_rows": 500,
+  "total_cost": 0.300315,
+  "input_tokens": 40415,
+  "output_tokens": 11938,
+  "results": {
+    "IMAGES-011-HOUSE_OVERSIGHT_031464.txt_974": [
+      "Marty",
+      "Jeffrey Epstein",
+      "Donald Trump",
+      "David Ingram"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033510.txt_15041": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026280.txt_21928": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029566.txt_12707": [
+      "Serena",
+      "Lisa"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030777.txt_2026": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033411.txt_4237": [
+      "Somers",
+      "Melania"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_026466.txt_6794": [
+      "Jeffrey",
+      "Diane"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033503.txt_18777": [
+      "Maxwell"
+    ],
+    "IMAGES-005-HOUSE_OVERSIGHT_020437.txt_21011": [
+      "Michael Cohen",
+      "Donald Trump",
+      "Laura"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033064.txt_7821": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022839.txt_21066": [
+      "Jeffrey"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032480.txt_1324": [
+      "Darren"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032941.txt_18663": [],
+    "TEXT-001-HOUSE_OVERSIGHT_028601.txt_8404": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030000.txt_3570": [
+      "Donald Trump",
+      "Jeffrey Epstein"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026180.txt_14763": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032706.txt_23490": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030719.txt_17385": [
+      "Donnie"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_030688.txt_16248": [
+      "Ira Rosen",
+      "Bill Maher"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_030495.txt_12598": [],
+    "IMAGES-009-HOUSE_OVERSIGHT_026674.txt_2683": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022322.txt_19079": [
+      "Vinit"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026569.txt_18513": [
+      "Jeffrey",
+      "Bill Clinton",
+      "Greta Tufvesson",
+      "Diana deGette",
+      "Jeff Kriendler",
+      "Goldsamt",
+      "Sofia",
+      "Marcus"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033180.txt_3219": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033458.txt_12011": [
+      "Joel",
+      "Jack Goldberger",
+      "Jerry"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_015002.txt_17708": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032776.txt_13556": [
+      "Jeffrey Epstein"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_028787.txt_4256": [],
+    "IMAGES-005-HOUSE_OVERSIGHT_019407.txt_13644": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032672.txt_1074": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029545.txt_3562": [
+      "Christina",
+      "Tyler Shears"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_030797.txt_4110": [],
+    "TEXT-001-HOUSE_OVERSIGHT_028589.txt_9064": [
+      "Cheryl"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_023440.txt_2568": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031420.txt_17102": [],
+    "IMAGES-004-HOUSE_OVERSIGHT_016553.txt_13114": [
+      "Anne",
+      "Larkin",
+      "Brindell",
+      "Tim Frank",
+      "Peter"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033356.txt_1316": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025918.txt_13539": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031291.txt_25706": [],
+    "IMAGES-005-HOUSE_OVERSIGHT_019338.txt_23262": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029228.txt_25427": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029499.txt_4253": [
+      "Donald Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_025911.txt_7169": [],
+    "TEXT-001-HOUSE_OVERSIGHT_027034.txt_3145": [
+      "Clinton"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_032226.txt_225": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030321.txt_17048": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032722.txt_25493": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032312.txt_21222": [
+      "Jeffrey",
+      "Bill"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032676.txt_21013": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032424.txt_11641": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031818.txt_10853": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033599.txt_22135": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030109.txt_5321": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_032284.txt_9390": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026005.txt_12408": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032637.txt_6514": [
+      "Robert"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_011280.txt_7966": [
+      "Trump",
+      "Jerry Fodor"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_028590.txt_4009": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030343.txt_10342": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030328.txt_23494": [
+      "Carnap",
+      "Jerry Fodor"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_025919.txt_20521": [
+      "Trump",
+      "Hillary",
+      "Sanders"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_031320.txt_6142": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030154.txt_10947": [
+      "Anastasia"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_032204.txt_21241": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025190.txt_14": [
+      "Robert"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_029174.txt_10339": [
+      "Jeffrey",
+      "Peter Getzels",
+      "Peter",
+      "Robert"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026118.txt_23777": [],
+    "IMAGES-005-HOUSE_OVERSIGHT_019060.txt_19653": [
+      "Epstein"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_026036.txt_21846": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032916.txt_21212": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031090.txt_1012": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029890.txt_2274": [
+      "Maxwell"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_029616.txt_21831": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026369.txt_21352": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_032268.txt_11603": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031729.txt_3525": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029501.txt_292": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_032376.txt_24634": [
+      "Jeffrey",
+      "Florence"
+    ],
+    "IMAGES-007-HOUSE_OVERSIGHT_023441.txt_25251": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032818.txt_10968": [
+      "Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_022819.txt_3170": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_022834.txt_19644": [
+      "Marie",
+      "Jeffrey"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032560.txt_13329": [
+      "Sessions",
+      "Sam Waksal"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_028859.txt_22358": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_032259.txt_14257": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032985.txt_11715": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033030.txt_5623": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032609.txt_18816": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_032206.txt_20767": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032663.txt_22566": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026106.txt_6184": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029003.txt_11414": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026328.txt_6880": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030412.txt_18743": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030868.txt_12546": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026242.txt_15000": [
+      "Barrack"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032591.txt_10796": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032034.txt_12034": [
+      "Trump",
+      "Alexander Smith",
+      "Steven Morris",
+      "Ben Quinn",
+      "Donald Trump",
+      "James Griffiths",
+      "David Nakamura",
+      "John Wagner",
+      "Nick Miroff"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032575.txt_14084": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_023448.txt_5948": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032302.txt_23895": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029213.txt_21376": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033599.txt_6319": [
+      "Eric"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_019348.txt_17482": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032975.txt_12083": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026080.txt_19835": [],
+    "IMAGES-006-HOUSE_OVERSIGHT_021814.txt_19814": [
+      "Jeffrey Epstein"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032716.txt_5212": [
+      "Jeffrey"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_028507.txt_18708": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031601.txt_11772": [
+      "Celina Midelfart",
+      "Donald"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032912.txt_837": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032777.txt_13896": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026321.txt_19512": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031649.txt_19545": [],
+    "TEXT-001-HOUSE_OVERSIGHT_028955.txt_12521": [
+      "Jeffrey",
+      "Woody Allen",
+      "William Carlos Williams",
+      "John Lithgow",
+      "Diane Paulus",
+      "Julie Taymor",
+      "Nas",
+      "Eve Ensler",
+      "Damian Woetzel",
+      "Kate Burton",
+      "Lil Buck Riley",
+      "Alfre Woodard",
+      "Herbie Hancock",
+      "Tony Kushner",
+      "Natalia Zukerman",
+      "Sally Field",
+      "Lena Dunham",
+      "Yo Yo Ma",
+      "Anna Deveare Smith"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_029010.txt_22397": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026170.txt_5065": [
+      "Jeff"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_031286.txt_1205": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032556.txt_17901": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032415.txt_14304": [
+      "Trump"
+    ],
+    "IMAGES-006-HOUSE_OVERSIGHT_021808.txt_1224": [],
+    "TEXT-001-HOUSE_OVERSIGHT_019105.txt_21050": [
+      "Steven Hoffenberg",
+      "Roger Stone",
+      "Jeff Epstein",
+      "James Patterson"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_029274.txt_17428": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030411.txt_17108": [
+      "Andrew",
+      "Trump",
+      "Ghislaine"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_029835.txt_23219": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029137.txt_10649": [
+      "Giulio Tononi"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_029575.txt_21392": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031642.txt_25385": [],
+    "IMAGES-005-HOUSE_OVERSIGHT_019871.txt_5271": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030882.txt_14537": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032553.txt_13097": [
+      "Trump"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_025879.txt_20725": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029575.txt_8357": [
+      "Clinton"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_031183.txt_15099": [
+      "Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026273.txt_4129": [],
+    "TEXT-002-HOUSE_OVERSIGHT_031764.txt_1157": [
+      "Carol D. Leonnig",
+      "Elliott Broidy",
+      "Trump",
+      "Xi Jinping",
+      "Christopher Clark"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_029015.txt_24009": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032242.txt_3734": [
+      "Trump"
+    ],
+    "IMAGES-007-HOUSE_OVERSIGHT_022661.txt_18104": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033491.txt_6743": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032871.txt_3061": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030970.txt_22372": [
+      "Powell"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030135.txt_18241": [],
+    "IMAGES-005-HOUSE_OVERSIGHT_019305.txt_23407": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033133.txt_14943": [],
+    "IMAGES-004-HOUSE_OVERSIGHT_017827.txt_22611": [
+      "Berlinger"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030639.txt_5478": [],
+    "TEXT-001-HOUSE_OVERSIGHT_028770.txt_10283": [
+      "Bill",
+      "Kevin",
+      "Boris"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_029910.txt_20887": [
+      "Nye",
+      "Scowcroft",
+      "Nick Burns",
+      "Condi",
+      "Patraeus",
+      "Albright",
+      "Slaughter",
+      "Donalon",
+      "Obama",
+      "Hadley",
+      "Bush",
+      "Sullivan",
+      "Hillary",
+      "Bill Burns",
+      "Kurt Campbell",
+      "Hoss Carwright",
+      "Harman",
+      "Ignatius",
+      "Sanger",
+      "Nunn",
+      "Reed",
+      "Sawers",
+      "Sherman",
+      "Work"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_024930.txt_9656": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030244.txt_3174": [
+      "Gergen",
+      "Gerald Ford",
+      "Ronald Reagan",
+      "Bill Clinton",
+      "Warren Christopher",
+      "George H.W. Bush"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033512.txt_14019": [
+      "Roy"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033225.txt_19442": [
+      "Irwin Corey",
+      "James Drougas",
+      "Trump",
+      "Richard",
+      "Fidel Castro",
+      "Dave Channon"
+    ],
+    "IMAGES-004-HOUSE_OVERSIGHT_016691.txt_19816": [
+      "Kirk",
+      "Trump",
+      "Ray Royce"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032694.txt_24573": [
+      "Donald"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_025199.txt_19431": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033428.txt_2649": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026317.txt_1806": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033410.txt_19693": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030602.txt_2693": [
+      "Nathan Wolf"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030757.txt_22215": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033488.txt_19128": [
+      "Jeffrey",
+      "Trump",
+      "Eric Roth",
+      "Larry"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_023616.txt_13422": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031443.txt_23528": [
+      "David"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030699.txt_11826": [
+      "Dylan",
+      "Soon-Yi",
+      "Woody"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033005.txt_1921": [
+      "Krumholtz"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_030727.txt_8742": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032329.txt_25581": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029915.txt_25641": [
+      "Michael",
+      "Ben"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032998.txt_8732": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033386.txt_20132": [
+      "Eric"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030659.txt_10295": [],
+    "TEXT-002-HOUSE_OVERSIGHT_031818.txt_3587": [
+      "Jeffrey",
+      "Trump"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_032379.txt_2107": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025347.txt_2947": [
+      "Richardson",
+      "Gates"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_030218.txt_8070": [
+      "Richard",
+      "Epstein"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_028972.txt_15678": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022771.txt_5575": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030200.txt_6391": [
+      "Nixon"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033053.txt_14766": [
+      "Michael Wolff",
+      "Donald Trump"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_031307.txt_5881": [],
+    "TEXT-001-HOUSE_OVERSIGHT_023418.txt_12069": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026090.txt_18709": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_028936.txt_18846": [
+      "Noam"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_027053.txt_9874": [
+      "Boris",
+      "Jeffrey",
+      "Magdalena Schuster"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_029402.txt_6951": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031549.txt_11297": [
+      "Megann"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_025101.txt_19174": [
+      "Edelman"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_025898.txt_9628": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031086.txt_2280": [
+      "Sultan"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_016693.txt_15512": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_028754.txt_2071": [],
+    "thread_id": [
+      "Trump",
+      "Clinton",
+      "Jeffrey Epstein",
+      "Andrew",
+      "Rinaldo",
+      "Boris",
+      "Putin",
+      "Ollie",
+      "Alex Acosta",
+      "Randy Schultz",
+      "Michelle Goldberg",
+      "Tonja Haddad Coleman",
+      "Pablos",
+      "Mike",
+      "Jeffrey",
+      "Miller",
+      "Evan Barr",
+      "DJT",
+      "Christie",
+      "Michael",
+      "Hamad bin jassim",
+      "Gotti",
+      "Strzok",
+      "McCabe",
+      "Mueller",
+      "Andrew Weissmann",
+      "Al Gore"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030703.txt_6857": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032544.txt_11805": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033581.txt_4397": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032672.txt_24082": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032631.txt_13477": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030844.txt_16231": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031217.txt_8156": [
+      "Mike"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033492.txt_8285": [
+      "Jeffrey",
+      "Larry"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033271.txt_18801": [],
+    "IMAGES-009-HOUSE_OVERSIGHT_027045.txt_8970": [
+      "Putin"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033423.txt_20036": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030609.txt_19883": [
+      "Bill Clinton",
+      "Boris"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033437.txt_20038": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032994.txt_6854": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022938.txt_13850": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_023661.txt_4154": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032994.txt_16758": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033110.txt_7634": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032285.txt_2713": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030904.txt_10615": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033295.txt_19255": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025960.txt_3879": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026329.txt_1527": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026078.txt_17047": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029578.txt_4516": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032519.txt_4428": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022766.txt_3950": [
+      "Marty",
+      "Ghislaine Maxwell"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_031413.txt_7422": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032834.txt_17871": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032289.txt_23646": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022272.txt_7521": [
+      "Jeffrey",
+      "Vinit",
+      "Kerry Lavrov",
+      "Merkel"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_033068.txt_8920": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031384.txt_6726": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031511.txt_76": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033287.txt_15968": [
+      "Peter Ticktin",
+      "Donald Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030724.txt_16442": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030495.txt_15422": [
+      "Nathan Wolf"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030498.txt_10386": [
+      "Boris"
+    ],
+    "IMAGES-009-HOUSE_OVERSIGHT_027126.txt_7946": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031005.txt_11168": [
+      "Howard",
+      "Jeffrey Epstein"
+    ],
+    "IMAGES-003-HOUSE_OVERSIGHT_014516.txt_3748": [
+      "Rich",
+      "Amanda",
+      "Donald Trump"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_025651.txt_4523": [],
+    "TEXT-001-HOUSE_OVERSIGHT_019219.txt_8529": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026176.txt_8449": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_025110.txt_20619": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033458.txt_14875": [
+      "Andy",
+      "Jeffrey",
+      "Benny Shabtai",
+      "Joel"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026204.txt_10648": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026111.txt_11245": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030362.txt_16757": [
+      "Jes"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032752.txt_12033": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031652.txt_3416": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033401.txt_2327": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026047.txt_25264": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033503.txt_9666": [
+      "Maxwell"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_029213.txt_8367": [],
+    "TEXT-001-HOUSE_OVERSIGHT_021814.txt_7826": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026406.txt_1975": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033023.txt_2566": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022226.txt_21552": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025361.txt_24545": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033082.txt_8705": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029113.txt_15347": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_023440.txt_24703": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031599.txt_16536": [],
+    "TEXT-001-HOUSE_OVERSIGHT_021216.txt_13784": [
+      "Sidney Hillman",
+      "Adam Serwer",
+      "Hannah Dreier",
+      "Anna Clark",
+      "Ta-Nehisi Coates",
+      "Jelani Cobb",
+      "Al Freedman",
+      "Hendrik Hertzberg",
+      "Harold Meyerson",
+      "Katrina vanden Heuvel",
+      "Julie K. Brown",
+      "Emily Michot",
+      "Jeffrey Epstein",
+      "Alex Acosta"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032478.txt_20114": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030118.txt_463": [
+      "Eric"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_030674.txt_17821": [
+      "Mueller"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_025842.txt_22833": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026193.txt_19124": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031597.txt_7680": [
+      "Marla Maples"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030229.txt_5066": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_023198.txt_12280": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_022695.txt_11121": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_025928.txt_5294": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032736.txt_25486": [
+      "Barrack"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026399.txt_11421": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031614.txt_16031": [],
+    "TEXT-001-HOUSE_OVERSIGHT_022187.txt_21082": [
+      "Bill Clinton",
+      "Donald Trump",
+      "Blake Ellis",
+      "Melanie Hicken",
+      "Melanie"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030209.txt_25631": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032858.txt_24618": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033276.txt_15019": [
+      "Larry Kudlow",
+      "Gary Cohn"
+    ],
+    "IMAGES-006-HOUSE_OVERSIGHT_022194.txt_11986": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032770.txt_16796": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029530.txt_25599": [
+      "Jeffrey",
+      "Waheed"
+    ],
+    "IMAGES-005-HOUSE_OVERSIGHT_020143.txt_23889": [
+      "Masha Drokova"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032818.txt_14382": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_022808.txt_19606": [
+      "Boies",
+      "David Boies"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_025652.txt_6194": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030218.txt_20888": [
+      "Richard",
+      "Epstein",
+      "President Clinton",
+      "Brandon"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_031567.txt_8009": [
+      "MBS"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_017581.txt_10799": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033278.txt_12420": [
+      "Larry Summers"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032375.txt_17484": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030101.txt_25350": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025121.txt_11552": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031627.txt_15637": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032588.txt_11458": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_025200.txt_18649": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030696.txt_14968": [
+      "Woody"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033111.txt_6977": [
+      "Stormy Daniels",
+      "Donald Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_025935.txt_18404": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031067.txt_20093": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026057.txt_13615": [
+      "Robert",
+      "Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_011904.txt_11678": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_023616.txt_10616": [
+      "Jermain",
+      "Cecile"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_022941.txt_3906": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_028980.txt_22991": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030211.txt_14429": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030954.txt_4601": [
+      "Bibi"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030799.txt_3539": [
+      "Trump"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032376.txt_19112": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032829.txt_11533": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026053.txt_25287": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030757.txt_5812": [],
+    "TEXT-002-HOUSE_OVERSIGHT_031800.txt_21316": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032527.txt_21190": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031691.txt_19970": [
+      "Peg",
+      "Jeffrey Epstein"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032760.txt_12654": [
+      "Donald Trump"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032816.txt_9836": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030609.txt_3289": [
+      "Andrew"
+    ],
+    "IMAGES-007-HOUSE_OVERSIGHT_023321.txt_22040": [
+      "Barry"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030679.txt_17196": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030299.txt_20890": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031523.txt_1086": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032546.txt_14355": [
+      "Pence"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_028870.txt_21274": [],
+    "TEXT-001-HOUSE_OVERSIGHT_028576.txt_9005": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032372.txt_13130": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031751.txt_10537": [
+      "Jeffrey Epstein",
+      "Tom Arnold",
+      "Trump",
+      "Charles Kushner",
+      "Howard Stern"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_029092.txt_20824": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030748.txt_343": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_028942.txt_23613": [
+      "Obama"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_026216.txt_1120": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_023418.txt_15617": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026612.txt_7708": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032682.txt_1505": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025879.txt_14468": [
+      "Weinberg",
+      "Clinton",
+      "Gore",
+      "Tipper",
+      "Miles Alexander"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_022776.txt_2465": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031031.txt_7200": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032883.txt_541": [],
+    "TEXT-001-HOUSE_OVERSIGHT_023661.txt_19907": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025812.txt_53": [
+      "Christina"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_031480.txt_1441": [
+      "Gulen"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032342.txt_11632": [
+      "Donald Trump",
+      "Jeffrey Epstein"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_030741.txt_3932": [
+      "Ariane de Rothschild"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_032439.txt_25370": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030129.txt_12383": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032224.txt_8527": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030652.txt_9692": [
+      "Bannon"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_025140.txt_11087": [
+      "JD Watson",
+      "Watson"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030350.txt_20225": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032924.txt_21798": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026571.txt_7248": [
+      "President Obama"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_027028.txt_21149": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030109.txt_18312": [],
+    "TEXT-001-HOUSE_OVERSIGHT_028875.txt_22800": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_031820.txt_8625": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_033504.txt_14987": [
+      "Ms. Maxwell",
+      "Mr. Trump"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033096.txt_18069": [
+      "Lavrov"
+    ],
+    "IMAGES-007-HOUSE_OVERSIGHT_022938.txt_10171": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026777.txt_12440": [
+      "Michael Wolff"
+    ],
+    "IMAGES-007-HOUSE_OVERSIGHT_023026.txt_19252": [
+      "Edwards",
+      "Epstein",
+      "Prince Andrew"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_033312.txt_7410": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026266.txt_3959": [
+      "Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030606.txt_3740": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032204.txt_15697": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025882.txt_17898": [
+      "Martin Weinberg",
+      "Clinton",
+      "Gore",
+      "Tipper",
+      "President Clinton",
+      "Vice President Gore",
+      "Miles Alexander"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_031593.txt_14678": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_028529.txt_15444": [
+      "Stephan Shakespeare",
+      "Bill Gates",
+      "Pope Francis",
+      "President Obama",
+      "Billy Graham",
+      "George W. Bush",
+      "Angelina Jolie",
+      "Oprah Winfrey",
+      "Alla Pugacheva",
+      "Bill Clinton"
+    ],
+    "IMAGES-008-HOUSE_OVERSIGHT_025968.txt_17344": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029094.txt_11356": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031069.txt_4137": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030974.txt_817": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032796.txt_19126": [],
+    "TEXT-001-HOUSE_OVERSIGHT_023717.txt_22273": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032955.txt_18632": [],
+    "TEXT-001-HOUSE_OVERSIGHT_025128.txt_17865": [
+      "Najeev"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026210.txt_10631": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031146.txt_8236": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_026461.txt_10981": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_023249.txt_1969": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030904.txt_14297": [],
+    "TEXT-001-HOUSE_OVERSIGHT_019321.txt_6268": [],
+    "TEXT-001-HOUSE_OVERSIGHT_015015.txt_19304": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026184.txt_17522": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030659.txt_12994": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030699.txt_14650": [
+      "Bannon",
+      "Trump"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_032277.txt_17496": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029593.txt_4614": [
+      "Serena"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_030129.txt_25341": [],
+    "TEXT-001-HOUSE_OVERSIGHT_029553.txt_6201": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032577.txt_14904": [],
+    "IMAGES-011-HOUSE_OVERSIGHT_030686.txt_7958": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026450.txt_21169": [
+      "Bannon",
+      "Spicer",
+      "Priebus",
+      "Trump",
+      "Kelly",
+      "Jared",
+      "Ivanka"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032752.txt_14834": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029684.txt_24879": [
+      "Jeffrey",
+      "Waheed"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032792.txt_10498": [],
+    "TEXT-001-HOUSE_OVERSIGHT_031591.txt_10890": [],
+    "IMAGES-012-HOUSE_OVERSIGHT_032538.txt_1536": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030367.txt_15161": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032828.txt_12784": [
+      "Trump"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_026514.txt_3985": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026237.txt_13765": [],
+    "IMAGES-007-HOUSE_OVERSIGHT_022936.txt_14079": [],
+    "TEXT-001-HOUSE_OVERSIGHT_021811.txt_12726": [
+      "Jeffrey Epstein",
+      "Clinton"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_024930.txt_3020": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_025927.txt_21425": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030706.txt_11662": [
+      "Ryan",
+      "McConnell"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_028974.txt_18945": [
+      "Jeff",
+      "Brockman",
+      "Ehud",
+      "Martin",
+      "Moshe",
+      "Jesus",
+      "Trump",
+      "Bernie"
+    ],
+    "TEXT-001-HOUSE_OVERSIGHT_030589.txt_46": [],
+    "IMAGES-008-HOUSE_OVERSIGHT_025898.txt_2893": [
+      "Jeff",
+      "Noam",
+      "Nili"
+    ],
+    "IMAGES-006-HOUSE_OVERSIGHT_021818.txt_5334": [],
+    "TEXT-001-HOUSE_OVERSIGHT_030950.txt_1869": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033092.txt_14157": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_028862.txt_11685": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030393.txt_7334": [
+      "Clapton"
+    ],
+    "IMAGES-011-HOUSE_OVERSIGHT_031552.txt_14443": [
+      "Stevie"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032885.txt_3791": [],
+    "TEXT-002-HOUSE_OVERSIGHT_032850.txt_22391": [],
+    "IMAGES-005-HOUSE_OVERSIGHT_019348.txt_13747": [
+      "Steve Bannon",
+      "Donald Trump",
+      "Salvini",
+      "Orban"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032507.txt_3075": [
+      "Masa",
+      "Masayoshi Son"
+    ],
+    "IMAGES-012-HOUSE_OVERSIGHT_032502.txt_4712": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_029088.txt_3440": [
+      "Jeffrey",
+      "Trump"
+    ],
+    "IMAGES-010-HOUSE_OVERSIGHT_030349.txt_18427": [
+      "Jeffrey",
+      "Lesley",
+      "Leon",
+      "Melanie"
+    ],
+    "TEXT-002-HOUSE_OVERSIGHT_032456.txt_222": [],
+    "TEXT-001-HOUSE_OVERSIGHT_026459.txt_1777": [],
+    "IMAGES-010-HOUSE_OVERSIGHT_030371.txt_13863": [],
+    "TEXT-002-HOUSE_OVERSIGHT_033025.txt_22329": [
+      "Trump"
+    ]
+  }
+}

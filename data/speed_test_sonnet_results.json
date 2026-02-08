@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-08T14:27:52.443017",
+  "model": "claude-sonnet-4-20250514",
+  "batch_size": 50,
+  "test_sample_size": 100,
+  "results": [
+    {
+      "concurrency": 5,
+      "batch_size": 50,
+      "elapsed_seconds": 13.58,
+      "emails_per_second": 7.3621,
+      "api_calls": 2,
+      "input_tokens": 7973,
+      "output_tokens": 2584,
+      "success_rate": 99.0,
+      "errors": 0,
+      "rate_limit_hits": 0
+    },
+    {
+      "concurrency": 10,
+      "batch_size": 50,
+      "elapsed_seconds": 13.73,
+      "emails_per_second": 7.2826,
+      "api_calls": 2,
+      "input_tokens": 7973,
+      "output_tokens": 2621,
+      "success_rate": 99.0,
+      "errors": 0,
+      "rate_limit_hits": 0
+    },
+    {
+      "concurrency": 15,
+      "batch_size": 50,
+      "elapsed_seconds": 14.1,
+      "emails_per_second": 7.0935,
+      "api_calls": 2,
+      "input_tokens": 7973,
+      "output_tokens": 2618,
+      "success_rate": 99.0,
+      "errors": 0,
+      "rate_limit_hits": 0
+    }
+  ]
+}

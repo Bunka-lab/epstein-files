@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classification Annotation</title>
+    <title>AI Classification Annotation Tool</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✓</text></svg>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
     <style>
@@ -63,21 +63,25 @@
 </head>
 <body>
     <div class="header">
-        <h1>Classification Annotation</h1>
+        <h1>AI Classification Annotation Tool</h1>
         <div class="accuracy" id="accuracy">--</div>
     </div>
 
     <div class="progress"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
 
     <div class="controls">
-        <select id="runSelect" disabled><option>Loading...</option></select>
+        <input type="file" id="dbFile" accept=".db,.sqlite,.sqlite3" style="display:none">
+        <button id="loadDbBtn">Load Database</button>
+        <span id="dbName" style="color:#666; margin-right:10px;">No database loaded</span>
+        <select id="runSelect" disabled><option>Select database first</option></select>
         <select id="sampleSize">
             <option value="10">10 samples</option>
             <option value="20" selected>20 samples</option>
             <option value="50">50 samples</option>
         </select>
         <button id="loadBtn" style="display:none">Load</button>
-        <button id="exportBtn" disabled>Export JSON</button>
+        <button id="saveScoreBtn" disabled style="background:#2a6">Save Score</button>
+        <span id="saveStatus" style="color:#666; margin-left:10px;"></span>
     </div>
 
     <div class="main">
@@ -92,23 +96,76 @@
     </div>
 
     <script>
-        let db, samples = [], annotations = {}, currentRun;
+        let db, SQL, samples = [], annotations = {}, currentRun, dbTables = [];
 
+        const DEFAULT_DB = 'epstein_analysis.db';
+
+        // Initialize SQL.js and try to load default database
         initSqlJs({ locateFile: f => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${f}` })
-            .then(SQL => fetch('epstein_analysis.db')
-                .then(r => r.arrayBuffer())
-                .then(buf => {
-                    db = new SQL.Database(new Uint8Array(buf));
-                    loadRuns();
-                })
-                .catch(() => document.getElementById('samples').innerHTML = '<div class="status">Run: python -m http.server 8001</div>')
-            );
+            .then(sql => {
+                SQL = sql;
+                document.getElementById('samples').innerHTML = '<div class="status">Loading database...</div>';
+
+                // Try to load default database
+                fetch(DEFAULT_DB)
+                    .then(r => {
+                        if (!r.ok) throw new Error('Not found');
+                        return r.arrayBuffer();
+                    })
+                    .then(buf => {
+                        db = new SQL.Database(new Uint8Array(buf));
+                        document.getElementById('dbName').textContent = DEFAULT_DB;
+
+                        const tables = db.exec("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name");
+                        dbTables = tables[0] ? tables[0].values.map(r => r[0]) : [];
+
+                        loadRuns();
+                    })
+                    .catch(() => {
+                        document.getElementById('samples').innerHTML = '<div class="status">Click "Load Database" to select a SQLite database file<br><small style="color:#999">Or run: python -m http.server 8001</small></div>';
+                    });
+            });
+
+        // Handle database file selection
+        document.getElementById('loadDbBtn').onclick = () => document.getElementById('dbFile').click();
+
+        document.getElementById('dbFile').onchange = (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            document.getElementById('samples').innerHTML = '<div class="status">Loading database...</div>';
+
+            const reader = new FileReader();
+            reader.onload = () => {
+                db = new SQL.Database(new Uint8Array(reader.result));
+                document.getElementById('dbName').textContent = file.name;
+
+                // Get list of tables
+                const tables = db.exec("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name");
+                dbTables = tables[0] ? tables[0].values.map(r => r[0]) : [];
+
+                loadRuns();
+            };
+            reader.readAsArrayBuffer(file);
+        };
 
         function loadRuns() {
             const sel = document.getElementById('runSelect');
             sel.innerHTML = '';
+
+            // Check if ai_classification_runs table exists
+            if (!dbTables.includes('ai_classification_runs')) {
+                sel.innerHTML = '<option>No ai_classification_runs table</option>';
+                document.getElementById('samples').innerHTML = '<div class="status">This database has no ai_classification_runs table. Create one to use this tool.</div>';
+                return;
+            }
+
             const runs = db.exec("SELECT * FROM ai_classification_runs");
-            if (!runs[0]) return;
+            if (!runs[0] || runs[0].values.length === 0) {
+                sel.innerHTML = '<option>No runs found</option>';
+                document.getElementById('samples').innerHTML = '<div class="status">No classification runs registered in ai_classification_runs</div>';
+                return;
+            }
 
             runs[0].values.forEach(row => {
                 const run = {};
@@ -121,7 +178,7 @@
 
             sel.disabled = false;
             document.getElementById('loadBtn').disabled = false;
-            document.getElementById('samples').innerHTML = '<div class="status">Select a run</div>';
+            document.getElementById('samples').innerHTML = '<div class="status">Select a classifier run</div>';
 
             // Auto-load on change
             sel.onchange = () => document.getElementById('loadBtn').click();
@@ -142,9 +199,11 @@
             if (currentRun.prompt_used) {
                 document.getElementById('promptText').textContent = currentRun.prompt_used;
                 document.getElementById('promptSection').style.display = 'block';
+            } else {
+                document.getElementById('promptSection').style.display = 'none';
             }
 
-            // Parse input columns
+            // Parse input columns (format: ["table.column", ...])
             let inputCols = [];
             try {
                 inputCols = JSON.parse(currentRun.input_columns || '[]');
@@ -152,10 +211,29 @@
                 inputCols = (currentRun.input_columns || '').split(',').map(s => s.trim());
             }
 
-            // Get output table
-            let outputTable = currentRun.output_tables?.split(',')[0]?.trim();
-            if (!outputTable || outputTable.includes('filtered')) {
-                document.getElementById('samples').innerHTML = '<div class="status">No output table for this run</div>';
+            // Parse output columns (format: ["table.column", ...])
+            let outputCols = [];
+            try {
+                outputCols = JSON.parse(currentRun.output_columns || '[]');
+            } catch(e) {
+                outputCols = (currentRun.output_columns || '').split(',').map(s => s.trim());
+            }
+
+            // Extract output table from first output column
+            const firstOutputCol = outputCols[0] || '';
+            if (firstOutputCol.includes('filtered')) {
+                document.getElementById('samples').innerHTML = '<div class="status">No output table for this run (filtered data)</div>';
+                return;
+            }
+            const outputTable = firstOutputCol.split('.')[0];
+            if (!outputTable) {
+                document.getElementById('samples').innerHTML = '<div class="status">No output table specified in output_columns</div>';
+                return;
+            }
+
+            // Check if table exists
+            if (!dbTables.includes(outputTable)) {
+                document.getElementById('samples').innerHTML = `<div class="status">Table "${outputTable}" not found in database</div>`;
                 return;
             }
 
@@ -164,74 +242,51 @@
             // Fetch samples from output table
             const result = db.exec(`SELECT * FROM "${outputTable}" ORDER BY RANDOM() LIMIT ${size}`);
             if (!result[0]) {
-                document.getElementById('samples').innerHTML = '<div class="status">No data</div>';
+                document.getElementById('samples').innerHTML = '<div class="status">No data in table</div>';
                 return;
             }
 
             const cols = result[0].columns;
-            const outputColNames = (currentRun.output_columns || '').split(',').map(c => c.trim());
+            // Extract just column names from table.column format
+            const outputColNames = outputCols.map(c => c.includes('.') ? c.split('.')[1] : c);
+
+            // Extract just column names from input_columns (table.column -> column)
+            const inputColNames = inputCols.map(c => c.includes('.') ? c.split('.').slice(1).join('.') : c);
 
             samples = result[0].values.map((row, i) => {
-                const s = { _idx: i, _cols: cols, _outputCols: outputColNames };
+                const s = { _idx: i, _cols: cols, _outputCols: outputColNames, _inputCols: inputColNames };
                 cols.forEach((c, j) => s[c] = row[j]);
                 return s;
             });
 
-            // For each sample, fetch related input data
-            await enrichSamplesWithInput(samples, inputCols, currentRun.run_id);
+            // Enrich samples with expanded data
+            enrichSamples(samples, inputCols);
 
             render();
-            document.getElementById('exportBtn').disabled = false;
+            document.getElementById('saveScoreBtn').disabled = true;
+            document.getElementById('saveStatus').textContent = '';
         };
 
-        async function enrichSamplesWithInput(samples, inputCols, runId) {
+        function enrichSamples(samples, inputCols) {
+            // Generic expansion: look for JSON array columns that reference other tables
             for (const sample of samples) {
-                sample._inputData = {};
+                sample._expanded = {};
 
-                // For C4: fetch emails from thread_ids
-                if (runId === 'C4') {
-                    let threadIds = [];
-                    try {
-                        threadIds = JSON.parse(sample['thread_ids [C4]'] || '[]');
-                    } catch(e) {}
+                // Check each column for expandable content
+                for (const col of sample._cols) {
+                    const val = sample[col];
+                    if (!val || typeof val !== 'string') continue;
 
-                    if (threadIds.length > 0) {
-                        // Get first 3 threads for context
-                        const limitedIds = threadIds.slice(0, 3);
-                        const placeholders = limitedIds.map(() => '?').join(',');
-                        const msgs = db.exec(`SELECT thread_id, sender, receiver, cc, body FROM "1_discussion_messages" WHERE thread_id IN (${placeholders}) LIMIT 10`, limitedIds);
-
-                        if (msgs[0]) {
-                            sample._inputData.emails = msgs[0].values.map(row => ({
-                                thread_id: row[0],
-                                sender: row[1],
-                                receiver: row[2],
-                                cc: row[3],
-                                body: row[4]
-                            }));
-                        }
-                    }
-                }
-
-                // For C2: the input is already in the output table (name_mentioned [C1])
-                // For C5: fetch cluster members and their relationships
-                if (runId === 'C5') {
-                    const clusterId = sample['cluster_id'];
-                    if (clusterId !== undefined) {
-                        const members = db.exec(`SELECT "name_id [C2]" FROM "7_network_cluster_members" WHERE cluster_id = ?`, [clusterId]);
-                        if (members[0]) {
-                            sample._inputData.members = members[0].values.map(r => r[0]);
-
-                            // Get relationships for top members
-                            const topMembers = sample._inputData.members.slice(0, 5);
-                            if (topMembers.length > 0) {
-                                const placeholders = topMembers.map(() => '?').join(',');
-                                const rels = db.exec(`SELECT "name_id [C2]", "relationship_description [C4]" FROM "4_person_relationships" WHERE "name_id [C2]" IN (${placeholders})`, topMembers);
-                                if (rels[0]) {
-                                    sample._inputData.relationships = rels[0].values.map(r => ({ name: r[0], rel: r[1] }));
-                                }
+                    // Try to parse as JSON array
+                    if (val.startsWith('[') && val.endsWith(']')) {
+                        try {
+                            const arr = JSON.parse(val);
+                            if (arr.length > 0 && typeof arr[0] === 'string') {
+                                // Check if these look like IDs that could be expanded
+                                // For now, just store parsed arrays for display
+                                sample._expanded[col] = arr;
                             }
-                        }
+                        } catch(e) {}
                     }
                 }
             }
@@ -248,60 +303,48 @@
 
                 const cols = s._cols;
                 const outputColNames = s._outputCols;
+                const inputColNames = s._inputCols;
 
-                // Separate input vs output columns
-                const inputFields = cols.filter(c => !outputColNames.some(oc => c.includes(oc.replace(/\[.*\]/, '').trim())));
-                const outputFields = cols.filter(c => outputColNames.some(oc => c.includes(oc.replace(/\[.*\]/, '').trim())));
+                // Input fields: only columns that match input_columns
+                const inputFields = cols.filter(c => inputColNames.some(ic => c === ic));
+                // Output fields: only columns that match output_columns
+                const outputFields = cols.filter(c => outputColNames.some(oc => c === oc));
 
                 let html = `<div class="sample-header">#${i + 1}</div><div class="sample-content">`;
 
                 // INPUT SECTION
                 html += `<div class="section-title input">INPUT DATA</div>`;
 
-                // Show enriched input data first
-                if (s._inputData.emails) {
-                    html += `<div class="field"><div class="field-label">Source Emails (${s._inputData.emails.length} shown)</div>`;
-                    s._inputData.emails.forEach(email => {
+                inputFields.forEach(c => {
+                    if (s[c] != null && s[c] !== '' && !c.startsWith('_')) {
+                        // Skip thread_ids if we have expanded emails
+                        if (c.includes('thread_ids') && s._expanded.emails) return;
+
+                        let val = String(s[c]);
+                        if (val.startsWith('[') && val.endsWith(']')) {
+                            try { val = JSON.parse(val).join(',  '); } catch(e) {}
+                        }
+                        html += `<div class="field"><div class="field-label">${c}</div><div class="field-value">${esc(val)}</div></div>`;
+                    }
+                });
+
+                // Show expanded emails
+                if (s._expanded.emails) {
+                    html += `<div class="field"><div class="field-label">Source Emails (${s._expanded.emails.length} shown)</div>`;
+                    s._expanded.emails.forEach(email => {
                         html += `<div class="email-block">
-                            <div class="email-meta"><b>From:</b> ${esc(email.sender || '')} <b>To:</b> ${esc(email.receiver || '')} ${email.cc ? `<b>CC:</b> ${esc(email.cc)}` : ''}</div>
+                            <div class="email-meta"><b>From:</b> ${esc(email.sender || '')} <b>To:</b> ${esc(email.receiver || '')}</div>
                             <div class="email-body">${esc(email.body || '')}</div>
                         </div>`;
                     });
                     html += `</div>`;
                 }
 
-                if (s._inputData.members) {
-                    html += `<div class="field"><div class="field-label">Cluster Members (${s._inputData.members.length})</div>
-                        <div class="field-value">${s._inputData.members.map(m => esc(m)).join(',  ')}</div></div>`;
+                // Show expanded cluster members
+                if (s._expanded.members) {
+                    html += `<div class="field"><div class="field-label">Cluster Members (${s._expanded.members.length})</div>
+                        <div class="field-value">${s._expanded.members.map(m => esc(m)).join(',  ')}</div></div>`;
                 }
-
-                if (s._inputData.relationships) {
-                    html += `<div class="field"><div class="field-label">Member Relationships</div>`;
-                    s._inputData.relationships.forEach(r => {
-                        html += `<div class="email-block">
-                            <div class="email-meta"><b>${esc(r.name)}</b></div>
-                            <div class="email-body">${esc(r.rel || '')}</div>
-                        </div>`;
-                    });
-                    html += `</div>`;
-                }
-
-                // Show input columns from the table itself
-                inputFields.forEach(c => {
-                    if (s[c] != null && s[c] !== '' && !c.startsWith('_')) {
-                        let val = String(s[c]);
-                        // Skip thread_ids in input since we show emails
-                        if (c.includes('thread_ids') && s._inputData.emails) return;
-                        // Format JSON arrays with spacing
-                        if (val.startsWith('[') && val.endsWith(']')) {
-                            try {
-                                const arr = JSON.parse(val);
-                                val = arr.join(',  ');
-                            } catch(e) {}
-                        }
-                        html += `<div class="field"><div class="field-label">${c}</div><div class="field-value">${esc(val)}</div></div>`;
-                    }
-                });
 
                 // OUTPUT SECTION
                 html += `<div class="section-title output">AI OUTPUT (to evaluate)</div>`;
@@ -343,6 +386,11 @@
             document.querySelectorAll(`#s${i} .btn`).forEach(b => b.classList.remove('selected'));
             document.querySelector(`#s${i} .btn-${v}`).classList.add('selected');
             updateStats();
+
+            // Enable save button if we have any correct/incorrect annotations
+            const hasAnnotations = Object.values(annotations).some(v => v === 'correct' || v === 'incorrect');
+            document.getElementById('saveScoreBtn').disabled = !hasAnnotations;
+            document.getElementById('saveStatus').textContent = '';
         }
 
         function updateStats() {
@@ -357,32 +405,52 @@
             document.getElementById('progressBar').style.width = `${done / n * 100}%`;
         }
 
-        document.getElementById('exportBtn').onclick = () => {
+        document.getElementById('saveScoreBtn').onclick = async () => {
             const correct = Object.values(annotations).filter(v => v === 'correct').length;
             const incorrect = Object.values(annotations).filter(v => v === 'incorrect').length;
+            const total = correct + incorrect;
 
-            const data = {
+            if (total === 0) {
+                document.getElementById('saveStatus').textContent = 'No annotations to save';
+                return;
+            }
+
+            const score = correct / total;
+
+            // Prepare annotations data
+            const annotationData = samples
+                .filter((s, i) => annotations[i] && annotations[i] !== 'skip')
+                .map((s, i) => ({
+                    thread_id: s.thread_id || s.id || `sample_${i}`,
+                    annotation: annotations[i]
+                }));
+
+            const payload = {
                 run_id: currentRun.run_id,
-                run_name: currentRun.run_name,
-                date: new Date().toISOString(),
-                accuracy: correct / (correct + incorrect) || null,
-                correct, incorrect,
-                skipped: Object.values(annotations).filter(v => v === 'skip').length,
-                samples: samples.map((s, i) => {
-                    const clean = { ...s };
-                    delete clean._idx;
-                    delete clean._cols;
-                    delete clean._outputCols;
-                    delete clean._inputData;
-                    return { ...clean, annotation: annotations[i] || null };
-                })
+                score: score,
+                annotations: annotationData
             };
 
-            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = `${currentRun.run_id}_annotation_${new Date().toISOString().slice(0,10)}.json`;
-            a.click();
+            try {
+                document.getElementById('saveStatus').textContent = 'Saving...';
+                const response = await fetch('/save_annotations', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    document.getElementById('saveStatus').textContent =
+                        `Saved! Score: ${Math.round(score * 100)}% (${result.annotations_saved} annotations)`;
+                    document.getElementById('saveStatus').style.color = '#2a6';
+                } else {
+                    throw new Error('Save failed');
+                }
+            } catch(e) {
+                document.getElementById('saveStatus').textContent = 'Error: Run annotation_server.py first';
+                document.getElementById('saveStatus').style.color = '#a44';
+            }
         };
     </script>
 </body>
