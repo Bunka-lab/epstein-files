@@ -1,0 +1,5827 @@
+{
+  "run_id": "F2",
+  "model": "claude-sonnet-4-20250514",
+  "timestamp": "2026-02-08T19:42:06.811791",
+  "unique_names": 3004,
+  "canonical_names": 1406,
+  "mapped_to_none": 1034,
+  "input_tokens": 31098,
+  "output_tokens": 31136,
+  "cost": 0.560334,
+  "consolidation_map": {
+    "A. Marie Villafa\u00f1a": [
+      "A. Marie Villafafa",
+      "A. Marie Villafana",
+      "A. Marie Villafa\u00f1a"
+    ],
+    "A. O. Scott": [
+      "A. O. SCOTT",
+      "A. O. Scott"
+    ],
+    "Aaron Blake": [
+      "Blake"
+    ],
+    "Aaron Sorkin": [
+      "Aaron Sorkin"
+    ],
+    "Abdulmalik Al-Makhlafi": [
+      "Abdulmalik Al-Makhlafi"
+    ],
+    "Abe Gosman": [
+      "Abe Gosman"
+    ],
+    "Abi Schwinck": [
+      "Abi Schwinck"
+    ],
+    "Abraham Lincoln": [
+      "Abraham Lincoln"
+    ],
+    "Alex Acosta": [
+      "Acosta",
+      "Alex Acosta",
+      "Alexander Acosta"
+    ],
+    "Ada Clapp": [
+      "Ada Clapp"
+    ],
+    "Adam Friedman": [
+      "Adam Friedman"
+    ],
+    "Adam Klasfeld": [
+      "Adam Klasfeld"
+    ],
+    "Adam Sandler": [
+      "Adam Sandler"
+    ],
+    "Adam Serwer": [
+      "Adam Serwer"
+    ],
+    "Addison Mizner": [
+      "Addison Mizner"
+    ],
+    "Adrien Morin": [
+      "Adrien Morin"
+    ],
+    "Adrienne Ross": [
+      "Adrienne Ross"
+    ],
+    "Afrah Nasser": [
+      "Afrah Nasser"
+    ],
+    "Al Eckert": [
+      "Al Eckert"
+    ],
+    "Al Franken": [
+      "Al Franken"
+    ],
+    "Al Gore": [
+      "Al Gore",
+      "Gore"
+    ],
+    "Al Seckel": [
+      "Al Secke",
+      "Al Seckel",
+      "Al seckel"
+    ],
+    "Al Sharpton": [
+      "Al Sharpton"
+    ],
+    "Al Taylor": [
+      "Al Taylor"
+    ],
+    "Alain Forget": [
+      "Alain Forget"
+    ],
+    "Alan Blinder": [
+      "Alan Blinder"
+    ],
+    "Alan Dershowitz": [
+      "Alan Derschowitz",
+      "Alan Dershowitz",
+      "Alan M Dershowitz",
+      "Alan M. Dershowitz",
+      "Dershowitz",
+      "Dersh",
+      "dershowitz"
+    ],
+    "Alan Dlugash": [
+      "Alan Dlugash"
+    ],
+    "Alan Fraade": [
+      "Alan Fraadc",
+      "Alan Fraade"
+    ],
+    "Alan Greenspan": [
+      "Alan Greenspan"
+    ],
+    "Alan Halperin": [
+      "Alan Halperin",
+      "Alan S Halperin",
+      "Alan S. Halperin"
+    ],
+    "Alan Rogers": [
+      "Alan Rogers"
+    ],
+    "Alan Simpson": [
+      "Alan Simpson"
+    ],
+    "Albert C. Ledner": [
+      "Albert C. Ledner"
+    ],
+    "Alberto Gonzales": [
+      "Alberto Gonzales"
+    ],
+    "Alec Baldwin": [
+      "Alec Baldwin"
+    ],
+    "Alex Campbell": [
+      "Alex Campbell"
+    ],
+    "Alex Family Pines": [
+      "Alex Family Pines"
+    ],
+    "Alex Gelinas": [
+      "Alex Gelinas"
+    ],
+    "Alex Jennings": [
+      "Alex Jennings",
+      "Jennings"
+    ],
+    "Alex Jones": [
+      "Alex Jones"
+    ],
+    "Alex Keuroghlian": [
+      "Alex Keuroghlian"
+    ],
+    "Alex Morgan": [
+      "Alex Morgan"
+    ],
+    "Alex Pines": [
+      "Alex Pines"
+    ],
+    "Alex Rowell": [
+      "Alex Rowell"
+    ],
+    "Alex Yablon": [
+      "Alex Yablon",
+      "Yablon"
+    ],
+    "Alexander Marlow": [
+      "Alexander Marlow"
+    ],
+    "Alexander Smith": [
+      "Alexander Smith"
+    ],
+    "Alexandra Preate": [
+      "Alexandra Preate"
+    ],
+    "Alexandra Wolfe": [
+      "Alexandra Wolfe",
+      "Wolfe"
+    ],
+    "Ali Akbar Salehi": [
+      "Ali Akbar Salehi"
+    ],
+    "Ali Khamenei": [
+      "Ali Khamenei"
+    ],
+    "Alice Cooper": [
+      "Alice Cooper"
+    ],
+    "Alice Fisher": [
+      "Alice Fisher",
+      "Fisher"
+    ],
+    "Alireza Ittihadieh": [
+      "Alireza ITTIHADIEH",
+      "Alireza Ittihadich",
+      "Alireza Ittihadieh"
+    ],
+    "Alistair Darling": [
+      "Alistair Darling",
+      "Darling"
+    ],
+    "Alla Pugach": [
+      "Alla Pugach"
+    ],
+    "Allen West": [
+      "Allen West"
+    ],
+    "Alp Asiandogan": [
+      "Alp Asiandogan"
+    ],
+    "Aly Yablon": [
+      "Aly Yablon"
+    ],
+    "Alyse Nelson": [
+      "Alyse Nelson"
+    ],
+    "Ens Amanda": [
+      "Amanda",
+      "Amanda Ens"
+    ],
+    "Ambra Gutierrez": [
+      "Ambra Gutierrez"
+    ],
+    "Amy Irving": [
+      "Amy Irving"
+    ],
+    "Amy Jacobson": [
+      "Amy Jacobson"
+    ],
+    "Amy Poehler": [
+      "Amy Poehler"
+    ],
+    "Ana Brice": [
+      "Brice"
+    ],
+    "Ananda Ens": [
+      "Ananda Ens"
+    ],
+    "Anas Alrasheed": [
+      "Anas Alrashecd",
+      "Anas Alrasheed"
+    ],
+    "Anastasia Kuznetsova": [
+      "Anastasia Kuznetsova"
+    ],
+    "Anders Corr": [
+      "Anders Corr"
+    ],
+    "Andrea Mitchell": [
+      "Andrea Mitchell",
+      "Mitchell"
+    ],
+    "Andreas Kraus": [
+      "Andreas Kraus"
+    ],
+    "Greg Andres": [
+      "Andres",
+      "Greg Andres"
+    ],
+    "Andres Aquino": [
+      "Andres Aquino"
+    ],
+    "Andres Serrano": [
+      "Andres Serrano"
+    ],
+    "Andrew Bryant": [
+      "Andrew Bryant"
+    ],
+    "Andrew Dubinsky": [
+      "Andrew Dubinsky"
+    ],
+    "Andrew Farkas": [
+      "Andrew Farkas",
+      "Farkas"
+    ],
+    "Andrew Friendly": [
+      "Andrew Friendly"
+    ],
+    "Andrew Grossman": [
+      "Andrew Grossman",
+      "Andrew M Grossman",
+      "Andrew M. Grossman",
+      "Grossman",
+      "Grossman Andrew M"
+    ],
+    "Andrew Khouri": [
+      "Andrew Khouri"
+    ],
+    "Andrew Limbong": [
+      "Andrew Limbong"
+    ],
+    "Andrew Lucasi": [
+      "Andrew Lucasi"
+    ],
+    "Andrew M Harris": [
+      "Andrew M Harris",
+      "Harris"
+    ],
+    "Andrew McCabe": [
+      "Andrew McCabe",
+      "McCabe"
+    ],
+    "Andrew Oosterbaan": [
+      "Andrew Oosterbaan"
+    ],
+    "Andy Bressler": [
+      "Andy Bressler"
+    ],
+    "Angelina Jolie": [
+      "Angelina Jolie",
+      "Angelina Jolins"
+    ],
+    "Ani Anbar": [
+      "Ani Anbar"
+    ],
+    "Anil Ambani": [
+      "Anil Ambani",
+      "Anil Ambar"
+    ],
+    "Anita Hill": [
+      "Anita Hill"
+    ],
+    "Ann Coulter": [
+      "Ann Coulter"
+    ],
+    "Ann Marie C. Villafana": [
+      "Ann Marie C Villafana",
+      "Ann Marie C.",
+      "Ann Marie C. Villafana"
+    ],
+    "Anna Clark": [
+      "Anna Clark"
+    ],
+    "Anna Dreber": [
+      "Anna Dreber"
+    ],
+    "Anne Boyles": [
+      "Anne Boyles"
+    ],
+    "Anne Gearan": [
+      "Anne Gearan"
+    ],
+    "Annette Tapert": [
+      "Annette Tapert"
+    ],
+    "Annette Witheridge": [
+      "Annette Witheridge"
+    ],
+    "Annie Gowen": [
+      "Annie Gowen"
+    ],
+    "Anoop Kumar": [
+      "Anoop Kumar"
+    ],
+    "Casey Anthony": [
+      "Casey Anthony"
+    ],
+    "Anthony Cady": [
+      "Anthony Cady"
+    ],
+    "Anthony Scaramucci": [
+      "Anthony Scaramucci"
+    ],
+    "Antonin Scalia": [
+      "Antonin Scalia",
+      "Scalia"
+    ],
+    "Antony Loyd": [
+      "Antony Loyd"
+    ],
+    "Anula Jayasuriya": [
+      "Anula Jayasuriya"
+    ],
+    "Aona Oreber": [
+      "Aona Oreber"
+    ],
+    "Ari Emanuel": [
+      "Ari Emanuel",
+      "Ari Emmanuel",
+      "Emanuel"
+    ],
+    "Ariadne Calvo-Platero": [
+      "Ariadne Calvo-Platero"
+    ],
+    "Ariana Huffington": [
+      "Ariana Huff",
+      "Ariana Huffington"
+    ],
+    "Ariane Dwyer": [
+      "Ariane Dwyer"
+    ],
+    "Ariane de Rothschild": [
+      "Ariane Rothschild",
+      "Ariane de Rothschild",
+      "Rothschild"
+    ],
+    "Arianna Huffington": [
+      "Arianna Huffington",
+      "Huffington"
+    ],
+    "Arif Naqvi": [
+      "Arif Naqvi"
+    ],
+    "Armando Fernandez": [
+      "Armando Fernandez"
+    ],
+    "Arnold Palmer": [
+      "Arnold Palmer"
+    ],
+    "Arthur Carter": [
+      "Arthur Carter"
+    ],
+    "Arthur Klein": [
+      "Arthur Klein"
+    ],
+    "Arthur Laffer": [
+      "Arthur Laffer"
+    ],
+    "Arthur Sulzberger": [
+      "Arthur Sulzberger"
+    ],
+    "Ashley Parker": [
+      "Ashley Parker"
+    ],
+    "Asia Argento": [
+      "Asia Argento"
+    ],
+    "Astrid Cantor": [
+      "Astrid Cantor"
+    ],
+    "Ate McClain": [
+      "Ate McClain"
+    ],
+    "Athena Jones": [
+      "Athena Jones"
+    ],
+    "Aubrey McClendon": [
+      "Aubrey McClendon"
+    ],
+    "Auren Hoffman": [
+      "Auren Hoffman"
+    ],
+    "Austen Goolsbee": [
+      "Austen Goolsbee"
+    ],
+    "Axel Bottstein": [
+      "Axel Bottstein"
+    ],
+    "Ayatollah Ali Khamenei": [
+      "Ayatollah Ali Khamenei"
+    ],
+    "Ayn Rand": [
+      "Ayn Rand"
+    ],
+    "Azeen Ghorayshi": [
+      "Azeen Ghorayshi"
+    ],
+    "Aziza Alahmadi": [
+      "Aziza Alahmadi"
+    ],
+    "BS Stern": [
+      "BS Stern"
+    ],
+    "Steve Bannon": [
+      "Bannon"
+    ],
+    "Barack Obama": [
+      "Barack Obama",
+      "Barak Obama",
+      "Obama",
+      "President Obama",
+      "obama"
+    ],
+    "Ehud Barak": [
+      "Barak",
+      "Ehud",
+      "Ehud Barak"
+    ],
+    "Barb Cowles": [
+      "Barb Cowles"
+    ],
+    "Barbara Lynch": [
+      "Barbara Lynch"
+    ],
+    "Barbro Ehnbom": [
+      "Barbro",
+      "Barbro C Ehnbom",
+      "Barbro C Ehnborn",
+      "Barbro C. Ehnbom",
+      "Barbro Cc Ehnbom",
+      "Barbro Ehnbom",
+      "Barbro Ehnbor",
+      "Barbro Ennbom"
+    ],
+    "Barnaby Marsh": [
+      "Barnaby Marsh"
+    ],
+    "Barnaby Summers Watson": [
+      "Barnaby Summers Watson"
+    ],
+    "Bill Barr": [
+      "Barr"
+    ],
+    "Thomas Barrack": [
+      "Barrack",
+      "Thomas Barrack",
+      "Thomas Barrack Jr.",
+      "Thomas J. Barrack",
+      "Thomas J. Barrack Jr.",
+      "Tom Barrack"
+    ],
+    "Barry Cohen": [
+      "Barry Cohen",
+      "Barry J",
+      "Barry J Cohen",
+      "Barry J. Cohen"
+    ],
+    "Barry Diller": [
+      "Barry Diller"
+    ],
+    "Barry Josephson": [
+      "Barry Josephson"
+    ],
+    "Steve Bauer": [
+      "Bauer"
+    ],
+    "Belle Gray": [
+      "Belle Gray",
+      "Gray"
+    ],
+    "Ben Bernanke": [
+      "Ben Bernanke"
+    ],
+    "Ben Foster": [
+      "Ben Foster"
+    ],
+    "Ben Goertzel": [
+      "Ben Goertzel"
+    ],
+    "Ben Mandelson": [
+      "Ben Mandelson"
+    ],
+    "Ben Quinn": [
+      "Ben Quinn",
+      "Quinn"
+    ],
+    "Ben Rattray": [
+      "Ben Rattray"
+    ],
+    "Ben Sasse": [
+      "Ben Sasse"
+    ],
+    "Benjamin Harnwell": [
+      "Benjamin Harnwell",
+      "Benjamin Harwell"
+    ],
+    "Benjamin Netanyahu": [
+      "Benjamin Netanyahu"
+    ],
+    "Benjamin Wegg-Prosser": [
+      "Benjamin Wegg-Prosser"
+    ],
+    "Bennett Greenwald": [
+      "Bennet Greenwald",
+      "Bennett Greenwald"
+    ],
+    "Bennet J. Moskowitz": [
+      "Bennet J. Moskowitz"
+    ],
+    "Bennett Schmidt": [
+      "Bennett Schmidt"
+    ],
+    "Benny Shabtai": [
+      "Benny Shabtai"
+    ],
+    "Bernard Kruger": [
+      "Bernard Kruger"
+    ],
+    "Bernie Nussbaum": [
+      "Bernie Nussbaum",
+      "Nussbaum"
+    ],
+    "Bernie Sanders": [
+      "Bernie Sanders"
+    ],
+    "Bert Ocariz": [
+      "Bert Ocariz"
+    ],
+    "Bertha Henry": [
+      "Bertha Henry"
+    ],
+    "Betsey Bloomingdale": [
+      "Betsey Bloomingdale"
+    ],
+    "Betsy DeVos": [
+      "Betsy DeVos"
+    ],
+    "Betty Currie": [
+      "Betty Currie"
+    ],
+    "Bev Gallagher": [
+      "Bev Gallagher"
+    ],
+    "Bianna Golodryga": [
+      "Bianna Golodryga"
+    ],
+    "Bibi Netanyahu": [
+      "Bibi Netanyahu"
+    ],
+    "Hunter Biden": [
+      "Biden",
+      "Hunter Biden"
+    ],
+    "Bilbo Baggins": [
+      "Bilbo Baggins"
+    ],
+    "Bill Burns": [
+      "Bill Burns"
+    ],
+    "Bill Clinton": [
+      "Clinton",
+      "clinton",
+      "bill clinton"
+    ],
+    "Bill Gates": [
+      "Bill Gates",
+      "Gates",
+      "gates"
+    ],
+    "Bill Hellman": [
+      "Bill Hellman"
+    ],
+    "Bill Joy": [
+      "Bill Joy",
+      "Joy"
+    ],
+    "Bill Maher": [
+      "Bill Maher"
+    ],
+    "Bill Palmer": [
+      "Bill Palmer"
+    ],
+    "Bill Prezant": [
+      "Bill Prezant"
+    ],
+    "Bill Richardson": [
+      "Bill Richardson",
+      "Richardson",
+      "Richardosn",
+      "richardson"
+    ],
+    "Bill Siegel": [
+      "Bill Siegel"
+    ],
+    "Bill Thiel": [
+      "Bill Thiel"
+    ],
+    "Billy Bush": [
+      "Billy Bush"
+    ],
+    "Billy Graham": [
+      "Billy Graham",
+      "Graham"
+    ],
+    "David Blaine": [
+      "Blaine",
+      "David Blaine"
+    ],
+    "Tony Blair": [
+      "Blair",
+      "Tony Blair"
+    ],
+    "Blake Ellis": [
+      "Blake Ellis"
+    ],
+    "Blake Lively": [
+      "Blake Lively"
+    ],
+    "Blanche Christerson": [
+      "Blanche Christerson",
+      "Blanche Christersor"
+    ],
+    "Michael Bloomberg": [
+      "Bloomberg"
+    ],
+    "Bo Dietl": [
+      "Bo Dietl"
+    ],
+    "Bob Costa": [
+      "Bob Costa"
+    ],
+    "Bob Crowe": [
+      "Bob Crowe"
+    ],
+    "Bob Fass": [
+      "Bob Fass"
+    ],
+    "Bob Kerrey": [
+      "Bob Kerrey"
+    ],
+    "Bob Mueller": [
+      "Bob Mueller"
+    ],
+    "Bob Pine": [
+      "Bob Pine"
+    ],
+    "Bob Pirie": [
+      "Bob Pirie"
+    ],
+    "Bob Van Voris": [
+      "Bob Van Voris"
+    ],
+    "Bob Woodward": [
+      "Bob Woodward"
+    ],
+    "Bobby Edwards": [
+      "Bobby Edwards"
+    ],
+    "Bobby McCormick": [
+      "Bobby McCormick"
+    ],
+    "Bobby Slayton": [
+      "Bobby Slayton"
+    ],
+    "David Boies": [
+      "Boies",
+      "David Boies"
+    ],
+    "Bono": [
+      "Bono"
+    ],
+    "Boris Nikolic": [
+      "Boris Nikoli",
+      "Boris Nikolic"
+    ],
+    "Brad Bowen": [
+      "Brad Bowen"
+    ],
+    "Brad Edwards": [
+      "Brad Edward",
+      "Brad Edwards",
+      "Bradley Edwards",
+      "Bradley J Edwards",
+      "Bradley J. Edwards"
+    ],
+    "Brad Karp": [
+      "Brad Karp",
+      "Brad S",
+      "Brad S Karp",
+      "Brad S Korp",
+      "Brad S. Karp"
+    ],
+    "Brad Parscale": [
+      "Brad Parscale"
+    ],
+    "Brad Wechsler": [
+      "Brad Wcchsicr",
+      "Brad Wechs",
+      "Brad Wechsler",
+      "Brod Wechsler"
+    ],
+    "Brandon Thompson": [
+      "Brandon Thompson"
+    ],
+    "Bret Baier": [
+      "Bret Baier"
+    ],
+    "Brett Jaffe": [
+      "Brett D Jaffe",
+      "Brett D. Jaffe",
+      "Brett Jaffe"
+    ],
+    "Brett Kavanaugh": [
+      "Brett Kavanaugh",
+      "Kavanaugh"
+    ],
+    "Brett Nelson": [
+      "Brett Nelson"
+    ],
+    "Brett Ratner": [
+      "Brett Ratner"
+    ],
+    "Brian Baker": [
+      "Brian Baker"
+    ],
+    "Brian Basham": [
+      "Brian Basham"
+    ],
+    "Brian Greene": [
+      "Brian Greene"
+    ],
+    "Brian Heberlig": [
+      "Brian Heberlig",
+      "Heberlig"
+    ],
+    "Bridges Hague": [
+      "Bridges Hague"
+    ],
+    "John Brockman": [
+      "Brockman",
+      "John Brockman"
+    ],
+    "Bruce L. Dennis": [
+      "Bruce L. Dennis"
+    ],
+    "Bruce Moskowitz": [
+      "Bruce Moskowitz"
+    ],
+    "Bruce Riedel": [
+      "Bruce Riedel"
+    ],
+    "Bruno Le Maire": [
+      "Bruno Le Maire"
+    ],
+    "Bryan Bender": [
+      "Bryan Bender"
+    ],
+    "Bryan Lourd": [
+      "Bryan Lourd"
+    ],
+    "Bryan Subotnick": [
+      "Bryan Subotnick"
+    ],
+    "Bunker Hunt": [
+      "Bunker Hunt"
+    ],
+    "George Bush": [
+      "Bush",
+      "George Bush"
+    ],
+    "Bushra Aldukhainah": [
+      "Bushra Aldukhainah"
+    ],
+    "Byron Auguste": [
+      "Byron Auguste"
+    ],
+    "Byung Pak": [
+      "Byung J Pak",
+      "Byung Pak"
+    ],
+    "Nancy Cain": [
+      "Cain",
+      "Nancy Cain"
+    ],
+    "Caitlin Emma": [
+      "Caitlin Emma"
+    ],
+    "Cal Safdic": [
+      "Cal Safdic"
+    ],
+    "Caleb Melby": [
+      "Caleb Melby"
+    ],
+    "Carl Icahn": [
+      "Carl Icahn"
+    ],
+    "Carlos Barria": [
+      "Carlos Barria"
+    ],
+    "Carlyn Joslin Castrucci": [
+      "Carlyn",
+      "Carlyn Joslin",
+      "Carlyn Joslin Castrucci"
+    ],
+    "Carmen Rita Wong": [
+      "Carmen Rita Wong"
+    ],
+    "Carol D. Leonnig": [
+      "Carol D. Leonnig"
+    ],
+    "Carolina Herrera": [
+      "Carolina Herrera"
+    ],
+    "Caroline Kennedy": [
+      "Caroline Kennedy"
+    ],
+    "Caroline Lang": [
+      "Caroline Lang"
+    ],
+    "Carolyn Cohen": [
+      "Carolyn Cohen"
+    ],
+    "Carolyn Rangel": [
+      "Carolyn Rangel"
+    ],
+    "Carrie Gracie": [
+      "Carrie Gracie"
+    ],
+    "Cary Ratner": [
+      "Cary Ratner"
+    ],
+    "Caryl Ratner": [
+      "Caryl Ratner"
+    ],
+    "Fidel Castro": [
+      "Castro",
+      "Fidel Castro"
+    ],
+    "Joslin Castrucci": [
+      "Castrucci",
+      "Castrucii"
+    ],
+    "Catherine Crier": [
+      "Catherine Crier"
+    ],
+    "Cathy Alexander": [
+      "Cathy Alexander"
+    ],
+    "Cavan Mahony": [
+      "Cavan Mahony"
+    ],
+    "Cecile de Jongh": [
+      "Cecile de Jongh"
+    ],
+    "Cecilia Steen": [
+      "Cecilia Sch\u00f6tt",
+      "Cecilia Steen",
+      "Cecilia Sterns"
+    ],
+    "Cedricone Ross": [
+      "Cedricone Ross"
+    ],
+    "Celina Midelfart": [
+      "Celina Midelfart"
+    ],
+    "Chamath Palihapitiya": [
+      "Chamath Palihapitiya"
+    ],
+    "Chan Chan": [
+      "Chan Chan"
+    ],
+    "Georgina Chapman": [
+      "Chapman",
+      "Georgina Chapman"
+    ],
+    "Charles Babington": [
+      "Charles Babington"
+    ],
+    "Charles Kushner": [
+      "Charles Kushner"
+    ],
+    "Charles Michael": [
+      "Charles Michael"
+    ],
+    "Charles Simonyi": [
+      "Charles Simonyi"
+    ],
+    "Charles Stevenson": [
+      "Charles Stevenson"
+    ],
+    "Charlie Kirk": [
+      "Charlie Kirk"
+    ],
+    "Charlie Rose": [
+      "Charlie Rose",
+      "Rose"
+    ],
+    "Charlie Sheen": [
+      "Charlie Sheen"
+    ],
+    "Charlotte Abrams": [
+      "Charlotte Abrams"
+    ],
+    "Chauncey Gardner": [
+      "Chauncey Gardner",
+      "Gardner"
+    ],
+    "Cheikh Tidiane Sy": [
+      "Cheikh Tidiane Sy"
+    ],
+    "Cheney Mason": [
+      "Cheney Mason"
+    ],
+    "Cheryl Kleen": [
+      "Cheryl Kleen"
+    ],
+    "Chet Tonja": [
+      "Chet Tonja",
+      "Tonja"
+    ],
+    "Chirlane McCray": [
+      "Chirlane McCray"
+    ],
+    "Chokri Belaid": [
+      "Chokri Belaid"
+    ],
+    "Noam Chomsky": [
+      "Chomsky",
+      "Noam Chomsky"
+    ],
+    "Chris Christie": [
+      "Christie"
+    ],
+    "Chris Perez": [
+      "Chris Perez"
+    ],
+    "Chris Searcy": [
+      "Chris Searcy"
+    ],
+    "Chris Sosa": [
+      "Chris Sosa"
+    ],
+    "Chris Wallace": [
+      "Chris Wallace"
+    ],
+    "Christa Quarles": [
+      "Christa Quarles"
+    ],
+    "Christina Galbraith": [
+      "Christina Galbraith"
+    ],
+    "Chuck Schumer": [
+      "Chuck Schumer",
+      "Schumer"
+    ],
+    "George Church": [
+      "Church",
+      "George Church"
+    ],
+    "Vitaly Churkin": [
+      "Churkin",
+      "Vitaly Churkin"
+    ],
+    "Cindi Leive": [
+      "Cindi Leive"
+    ],
+    "Cindy Sheehan": [
+      "Cindy Sheehan"
+    ],
+    "Clair Brown": [
+      "Clair Brown"
+    ],
+    "Clare O'Connor": [
+      "Clare O'Connor"
+    ],
+    "Clarence Thomas": [
+      "Clarence Thomas"
+    ],
+    "Clive Crook": [
+      "Clive Crook"
+    ],
+    "Michael Cohen": [
+      "Cohen",
+      "cohen"
+    ],
+    "Gary Cohn": [
+      "Cohn",
+      "Gary Cohn"
+    ],
+    "Coleman Christie": [
+      "Coleman Christie"
+    ],
+    "Colin Dwyer": [
+      "Colin Dwyer"
+    ],
+    "Colin Ohrt": [
+      "Colin Ohrt"
+    ],
+    "James Comey": [
+      "Comey",
+      "James Comey"
+    ],
+    "Conchita Sarnoff": [
+      "Conchita Sarnoff"
+    ],
+    "Condaleeza Rice": [
+      "Condaleeza Rice"
+    ],
+    "Connie Zaguirre": [
+      "Connie Zaguirre"
+    ],
+    "Conrad B": [
+      "Conrad B"
+    ],
+    "Nick Cooke": [
+      "Cooke",
+      "Nick Cooke"
+    ],
+    "Cordelia Jenkins": [
+      "Cordelia Jenkins"
+    ],
+    "Cory Booker": [
+      "Cory Booker"
+    ],
+    "Courtenay Brown": [
+      "Courtenay Brown"
+    ],
+    "Coy Garrett": [
+      "Coy E. Garrett",
+      "Coy Garrett"
+    ],
+    "Craig Jacoby": [
+      "Craig Jacoby"
+    ],
+    "Craig Sherman": [
+      "Craig Sherman"
+    ],
+    "None": [
+      "Aaron",
+      "Abel",
+      "Ada",
+      "Adam",
+      "Afri",
+      "Afri zp",
+      "Agnelli",
+      "Ailes",
+      "Al-Waleed",
+      "Alan",
+      "Alana",
+      "Albright",
+      "Alex",
+      "Alexandra",
+      "Alireza",
+      "Alice",
+      "Aliyev",
+      "Allison",
+      "Aluna",
+      "Amand",
+      "Amy",
+      "Ana",
+      "Anas",
+      "Andrew",
+      "Andrew M",
+      "Andy",
+      "Anil",
+      "Ann",
+      "Ann Marie",
+      "Anna",
+      "Anne",
+      "Anthony",
+      "Antonio",
+      "Ariane",
+      "Arianna",
+      "Arline",
+      "Arthur",
+      "Ashcroft",
+      "Ashley",
+      "Assad",
+      "Assads",
+      "Avenatti",
+      "Balaji",
+      "Balmer",
+      "Ban",
+      "Barack",
+      "Barnaby",
+      "Barry",
+      "Bear",
+      "Beethoven",
+      "Bella Klein",
+      "Belle",
+      "Bellini",
+      "Ben",
+      "Benjamin",
+      "Bennet",
+      "Bernie",
+      "Bert",
+      "Betty",
+      "Bibi",
+      "Bill",
+      "Bill Bonner",
+      "Bill C",
+      "Blake",
+      "Bob",
+      "Bobby",
+      "Bono",
+      "Boris",
+      "Boris Niki",
+      "Borja",
+      "Brad",
+      "Brandon",
+      "Bree",
+      "Brian",
+      "Brianna",
+      "Brigid",
+      "Brindell",
+      "Bruno",
+      "Brutus",
+      "Bubba",
+      "Buhari",
+      "Cali",
+      "Carl",
+      "Carlos",
+      "Carluz",
+      "Carnegie",
+      "Carolina",
+      "Caroline",
+      "Carson",
+      "Cassius",
+      "Castelbajac",
+      "Cather",
+      "Catherine",
+      "Cecile",
+      "Chad",
+      "Chan",
+      "Charlene",
+      "Charles",
+      "Charlie",
+      "Chelsea",
+      "Cheri",
+      "Cheryl",
+      "Chet",
+      "Cheves",
+      "Chris",
+      "Christakis",
+      "Christian",
+      "Christina",
+      "Christoph",
+      "Chua",
+      "Churchill",
+      "Cilings",
+      "Clapton",
+      "Clooney",
+      "Colin",
+      "Condi",
+      "Consuelo",
+      "Cory",
+      "Cosby",
+      "Couri",
+      "DD",
+      "DJT",
+      "DTF",
+      "Dan",
+      "Dangene",
+      "Danicl",
+      "Daniel",
+      "Danny",
+      "Darren",
+      "Dasha",
+      "Dave",
+      "Dean",
+      "Debra",
+      "Deepak",
+      "Denise",
+      "Dennet",
+      "Dennett",
+      "Dersh Reummler",
+      "Diana",
+      "Diane",
+      "Dick",
+      "Dimitri",
+      "Dixon",
+      "Don",
+      "Donald",
+      "Donalon",
+      "Donnie",
+      "Donny",
+      "Doronin",
+      "Doug",
+      "Dr. Krauss",
+      "Dugan",
+      "Dunlavey",
+      "Dylan",
+      "E. Jeffrey",
+      "EL HACHEM Johnny",
+      "Ed",
+      "Eduardo",
+      "Ehud",
+      "Eiler",
+      "Eilleen",
+      "Eleanore",
+      "Eliopoulos",
+      "Eliza",
+      "Elvis",
+      "Emmanual",
+      "Ensign",
+      "Eric",
+      "Eric Dec",
+      "Erolls",
+      "Eva",
+      "Evan",
+      "Eve",
+      "Fenn",
+      "Ferguson",
+      "Fewick",
+      "Feynman",
+      "Fiorina",
+      "Fitz Corr",
+      "Fitzroy Salesman",
+      "Forrest Miller",
+      "Fouad",
+      "Fozia Alvi",
+      "Frankel",
+      "Fred",
+      "Freud",
+      "Gary",
+      "Gary H",
+      "Gavin",
+      "General Clarke",
+      "General MacArthur",
+      "General Petraeus",
+      "Genghis Khan",
+      "Gergen",
+      "Gerry",
+      "Gibson",
+      "Glen",
+      "Goldsamt",
+      "Golenbg",
+      "Gorelick",
+      "Gov Mapp",
+      "Governor King",
+      "Governor Young",
+      "Greg",
+      "Grey",
+      "Gunther Stent",
+      "Guy",
+      "HB",
+      "Hadley",
+      "Hannity",
+      "Harman",
+      "Daniel Siac",
+      "Daniel Siad",
+      "Daniel Sicd",
+      "David G",
+      "Cuomo",
+      "Fanell Red",
+      "Farmer Jaffe",
+      "David G",
+      "Hart",
+      "Harth",
+      "Harvey",
+      "Hauser",
+      "Heather",
+      "Henri",
+      "Henry",
+      "Hester",
+      "Hicks",
+      "Higgins",
+      "Hilary",
+      "Hill",
+      "Hillary",
+      "Hiltzig",
+      "Hitler",
+      "Hodiaki",
+      "Hoffman",
+      "Hoffenberg",
+      "Hoffmann",
+      "Hollande",
+      "Hopkins",
+      "Howard",
+      "Huckabee",
+      "Ian",
+      "Ignatius",
+      "Igor",
+      "Inhofe",
+      "Irwin",
+      "Ivanka",
+      "Ivy",
+      "J",
+      "J Epstein",
+      "J Jep",
+      "J Link",
+      "J Sweet",
+      "J. Coleman",
+      "J. Jeskewitz",
+      "Jack ANG",
+      "Jackie",
+      "Jacob",
+      "James",
+      "James E",
+      "James E.",
+      "Jamie",
+      "Jamie D",
+      "Jan",
+      "Jared",
+      "Jarecki",
+      "Jarred",
+      "Jason",
+      "Jcichi",
+      "Jean",
+      "Jeannie",
+      "Jed",
+      "Jeff",
+      "Jefferey",
+      "Jeffery",
+      "Jeffrey",
+      "Jeffrey E",
+      "Jeffrey E.",
+      "Jennie",
+      "Jerome",
+      "Jerru",
+      "Jerry",
+      "Jermain",
+      "Jermaine",
+      "Jessica",
+      "Jide",
+      "Jim",
+      "Jimmy",
+      "Jimmy Cyane",
+      "Jindal",
+      "Joan",
+      "Joc Avantaric",
+      "Joe",
+      "Joe Avantario",
+      "Joe Nordgaardly Kafka",
+      "Joe V",
+      "Joel",
+      "Johan",
+      "John",
+      "Johnny",
+      "Johnny Po",
+      "Jonanthan",
+      "Jonathan",
+      "Joseph",
+      "Josh",
+      "Joyce",
+      "Jr.",
+      "Justin",
+      "Kaczynski",
+      "Karen",
+      "Karim",
+      "Karyyna",
+      "Kasich",
+      "Kaslowitz",
+      "Kathy",
+      "Kathy Er",
+      "Katinka",
+      "Katzenberg",
+      "Kelly Friend",
+      "Kelly Friendly",
+      "Ken",
+      "Ken Adams",
+      "Ken Bensinger",
+      "Ken Jenne",
+      "Ken Kurson",
+      "Kenny Shirley",
+      "Kennedy",
+      "Kerry",
+      "Kevin",
+      "Kevin Bright",
+      "Kevin Cright",
+      "Kevin Frost",
+      "Kevin Liptak",
+      "Kevin McIntosh",
+      "Kevin Neater",
+      "Kevin Robert Frost",
+      "Key Anderson",
+      "Keyu Jin",
+      "Kia Kokalitcheva",
+      "Kid Rock",
+      "Kim",
+      "Kim Darroch",
+      "Kim Jong Un",
+      "Kim Kardashian",
+      "Kimberly Farkus",
+      "King",
+      "Kipling",
+      "Kirk Blouin",
+      "Kirk Johnson",
+      "Kirsten Gillibrand",
+      "Kirsty MacKenzie",
+      "Kirsty Mackenzie",
+      "Kishore Mahbubani",
+      "Klein",
+      "Kofi Rashid",
+      "Kogan",
+      "Kosslym",
+      "Kosslyn",
+      "Krauel",
+      "Kristin Andersen",
+      "Krumholtz",
+      "Kurt Campbell",
+      "Kurzweil",
+      "Kurzweill",
+      "Kushner",
+      "L'Wren Scott",
+      "LARRY SLOMAN",
+      "LHS",
+      "Lachlan Cartwright",
+      "Lafayette",
+      "Lajcak Miroslav",
+      "Lake Lytal",
+      "Lalla",
+      "Lando",
+      "Lang Churkin",
+      "Lanny Swerdlow",
+      "Lara Spencer",
+      "Larkin",
+      "Larry",
+      "Larry Cohen",
+      "Larry Delson",
+      "Larry Gagosian",
+      "Larry Kudlow",
+      "Larry Page",
+      "Larson",
+      "Lasma",
+      "Laufman",
+      "Laura",
+      "Laura Boldrini",
+      "Laura Wasser",
+      "Lauren Petrell",
+      "Lauren Petrella",
+      "Lauren Petreln",
+      "Lauren Santo Domingo",
+      "Laurie Cameron",
+      "Lavrov",
+      "Lawerence",
+      "Lawrence I. Richman",
+      "Le Pen",
+      "LeBron",
+      "Leah Busque",
+      "Leah Pisar",
+      "Leah Reis-Dennis",
+      "Leahy",
+      "Lee Quarnstrom",
+      "Lee Quarnstron",
+      "Lee Silver",
+      "Leila Hoteit",
+      "Lem",
+      "Lena",
+      "Lena Dunham",
+      "Leo",
+      "Leon Bick",
+      "Leon Blac is",
+      "Leon Black",
+      "Leon Terjge Rothschild",
+      "Leonard",
+      "Leonard Lebovitch",
+      "Les Wexner",
+      "Lesley",
+      "Lesley Bella Bebe",
+      "Lesley Gott",
+      "Lesley Grof",
+      "Lesley Groff",
+      "Lesley Groft",
+      "Lesley Stahl",
+      "Leslie",
+      "Leslie Goldman",
+      "Leslie Wexner",
+      "Lewie",
+      "Leymah Gbowee",
+      "Lil B",
+      "Lilly",
+      "Lilly Ann Sanchez",
+      "Lilly Jack",
+      "Lilly Sanchez",
+      "Lily",
+      "Lily Ann Sanchez",
+      "Lily Sanchez",
+      "Linda",
+      "Linda Pinto",
+      "Linda Stone",
+      "Linda W. Grossman",
+      "Linde Stn hE",
+      "Lindsey Graham",
+      "Linus Torvalds",
+      "Lionel",
+      "Lis",
+      "Lisa",
+      "Lisa Albert",
+      "Lisa Baker",
+      "Lisa Bryant",
+      "Lisa Emelia Svensson",
+      "Lisa Gratizaino",
+      "Lisa Monaco",
+      "Lisa Murkowski",
+      "Lisa Ne",
+      "Lisa New",
+      "Lisa Nw",
+      "Lisa Randall",
+      "Lisa Rossi",
+      "Lisa Svensson",
+      "Lisa Twardeau",
+      "Lito",
+      "Liz Hartley",
+      "Liz Hertey",
+      "Liza Zazdravnih",
+      "Lloyd Grove",
+      "Loi Ito",
+      "Lois Smith",
+      "Lolita",
+      "Lou Barletta",
+      "Louella Rabu",
+      "Louella Rabuyo",
+      "Louis",
+      "Louis Barbati",
+      "Louis C.K.",
+      "Louise Mensch",
+      "Lourie",
+      "Lyn",
+      "Lyn Fontanilla",
+      "Lynn",
+      "Lynnie Tofte Fass",
+      "Lyor Cohen",
+      "MARTY FEINBERG",
+      "MEE",
+      "MICHAEL R. SISAK",
+      "Mabuto",
+      "Mace",
+      "Madars",
+      "Madeleine Habib",
+      "Madeleine Westerhout",
+      "Magdalena Schuster",
+      "Maggie Haberman",
+      "Magnani",
+      "Mahle",
+      "Mahler",
+      "Mahmoud Abbas",
+      "Maja Hoffman",
+      "Maksim Nemtsev",
+      "Malia",
+      "Malia McLaughlin",
+      "Manson",
+      "Manuela",
+      "Manuela Wieland",
+      "Marc Andreesen",
+      "Marc Kensington",
+      "Marc Rich",
+      "Marcelo",
+      "Marcie Brown",
+      "Marcus",
+      "Margaret Atwood",
+      "Margaret Slattery",
+      "Margarita",
+      "Margaux Rogers",
+      "Margie",
+      "Margo Nederlander",
+      "Margo nederlander",
+      "Margot Robbie",
+      "Marguerite Atkins",
+      "Margy Slattery",
+      "Maria",
+      "Maria Luisa",
+      "Maria T Zuber",
+      "Maria T. Zuber",
+      "Mariana Idikowska",
+      "Marie Moneysmith",
+      "Marilyn",
+      "Marine Le Pen",
+      "Mario Platero",
+      "Mariska Hargitay",
+      "Marissa",
+      "Marissa Mayer",
+      "Marjorie Margolies-Mezvinsky",
+      "Marjorie Sue Margolies",
+      "Mark",
+      "Mark Albert",
+      "Mark Bittman",
+      "Mark Burnett",
+      "Mark Cohen",
+      "Mark Epstein",
+      "Mark Green",
+      "Mark L Epstein",
+      "Mark L. Epstein",
+      "Mark Lloyd",
+      "Mark Loyd",
+      "Mark Roberts",
+      "Mark Simone",
+      "Mark Tramo",
+      "Mark Twain",
+      "Mark Warner",
+      "Mark Zuckerberg",
+      "Markus Strobel",
+      "Marla",
+      "Marla Maples",
+      "Marlene Edme",
+      "Marshall E. Eisenberg",
+      "Marshall Eisenberg",
+      "Marshall F. Eisenberg",
+      "Marshall Funk",
+      "Marshall Heyman",
+      "Martha Minow",
+      "Martha Stewart",
+      "Marti Noxon",
+      "Martin A Nowak",
+      "Martin A.",
+      "Martin G Weinberg",
+      "Martin G. Weinberg",
+      "Martin Novak",
+      "Martin Nowak",
+      "Martin Weinbcro",
+      "Martin Weinber",
+      "Martin Weinberg",
+      "Martin Weinberr",
+      "Marty",
+      "Marty Feinberg",
+      "Marvin Davis",
+      "Mary",
+      "Mary E. Pirrotta",
+      "Mary J Blige",
+      "Mary J. Bilge",
+      "Mary J. Blige",
+      "Mary Rich",
+      "Masa",
+      "Masaccio",
+      "Masayoshi",
+      "Masayoshi Son",
+      "Masha",
+      "Masha Drokova",
+      "Mason-Mahon",
+      "Massoud Hayoun",
+      "Matt",
+      "Matt C",
+      "Matt Lauer",
+      "Matt Levine",
+      "Matt Ridley",
+      "Matt Williams",
+      "Matt Wilstein",
+      "Matt Zames",
+      "Matthew",
+      "Matthew Hiltzik",
+      "Matthew Horton",
+      "Matthew Mosk",
+      "Matthew Stadlen",
+      "Matthew d'Ancona",
+      "Mattie",
+      "Mattis",
+      "Max Ehrenfreund",
+      "Maxeme Tuchman",
+      "Maxine Waters",
+      "Maye Musk",
+      "Maz",
+      "Maziar Minovi",
+      "Mbr",
+      "McConnell",
+      "McGann",
+      "McGyver",
+      "McMasters",
+      "Mclanic Spinclla",
+      "Meg",
+      "Megyn Kelly",
+      "Melania",
+      "Melania Trump",
+      "Melanie",
+      "Melanie Hicken",
+      "Melanie Spin",
+      "Melanie Spina",
+      "Melanie Spincla",
+      "Melanie Spincll",
+      "Melanie Spinclla",
+      "Melanie SpineIla",
+      "Melanie Spinel",
+      "Melanie Spinell",
+      "Melanie Spinella",
+      "Melanie Spinella Bo",
+      "Melanie Spinella Fa",
+      "Melanie Spinella Po",
+      "Melanie Spinelli",
+      "Melanie Walker",
+      "Melinda Gates",
+      "Melissa",
+      "Melissa Arnoldi",
+      "Menachem Begin",
+      "Merkel",
+      "Merrick",
+      "Mervyn King",
+      "Merwin",
+      "Merwin Dela Cruz",
+      "Merwin Dela cruz",
+      "Mia",
+      "Miasha",
+      "Micha",
+      "Michael",
+      "Michael Barker",
+      "Michael Baxter",
+      "Michael Bilton",
+      "Michael Bloomberg",
+      "Michael Boccio",
+      "Michael Braun",
+      "Michael Buchholtz",
+      "Michael Cohen",
+      "Michael D. Cohen",
+      "Michael Davison",
+      "Michael Douglas",
+      "Michael Flynn",
+      "Michael Greenberg",
+      "Michael Horowitz",
+      "Michael J. Pike",
+      "Michael King",
+      "Michael Klein",
+      "Michael Lynch",
+      "Michael M Greenberg",
+      "Michael Milken",
+      "Michael Moore",
+      "Michael Murdoch",
+      "Michael Ovitz",
+      "Michael Reiter",
+      "Michael S. Buchholtz",
+      "Michael S. Sitrick",
+      "Michael Sanka",
+      "Michael Scotto",
+      "Michael Shermer",
+      "Michael Shrimpton",
+      "Michael Simmons",
+      "Michael Stechel",
+      "Michael Viller",
+      "Michael Wo!",
+      "Michael Wola",
+      "Michael Wolf",
+      "Michael Wolff",
+      "Michael Wolffe",
+      "Michael Wolft",
+      "Michael Wott",
+      "Michaela Angela Davis",
+      "Michelle",
+      "Michelle Goldbe",
+      "Michelle Goldberg",
+      "Michelle Nichols",
+      "Michelle Obama",
+      "Michelle Stockman",
+      "Mick",
+      "Mick Jagger",
+      "Mick Mulvaney",
+      "Mike",
+      "Mike Blake",
+      "Mike Cagney",
+      "Mike Cohen",
+      "Mike Fisten",
+      "Mike Flynn",
+      "Mike Ovitz",
+      "Mike Pence",
+      "Mike Sitrick",
+      "Mike Tyson",
+      "Miles Alexander",
+      "Mimi Ito",
+      "Mindy Grossman",
+      "Miriam",
+      "Miro",
+      "Miro Lacjak",
+      "Miro Lajcak",
+      "Miroslav Lajcak",
+      "Miroslav Laj\u010dak",
+      "Miroslav Laj\u010d\u00e1k",
+      "Misha Gromov",
+      "Misty Copeland",
+      "Mitch Glazer",
+      "Mitchell Barca",
+      "Mohammed",
+      "Mohmaaed",
+      "Moonves",
+      "Moran",
+      "Mort",
+      "Moscowitz",
+      "Mr Edwards",
+      "Mr Epstein",
+      "Mr Weinberg",
+      "Mr. Epstein",
+      "Mr. Link",
+      "Mr. Trump",
+      "Ms. Maxwell",
+      "Mussolini",
+      "NF Kassell",
+      "NN Scott",
+      "NY Max",
+      "Nadia",
+      "Najeev",
+      "Nancy",
+      "Naomi W",
+      "Nas",
+      "Natasha",
+      "Nathan",
+      "Nav Gupta",
+      "Nay Gupta",
+      "Nazarbayev",
+      "Neal",
+      "Neil",
+      "Nicholas",
+      "Nicholas Rib",
+      "Nick",
+      "Nili",
+      "Noam",
+      "Nunn",
+      "Nye",
+      "Oetken",
+      "Olivier",
+      "Ollie",
+      "Omar Quadhafi",
+      "Orban",
+      "Ottis",
+      "Outarra",
+      "PC",
+      "Pablo",
+      "Pablos",
+      "Paige",
+      "Pam",
+      "Panetta",
+      "Pastrana",
+      "Pataki",
+      "Patraeus",
+      "Patricia",
+      "Patrick",
+      "Paula",
+      "Peg",
+      "Pegey",
+      "Pena Nieto",
+      "Penn Jillette",
+      "Pete",
+      "Peter",
+      "Peters",
+      "Philip",
+      "Phillipe",
+      "Philly",
+      "Pink",
+      "Pnebus",
+      "Poliquin",
+      "Pompeo",
+      "Powell",
+      "Preate Alexandra",
+      "President Clinton",
+      "President Struppa",
+      "President Trump",
+      "Priebus",
+      "Prince Mbs",
+      "Professor New",
+      "Prokhorov",
+      "Pruseven Waheed Mandelson",
+      "Rajeev",
+      "Rake Silings",
+      "Ralph",
+      "Ramachandrain",
+      "Ramachandran",
+      "Ramascharn",
+      "Ranieri",
+      "Rebecca",
+      "Recarey",
+      "Reed",
+      "Reid",
+      "Reid Bo",
+      "Reid J",
+      "Reid S",
+      "Renata B",
+      "Rhinehart",
+      "Rich",
+      "Richard",
+      "Rifkin",
+      "Robert",
+      "Roberts",
+      "Rockefeller",
+      "Rod",
+      "Roger",
+      "Rolando",
+      "Roosevelt",
+      "Rory",
+      "Rothchild",
+      "Rouhani",
+      "Roy",
+      "Rubenfeld",
+      "Rubio",
+      "Ryan",
+      "Ryboloev",
+      "Rybolovlev",
+      "Rynolds",
+      "Saddam",
+      "Saks",
+      "Saks Mandelbrot",
+      "Salvini",
+      "Samantha",
+      "Samuel",
+      "Sancall",
+      "Sanders",
+      "Sandy",
+      "Sanger",
+      "Santa",
+      "Santorum",
+      "Sapir",
+      "Sarah",
+      "Sawers",
+      "Schwartman",
+      "Schwarzenegger",
+      "Scowcroft",
+      "Sean",
+      "Seche",
+      "Seligman",
+      "Serena",
+      "Sergey",
+      "Set Lloyd",
+      "Seurcr",
+      "Shaher",
+      "Shaque",
+      "Sheldrake",
+      "Sherman",
+      "Sheyl",
+      "Shk. Hamad",
+      "Shugo",
+      "Si Li",
+      "Simba",
+      "Skip Rimer",
+      "Slaughter",
+      "Sofia",
+      "Somers",
+      "Sonam",
+      "Spicer",
+      "Squeaky",
+      "Sri Emanuel",
+      "Stalin",
+      "Stamper",
+      "Stephanie",
+      "Stephen",
+      "Stephen A",
+      "Stephen A.",
+      "Stephen Alexander",
+      "Stephen Alexander EEE",
+      "Stephen Alpher",
+      "Steve",
+      "Steve Bano",
+      "Steve Bauer",
+      "Steve Yanda",
+      "Steven",
+      "Steven Elkman",
+      "Steven Etkind",
+      "Steven Gaydos",
+      "Steven Morris",
+      "Steven Pfeiffer",
+      "Steven R. Safra",
+      "Steven Victor",
+      "Stevie",
+      "Strominger",
+      "Strzok",
+      "Sue",
+      "Sultan",
+      "Susskind",
+      "Syria",
+      "Tamara",
+      "Tamem",
+      "Tarek",
+      "Tata",
+      "Ted",
+      "Terry",
+      "Terry Kafka",
+      "Terry KafkaMill",
+      "Terry Katka",
+      "Thierry Baudasse",
+      "Thomas",
+      "Thomas D Williams",
+      "Thomas D. Williams",
+      "Tidiane",
+      "Tigrane",
+      "Tilerson",
+      "Tillerson",
+      "Tim",
+      "Tim Kane",
+      "Timothy",
+      "Timothy B. Lee",
+      "Tipper",
+      "Tom",
+      "Tom Goldberg",
+      "Tom Rich",
+      "Tonja",
+      "Tonya",
+      "Tora",
+      "Torricke-Barton",
+      "Torry Katka",
+      "Tracie",
+      "Tyler",
+      "Unik",
+      "V. S. Naipaul",
+      "Valeria",
+      "Var Cie Brown",
+      "Vice President Gore",
+      "Vicky",
+      "Victoria",
+      "Viet Lesley Croft",
+      "Vike Cagney",
+      "Vince",
+      "Vinicius",
+      "Vinit",
+      "Viohcbbi",
+      "Virginia",
+      "Volcker",
+      "Walter",
+      "Warren",
+      "Wayne",
+      "Weinberger",
+      "Weissmann",
+      "Wendy",
+      "West",
+      "Whitman",
+      "Wiesner",
+      "William",
+      "Wine",
+      "Wladimir",
+      "Wohl",
+      "Woody",
+      "Work",
+      "Xi",
+      "Yates",
+      "Yellen",
+      "Zeus",
+      "Zimmerman",
+      "Zoe",
+      "Zubair",
+      "abuulabass",
+      "al gore",
+      "alex",
+      "andrew farkas",
+      "antonio",
+      "aziza alah madi",
+      "bill burns",
+      "boris",
+      "brad",
+      "brad karp",
+      "cecile",
+      "cheryl",
+      "david pecker",
+      "debra",
+      "diana goldner",
+      "don mcegahn",
+      "donald",
+      "elisabeth feliho",
+      "euro",
+      "glenn",
+      "gmax",
+      "gordon brown",
+      "hardeep puree",
+      "jermaine",
+      "john Connolly",
+      "josh",
+      "julie taymor",
+      "kathy",
+      "ken starr",
+      "kosslyn",
+      "larry",
+      "larson",
+      "lauren petrella",
+      "lily sanchez",
+      "mark",
+      "marla maples",
+      "mick jagger",
+      "patrick",
+      "paul krassne",
+      "paul krassner",
+      "paul krassner ii",
+      "rajeev",
+      "ron soffer",
+      "steve",
+      "summer rayne",
+      "tamem",
+      "terry",
+      "tom",
+      "Watson",
+      "Wechsler",
+      "virignia",
+      "woody"
+    ],
+    "Francis Crick": [
+      "Crick",
+      "Francis Crick"
+    ],
+    "Merwin Dela Cruz": [
+      "Cruz"
+    ],
+    "Richard Daley": [
+      "Daley",
+      "Richard Daley"
+    ],
+    "Rivkin David": [
+      "David"
+    ],
+    "Marvin Davis": [
+      "Davis"
+    ],
+    "Daniel Dawson": [
+      "Dawson",
+      "Daniel Dawson"
+    ],
+    "Danny Frost": [
+      "Danny Frost"
+    ],
+    "Johnny Depp": [
+      "Depp",
+      "Johnny Depp"
+    ],
+    "William Drake": [
+      "Drake",
+      "William Drake"
+    ],
+    "Susan Edelman": [
+      "Edelman",
+      "Susan Edelman"
+    ],
+    "Bradley Edwards": [
+      "Edwards"
+    ],
+    "Ari Emmanuel": [
+      "Emmanuel"
+    ],
+    "Amanda Ens": [
+      "Ens",
+      "Ens Amanda"
+    ],
+    "Jeffrey Epstein": [
+      "EDWARD JAY EPSTEIN",
+      "Edward Epstein",
+      "Epstein",
+      "Epstein Jeffrey",
+      "Jeff Epstein",
+      "Jeffery Epstein",
+      "Jefffrey Epstein",
+      "Jeffrey E Epstein",
+      "Jeffrey E. Epstein",
+      "Jeffrey Edward Epstein",
+      "Jeffrey Epstein"
+    ],
+    "Recep Tayyip Erdogan": [
+      "Erdogan",
+      "Endogan",
+      "Recep Tayyip Erdogan"
+    ],
+    "Nathan Feigenbaum": [
+      "Feigenbaum",
+      "Nathan Feigenbaum"
+    ],
+    "Norman Finkelstein": [
+      "Finkelstein",
+      "Norman Finkelstein"
+    ],
+    "James Flynn": [
+      "Flynn",
+      "James Flynn"
+    ],
+    "Daniel Foley": [
+      "Daniel Foley"
+    ],
+    "Elizabeth Price Foley": [
+      "Elizabeth Price Foley"
+    ],
+    "Richard Frank": [
+      "Frank",
+      "Richard Frank"
+    ],
+    "Kevin Frost": [
+      "Frost"
+    ],
+    "Tim Geithner": [
+      "Geithner",
+      "Tim Geithner"
+    ],
+    "Murray Gellman": [
+      "Gellman"
+    ],
+    "Rush George": [
+      "George"
+    ],
+    "Newt Gingrich": [
+      "Gingrich",
+      "Newt Gingrich"
+    ],
+    "Rudy Giuliani": [
+      "Giuliani",
+      "Rudolph W. Giuliani",
+      "Rudy",
+      "Rudy Giuliani"
+    ],
+    "Patricia Gayle Gordon": [
+      "Gordon",
+      "Patricia Gayle Gordon",
+      "Patricia Gayle-Gordon"
+    ],
+    "John Gotti": [
+      "Gotti",
+      "John Gotti",
+      "gotti"
+    ],
+    "Steven J Gould": [
+      "Gould"
+    ],
+    "Fethullah Gulen": [
+      "Gulen",
+      "Fethullah Gulen"
+    ],
+    "David Haig": [
+      "Haig",
+      "David Haig"
+    ],
+    "Jim Halligan": [
+      "Halligan",
+      "Jim Halligan"
+    ],
+    "Shk. Hamad": [
+      "Hamad",
+      "Hamad Bun Jasem",
+      "Hamad bin jassim"
+    ],
+    "Rob Hanson": [
+      "Hanson",
+      "Rob Hanson"
+    ],
+    "Craig Venter": [
+      "Craig Venter"
+    ],
+    "Cy Vance": [
+      "Cy Vance",
+      "Vance"
+    ],
+    "Cynthia McFadden": [
+      "Cynthia McFadden"
+    ],
+    "Cyrus R. Vance Jr.": [
+      "Cyrus R. Vance Jr."
+    ],
+    "David Schoen": [
+      "DAVID SCHOEN",
+      "David I. Schoen",
+      "David Schocn",
+      "David Schoen"
+    ],
+    "Dambisa Moyo": [
+      "Dambisa Moyo"
+    ],
+    "Damian Collins": [
+      "Damian Collins"
+    ],
+    "Damian Paletta": [
+      "Damian Paletta"
+    ],
+    "Damian Woetzel": [
+      "Damian Woetzel"
+    ],
+    "Dan Christensen": [
+      "Dan Christensen"
+    ],
+    "Dan Fleuette": [
+      "Dan Fleuette"
+    ],
+    "Dan Gilbert": [
+      "Dan Gilbert"
+    ],
+    "Dan Hannan": [
+      "Dan Hannan"
+    ],
+    "Dan Mangan": [
+      "Dan Mangan"
+    ],
+    "Dan Petrocelli": [
+      "Dan Petrocelli"
+    ],
+    "Dan Rose": [
+      "Dan Rose"
+    ],
+    "Dane Stangler": [
+      "Dane Stangler"
+    ],
+    "Daniel Mendelsohn": [
+      "Daniel Mendelsohn"
+    ],
+    "Daniel Sabba": [
+      "Daniel Sabba"
+    ],
+    "Daniel Schecter": [
+      "Daniel Schecter",
+      "Schecter"
+    ],
+    "Danny Goldberg": [
+      "Danny Goldberg"
+    ],
+    "Danny Hillis": [
+      "Danny Hillis",
+      "Hillis"
+    ],
+    "Danny Kahneman": [
+      "Danny Kahneman"
+    ],
+    "Danny Shurden": [
+      "Danny Shurden"
+    ],
+    "Danya Sherman": [
+      "Danya Sherman"
+    ],
+    "Dara Khosrowshahi": [
+      "Dara Khosrowshahi"
+    ],
+    "Dara Richardson-Heron": [
+      "Dara Richardson-Heron"
+    ],
+    "Darcy Frey": [
+      "Darcy Frey"
+    ],
+    "Darren K. Indyke": [
+      "Darren Indivig",
+      "Darren Indyk",
+      "Darren Indykc",
+      "Darren Indyke",
+      "Darren K.",
+      "Darren K. Indyke",
+      "Derren Indyxc",
+      "Indyke"
+    ],
+    "Darren Rigger": [
+      "Darren Rigger"
+    ],
+    "Daryl Cagle": [
+      "Daryl Cagle"
+    ],
+    "Dave Camp": [
+      "Dave Camp"
+    ],
+    "Dave Channon": [
+      "Dave Channon"
+    ],
+    "Dave Clark": [
+      "Dave Clark"
+    ],
+    "Dave Deyoe": [
+      "Dave Deyoe"
+    ],
+    "Dave Goldberg": [
+      "Dave Goldberg"
+    ],
+    "Dave Hope": [
+      "Dave Hope"
+    ],
+    "Dave Morin": [
+      "Dave Morin"
+    ],
+    "David A Rosow": [
+      "David A Rosow"
+    ],
+    "David Asch": [
+      "David Asch"
+    ],
+    "David B. Rivkin Jr.": [
+      "David B Rivkin Jr",
+      "David B. Rivkin Jr.",
+      "David Rivkin"
+    ],
+    "David Ben Gurion": [
+      "David Ben Gurion"
+    ],
+    "David Bianco": [
+      "David Bianco"
+    ],
+    "David Brenner": [
+      "David Brenner"
+    ],
+    "David Brooks": [
+      "David Brooks"
+    ],
+    "David Cameron": [
+      "David Cameron"
+    ],
+    "David Carey": [
+      "David Carey"
+    ],
+    "David Carst": [
+      "David Carst"
+    ],
+    "David Coleman": [
+      "David Coleman"
+    ],
+    "David Copperfield": [
+      "David Copperfield"
+    ],
+    "David Darst": [
+      "David Darst"
+    ],
+    "David Dicke": [
+      "David Dicke"
+    ],
+    "David E. Rove": [
+      "David E. Rove"
+    ],
+    "David Fizel": [
+      "David Fisze",
+      "David Fiszel",
+      "David Fizel"
+    ],
+    "David Grosof": [
+      "David Grosof"
+    ],
+    "David Hanks": [
+      "David Hanks"
+    ],
+    "David Hayes": [
+      "David Hayes",
+      "David L Hayes"
+    ],
+    "David Icke": [
+      "David Icke"
+    ],
+    "David Ingram": [
+      "David Ingram"
+    ],
+    "David Koch": [
+      "David Koch"
+    ],
+    "David Leonhardt": [
+      "David Leonhardt"
+    ],
+    "David Malan": [
+      "David Malan"
+    ],
+    "David Mann": [
+      "David Mann"
+    ],
+    "David Marin": [
+      "David Marin"
+    ],
+    "David Marr": [
+      "David Marr"
+    ],
+    "David McCabe": [
+      "David McCabe"
+    ],
+    "David Mitchell": [
+      "David Mitchel",
+      "David Mitchell"
+    ],
+    "David Mossberg": [
+      "David Mossberg"
+    ],
+    "David Nakamura": [
+      "David Nakamura"
+    ],
+    "David Pegg": [
+      "David Peag",
+      "David Pecker",
+      "David Pegg"
+    ],
+    "David Rodgers": [
+      "David Rodgers"
+    ],
+    "David Sauvage": [
+      "David Sauvage"
+    ],
+    "David Stern": [
+      "David Ster",
+      "David Stern",
+      "David Sterr"
+    ],
+    "David Willis": [
+      "David Willis"
+    ],
+    "David Woo": [
+      "David Woo"
+    ],
+    "Dean Kamen": [
+      "Dean Kamen"
+    ],
+    "Debbie Bancroft": [
+      "Debbie Bancroft"
+    ],
+    "Debbie Fein": [
+      "Debbie Fein"
+    ],
+    "Deepak Chopra": [
+      "Deepak Chopra"
+    ],
+    "Delaney Tarr": [
+      "Delaney Tarr"
+    ],
+    "Denis Dutton": [
+      "Denis Dutton"
+    ],
+    "Denis McDonough": [
+      "Denis McDonough"
+    ],
+    "Denis P Coleman": [
+      "Denis P Coleman"
+    ],
+    "Dennis Prager": [
+      "Dennis Prager"
+    ],
+    "Dennis Rodman": [
+      "Dennis Rodman"
+    ],
+    "Denyse Sabagh": [
+      "Denyse Sabagh"
+    ],
+    "Derek Bok": [
+      "Derek Bok"
+    ],
+    "Devlin Barrett": [
+      "Devlin Barrett"
+    ],
+    "Diana Chapman Walsh": [
+      "Diana Chapman Walsh"
+    ],
+    "Diana Goldner": [
+      "Diana Goldner"
+    ],
+    "Diana deGette": [
+      "Diana deGette"
+    ],
+    "Diane Paulus": [
+      "Diane Paulus"
+    ],
+    "Diane von Furstenberg": [
+      "Diane Von Furstenberg",
+      "Diane von Furstenberg"
+    ],
+    "Diane Ziman": [
+      "Diane Ziman"
+    ],
+    "Dick Cavett": [
+      "Dick Cavett"
+    ],
+    "Dick Merkin": [
+      "Dick Merkin"
+    ],
+    "Ditsa Pines": [
+      "Ditsa Pines"
+    ],
+    "Dominique Crenn": [
+      "Dominique Crenn"
+    ],
+    "Dominique Strauss-Kahn": [
+      "Dominique Strauss-Kahn",
+      "Strauss-Kahn",
+      "Strauss Kahn"
+    ],
+    "Don McGahn": [
+      "Don McGahn",
+      "McGahn"
+    ],
+    "Donald Trump": [
+      "Donald J Trump",
+      "Donald J. Trump",
+      "Donald Trump",
+      "Trump",
+      "Donald J Trump",
+      "Donald J. Trump",
+      "Donald Trump",
+      "Mr. Trump",
+      "President Trump",
+      "donald trump",
+      "trump"
+    ],
+    "Donald Trump Jr.": [
+      "Donald Jr",
+      "Donald Trump Jr",
+      "Donald Trump Jr."
+    ],
+    "Donald Rubin": [
+      "Donald Rubin"
+    ],
+    "Donna Paine": [
+      "Donna Paine"
+    ],
+    "Donny Deutsch": [
+      "Donny Deutsch"
+    ],
+    "Drew Houston": [
+      "Drew Houston"
+    ],
+    "Draymond Green": [
+      "Draymond Green"
+    ],
+    "Dustin Hoffman": [
+      "Dustin Hoffman"
+    ],
+    "Dwight Eisenhower": [
+      "Dwight Eisenhower"
+    ],
+    "E JR Stambaugh": [
+      "E JR Stambaugh"
+    ],
+    "EO Wilson": [
+      "EO Wilson"
+    ],
+    "Ebrahim Raisi": [
+      "Ebrahim Raisi"
+    ],
+    "Ece Temelkuran": [
+      "Ece Temelkuran"
+    ],
+    "Ed Boyden": [
+      "Ed Boyden"
+    ],
+    "Ed Hammer": [
+      "Ed Hammer"
+    ],
+    "Ed Lachman": [
+      "Ed Lachman"
+    ],
+    "Ed Mezvinsky": [
+      "Ed Mezvinsky"
+    ],
+    "Ed Rogers": [
+      "Ed Rogers"
+    ],
+    "Ed Thompson": [
+      "Ed Thompson"
+    ],
+    "Ed Vaizey": [
+      "Ed Vaizey"
+    ],
+    "Eddie Murphy": [
+      "Eddie Murphy",
+      "Murphy"
+    ],
+    "Edmond de Rothschild": [
+      "Edmond de Rothschild"
+    ],
+    "Eduardo Balbis": [
+      "Eduardo Balbis"
+    ],
+    "Edward B. Reynolds": [
+      "Edward B. Reynolds",
+      "Edward B. Reynolds Jr",
+      "Reynolds"
+    ],
+    "Edward Jay": [
+      "Edward Jay",
+      "Jay"
+    ],
+    "Edward Mezvinsky": [
+      "Edward Mezvinsky"
+    ],
+    "Edward Patillo": [
+      "Edward Patillo",
+      "Edward Petillo"
+    ],
+    "Edward Rod Larsen": [
+      "Edward Red Larsen",
+      "Edward Rod Larsen"
+    ],
+    "Edwin A. Schlossberg": [
+      "Edwin A. Schlossberg"
+    ],
+    "Edy-imi Weiss": [
+      "Edy Weiss",
+      "Edy-Imi Weiss",
+      "Edy-imi Weiss"
+    ],
+    "Edyta Wynberg": [
+      "Edyta Wynberg"
+    ],
+    "Eileen Alexandersson": [
+      "Eileen",
+      "Eileen Alexandersson"
+    ],
+    "El Chapo": [
+      "El Chapo"
+    ],
+    "El Hadji Amadou Sall": [
+      "El Hadji Amadou Sall",
+      "Sall"
+    ],
+    "Eleanora Kennedy": [
+      "Eleanora Kennedy"
+    ],
+    "Elena Kagan": [
+      "Elena Kagan",
+      "Kagan"
+    ],
+    "Eli Baden-Lasar": [
+      "Eli Baden-Lasar"
+    ],
+    "Eliot Spitzer": [
+      "Eliot Spitzer",
+      "Spitzer"
+    ],
+    "Elisa New": [
+      "Elisa New"
+    ],
+    "Elisabeth Feliho": [
+      "Elisabeth Feliho"
+    ],
+    "Eliza Dolittle": [
+      "Eliza Dolittle"
+    ],
+    "Elizabeth Sample": [
+      "Elizabeth Sample"
+    ],
+    "Ellen Kerns": [
+      "Ellen Kerns"
+    ],
+    "Ellen de Generes": [
+      "Ellen de Generes"
+    ],
+    "Elliott Broidy": [
+      "Elliott Broidy"
+    ],
+    "Elon Musk": [
+      "Elon Musk",
+      "Musk"
+    ],
+    "Emily Chang": [
+      "Emily Chang"
+    ],
+    "Emily Dickinson": [
+      "Emily Dickinson"
+    ],
+    "Emily Heil": [
+      "Emily Heil"
+    ],
+    "Emily Kennedy": [
+      "Emily Kennedy"
+    ],
+    "Emily Michot": [
+      "Emily Michot"
+    ],
+    "Emily Smith": [
+      "Emily Smith"
+    ],
+    "Emmanuel Riva": [
+      "Emmanuel Riva"
+    ],
+    "Emmet Flood": [
+      "Emmet Flood"
+    ],
+    "Enrique Pena Nieto": [
+      "Enrique Pena Nieto"
+    ],
+    "Ephraim Sneh": [
+      "Ephraim Sneh"
+    ],
+    "Eric Cantor": [
+      "Eric Cantor"
+    ],
+    "Eric H. Holder Jr.": [
+      "Eric H. Holder",
+      "Eric H. Holder Jr.",
+      "Eric Holder"
+    ],
+    "Eric Maskin": [
+      "Eric Maskin",
+      "Maskin"
+    ],
+    "Eric Roth": [
+      "Eric Rot",
+      "Eric Roth"
+    ],
+    "Eric Schadt": [
+      "Eric Schadt"
+    ],
+    "Eric Schmidt": [
+      "Eric Schmidt"
+    ],
+    "Erik Bechtol": [
+      "Erik Bechtol"
+    ],
+    "Erik Callaway": [
+      "Erik Callaway"
+    ],
+    "Erik Prince": [
+      "Erik Prince"
+    ],
+    "Erika Kellerhals": [
+      "Erika Kellerhals",
+      "Erika Kellerhals Po"
+    ],
+    "Erika Najarian": [
+      "Erika Najarian"
+    ],
+    "Erin Billings": [
+      "Erin Billings"
+    ],
+    "Etienne Binant": [
+      "Etienne Binant"
+    ],
+    "Eva Dichand": [
+      "Eva Dichand"
+    ],
+    "Eva Dubin": [
+      "Eva Dubin"
+    ],
+    "Eva Lewis": [
+      "Eva Lewis",
+      "Lewis"
+    ],
+    "Evan Barr": [
+      "Evan Barr"
+    ],
+    "Evan Smith": [
+      "Evan Sith",
+      "Evan Smith"
+    ],
+    "Evan Williams": [
+      "Evan Williams"
+    ],
+    "Eve Ensler": [
+      "Eve Ensler"
+    ],
+    "Evelyn Wohl Ford": [
+      "Evelyn Wohl Ford"
+    ],
+    "Fabrice Aidan": [
+      "Fabrice Aidan"
+    ],
+    "Faith Kates": [
+      "Faith Kate",
+      "Faith Kate Sis",
+      "Faith Kates",
+      "Faith Kats"
+    ],
+    "Fareed Zakaria": [
+      "Fareed Zakaria"
+    ],
+    "Farooq Bajwa": [
+      "Farooq Bajwa"
+    ],
+    "Fazel Meybodi": [
+      "Fazel Meybodi"
+    ],
+    "Federica Davila": [
+      "Federica Davila"
+    ],
+    "Ferdinando I de'Medici": [
+      "Ferdinando",
+      "Ferdinando I de'Medici"
+    ],
+    "Flaminio Vacca": [
+      "Flaminio Vacca"
+    ],
+    "Florence Anthony": [
+      "Florence",
+      "Florence Anthony"
+    ],
+    "Frances Martel": [
+      "Frances Martel"
+    ],
+    "Frances Northcutt": [
+      "Frances Northcutt"
+    ],
+    "Francis Derby": [
+      "Francis Derby"
+    ],
+    "Francis Ford Coppola": [
+      "Francis Ford Coppola"
+    ],
+    "Francisco Blanch": [
+      "Francisco Blanch"
+    ],
+    "Frank Gehry": [
+      "Frank Gehry"
+    ],
+    "Frank Pizzurro": [
+      "Frank Pizzurro",
+      "Pizzurro"
+    ],
+    "Fred Haddad": [
+      "Fred Haddad"
+    ],
+    "Fred Simon": [
+      "Fred Simon"
+    ],
+    "Frederic C. Hof": [
+      "Frederic C. Hof"
+    ],
+    "Frederick Forsyth": [
+      "Frederick Forsyth"
+    ],
+    "Freeman Dyson": [
+      "Freeman Dyson"
+    ],
+    "Gabe Ginsberg": [
+      "Gabe Ginsberg"
+    ],
+    "Gamal Mubarak": [
+      "Gamal Mubarak"
+    ],
+    "Gareth Thompson": [
+      "Gareth Thompson"
+    ],
+    "Gary Baise": [
+      "Gary Baise",
+      "Gary H Baise",
+      "Gary H. Baise"
+    ],
+    "Gary Gross": [
+      "Gary Gross"
+    ],
+    "Gavin Liu": [
+      "Gavin Liu"
+    ],
+    "Geoffrey West": [
+      "Geoffrey West"
+    ],
+    "Geordie Greig": [
+      "Geordie",
+      "Geordie Greig"
+    ],
+    "George C. Wolfe": [
+      "George C. Wolfe"
+    ],
+    "George H.W. Bush": [
+      "George H W Bush",
+      "George H.W. Bush"
+    ],
+    "George Henderson": [
+      "George Henderson"
+    ],
+    "George Houraney": [
+      "George Houraney"
+    ],
+    "George Krassner": [
+      "George Krassner"
+    ],
+    "George Mitchell": [
+      "George Mitchell"
+    ],
+    "George Nader": [
+      "George Nader"
+    ],
+    "George Rose": [
+      "George Rose"
+    ],
+    "George Rush": [
+      "George Rush",
+      "Rush",
+      "Rush George"
+    ],
+    "George Soros": [
+      "George Soros"
+    ],
+    "George Tenet": [
+      "George Tenet"
+    ],
+    "George W. Bush": [
+      "George W Bush",
+      "George W. Bush"
+    ],
+    "George Washington": [
+      "George Washington"
+    ],
+    "Gerald B. Lefcourt": [
+      "Gerald B Lefcourt",
+      "Gerald B. Lefcourt",
+      "Gerald Lefcourt",
+      "Gerald B Lefcourt",
+      "Gerald B. Lefcourt",
+      "Gerald Lefcourt",
+      "Lefcourt"
+    ],
+    "Gerald Barton": [
+      "Gerald Barton"
+    ],
+    "Gerald F. Seib": [
+      "Gerald F Seib",
+      "Gerald F. Seib"
+    ],
+    "Gerald Ford": [
+      "Gerald Ford"
+    ],
+    "Gernot Kramper": [
+      "Gernot Kramper",
+      "Kramper"
+    ],
+    "Gerry Baker": [
+      "Gerry Baker"
+    ],
+    "Gerry Ohrstrom": [
+      "Gerry Ohrstrom"
+    ],
+    "Ghislaine Maxwell": [
+      "Ghislaine",
+      "Ghislaine Maxwell",
+      "Fan Maxwell",
+      "G Maxwell",
+      "GMAX",
+      "Gmax",
+      "G Maxwell",
+      "Maxwell",
+      "Miss Maxwell"
+    ],
+    "Gianni Serazzi": [
+      "Gianni Serazzi"
+    ],
+    "Gillian Tett": [
+      "Gillian Tett"
+    ],
+    "Ginny Hughes": [
+      "Ginny Hughes"
+    ],
+    "Gino Yu": [
+      "Gino",
+      "Gino Yu"
+    ],
+    "Giovanni di Scherano Fancelli": [
+      "Giovanni di Scherano Fancelli"
+    ],
+    "Gisele Dimant": [
+      "Gisele Dima",
+      "Gisele Dimant",
+      "Gregg Dimant"
+    ],
+    "Giulio Tononi": [
+      "Giulio",
+      "Giulio Tononi"
+    ],
+    "Giuseppe Conte": [
+      "Giuseppe Conte"
+    ],
+    "Glenn Dubin": [
+      "Glenn",
+      "Glenn Dubin"
+    ],
+    "Glenn Simpson": [
+      "Glenn Simpson"
+    ],
+    "Gloria Allred": [
+      "Gloria Allred"
+    ],
+    "Gordon Brown": [
+      "Gordon Brown"
+    ],
+    "Gordon Gekko": [
+      "Gordon Gekko"
+    ],
+    "Gordon Getty": [
+      "Gordon Getty"
+    ],
+    "Grant J. Smith": [
+      "Grant J. Smith"
+    ],
+    "Grant Seeger": [
+      "Grant Seeger"
+    ],
+    "Graydon Carter": [
+      "Graydon",
+      "Graydon Carter"
+    ],
+    "Greg Farrell": [
+      "Greg Farrell"
+    ],
+    "Greg Robins": [
+      "Greg Robins",
+      "Robins"
+    ],
+    "Greg Walden": [
+      "Greg Walden"
+    ],
+    "Gregory Chaitin": [
+      "Gregory Chaitin"
+    ],
+    "Greta Tufvesson": [
+      "Greta Tufvesson"
+    ],
+    "Guy Lewis": [
+      "Guy Lewis"
+    ],
+    "Guy Amico": [
+      "Guy Amico",
+      "Guy Anico"
+    ],
+    "Gwendolyn Beck": [
+      "Gwendolyn",
+      "Gwendolyn Beck"
+    ],
+    "HARRY SHEARER": [
+      "HARRY SHEARER"
+    ],
+    "Hakeem Jeffries": [
+      "Hakeem Jeffries"
+    ],
+    "Hal Ennis": [
+      "Hal Ennis"
+    ],
+    "Hal Holbrook": [
+      "Hal Holbrook",
+      "Holbrook"
+    ],
+    "Haley Robson": [
+      "Haley",
+      "Haley Robson"
+    ],
+    "Halle Berry": [
+      "Halle Berry"
+    ],
+    "Hamadi Jebali": [
+      "Hamadi Jebali"
+    ],
+    "Hank Greenberg": [
+      "Hank Greenberg",
+      "Hank Greenburg"
+    ],
+    "Hannah Dreier": [
+      "Hannah Dreier"
+    ],
+    "Hannah Lucinda Smith": [
+      "Hannah Lucinda Smith"
+    ],
+    "Hardeep Puri": [
+      "Hardeep Puree",
+      "Hardeep Puri"
+    ],
+    "Harold Simmons": [
+      "Harold Simmons"
+    ],
+    "Harris Faulkner": [
+      "Harris Faulkner"
+    ],
+    "Harry Fisch": [
+      "Harry Fisch"
+    ],
+    "Liz Hartley": [
+      "Hartley"
+    ],
+    "Eric Holder": [
+      "Holder"
+    ],
+    "Sultan Hamad Jabor": [
+      "Jabor",
+      "Jabor Y",
+      "Jabor Y.",
+      "Jabor Y. INEWEI",
+      "jabor"
+    ],
+    "Lilly Jack": [
+      "Jack"
+    ],
+    "Jesse Jackson": [
+      "Jackson"
+    ],
+    "Thorbj\u00f8rn Jagland": [
+      "Jagland",
+      "jagland",
+      "Thorbjgn Jagland",
+      "Thorbjon JagIan",
+      "Thorbjon Jagan",
+      "Thorbjon Jagland",
+      "Thorbjorn Jaglan",
+      "Thorbjorn Jagland",
+      "Thorbj\u00f3n Jagland",
+      "Thorbj\u00f8rn Jagland"
+    ],
+    "Judge Johnson": [
+      "Johnson"
+    ],
+    "Rich Joslin": [
+      "Joslin",
+      "Rich Joslin",
+      "joslin"
+    ],
+    "Brad S. Karp": [
+      "Karp"
+    ],
+    "Faith Kate": [
+      "Kate"
+    ],
+    "West Kaufman": [
+      "Kaufman",
+      "West Kaufman"
+    ],
+    "Kate Kelly": [
+      "Kelly"
+    ],
+    "Harry Reid": [
+      "Harry Reid",
+      "reid"
+    ],
+    "Harry Shearer": [
+      "Harry Shearer"
+    ],
+    "Harry Sloman": [
+      "Harry Sloman"
+    ],
+    "Harvey Morgan": [
+      "Harvey Morga",
+      "Harvey Morgan"
+    ],
+    "Harvey Spevak": [
+      "Harvey Spevak"
+    ],
+    "Harvey Weinstein": [
+      "Harvey Weinstein",
+      "Weinstein",
+      "harvey weinstein",
+      "Weinstein, Jason"
+    ],
+    "Hassan Nasrallah": [
+      "Hassan Nasrallah",
+      "Hassan Nasrallan"
+    ],
+    "Hassanal Bolkiah": [
+      "Hassanal Bolkiah"
+    ],
+    "Heather Berlin": [
+      "Heather Berlin"
+    ],
+    "Heather Gray": [
+      "Heather Gray"
+    ],
+    "Heather Mann": [
+      "Heather Mani",
+      "Heather Mann"
+    ],
+    "Heidi Klum": [
+      "Heidi Klum"
+    ],
+    "Helen Fisher": [
+      "Helen Fisher"
+    ],
+    "Helen Lewis": [
+      "Helen Lewis"
+    ],
+    "Henry Eckert": [
+      "Henry Eckert"
+    ],
+    "Henry Hortenstine": [
+      "Henry Hortenstine"
+    ],
+    "Henry Kissinger": [
+      "Henry Kissinger",
+      "Kissinger"
+    ],
+    "Henry Kravis": [
+      "Henry Kravis"
+    ],
+    "Henry MacMahon": [
+      "Henry MacMahon"
+    ],
+    "Henry Paulson": [
+      "Henry Paulson"
+    ],
+    "Henry Peek": [
+      "Henry Peek"
+    ],
+    "Henry Rosovosky": [
+      "Henry Rosovosky",
+      "Henry Rosvsky"
+    ],
+    "Herb Goodman": [
+      "Herb Goodman"
+    ],
+    "Herb Segal": [
+      "Herb Segal"
+    ],
+    "Herbie Hancock": [
+      "Herbie Hancock"
+    ],
+    "Herg\u00e9": [
+      "Herg\u00e9"
+    ],
+    "Heyward Isham": [
+      "Heyward Isham"
+    ],
+    "Hilary Rosen": [
+      "Hilary Rosen"
+    ],
+    "James E. Hill": [
+      "Hill James E.",
+      "James E Hill",
+      "James E. Hill",
+      "James Hill"
+    ],
+    "Hillary Clinton": [
+      "Hillary Clinton"
+    ],
+    "Hiroko Tabuchi": [
+      "Hiroko Tabuchi"
+    ],
+    "Holly Harris": [
+      "Holly Harris"
+    ],
+    "Holly Krassner Dawson": [
+      "Holly Krassner Dawson"
+    ],
+    "Holly Williams": [
+      "Holly Williams"
+    ],
+    "Horace Vandergelder": [
+      "Horace Vandergelder"
+    ],
+    "Hosain Rahman": [
+      "Hosain",
+      "Hosain Rahman"
+    ],
+    "Hosni Mubarak": [
+      "Hosni Mubarak"
+    ],
+    "Hoss Carwright": [
+      "Hoss Carwright"
+    ],
+    "Howard Gardner": [
+      "Howard Gardner"
+    ],
+    "Howard Rubenstein": [
+      "Howard Rubenstein"
+    ],
+    "Howard Schultz": [
+      "Howard Schult",
+      "Howard Schultz"
+    ],
+    "Howard Stern": [
+      "Howard Stern"
+    ],
+    "Hubert Burda": [
+      "Hubert Burda"
+    ],
+    "Hugh Hewitt": [
+      "Hugh Hewitt"
+    ],
+    "Hussein ibn Ali": [
+      "Hussein ibn Ali"
+    ],
+    "Ian Bostridge": [
+      "Ian Bostridge"
+    ],
+    "Ian Osborne": [
+      "Ian Osbone",
+      "Ian Osborne",
+      "Ian Osborne Po"
+    ],
+    "Imi Weiss": [
+      "Imi Weiss"
+    ],
+    "Inda W. Grossman": [
+      "Inda W. Grossman"
+    ],
+    "Ira Rosen": [
+      "Ira Rosen"
+    ],
+    "Irene Steiner": [
+      "Irene Steiner"
+    ],
+    "Irwin Corey": [
+      "Irwin Corey"
+    ],
+    "Irwin Tenenbaum": [
+      "Irwin Tenenbaum"
+    ],
+    "Isaac Asimov": [
+      "Isaac Asimov"
+    ],
+    "Ismail Ould Cheikh Ahmed": [
+      "Ismail Ould Cheikh Ahmed"
+    ],
+    "Israel Horovitz": [
+      "Israel Horovitz"
+    ],
+    "Ivan Glasenberg": [
+      "Ivan Glasenberg"
+    ],
+    "Ivanka Trump": [
+      "Ivanka Trump"
+    ],
+    "Izhak Rabin": [
+      "Izhak Rabin"
+    ],
+    "J Zack Goldberger": [
+      "J Zack Goldberger"
+    ],
+    "JD Watson": [
+      "JD Watson"
+    ],
+    "JFK Jr": [
+      "JFK Jr"
+    ],
+    "JIM MUSTIAN": [
+      "JIM MUSTIAN"
+    ],
+    "JR Stambaugh": [
+      "JR Stambaugh"
+    ],
+    "Jack Browning": [
+      "Jack Browning"
+    ],
+    "Jack Goldberger": [
+      "Jack Goldberger"
+    ],
+    "Jack Kemp": [
+      "Jack Kemp"
+    ],
+    "Jack Kevorkian": [
+      "Jack Kevorkian"
+    ],
+    "Jack Lang": [
+      "Jack LANG",
+      "Jack Lang",
+      "Lang"
+    ],
+    "Jack Morris": [
+      "Jack Morris"
+    ],
+    "Jack Robertson": [
+      "Jack Robertson"
+    ],
+    "Jack Scarola": [
+      "Jack Scarola",
+      "Scarola"
+    ],
+    "Jackie Martling": [
+      "Jackie Martling"
+    ],
+    "Jackie Perczel": [
+      "Jackie Percyzk",
+      "Jackie Perczek",
+      "Jackie Perczel"
+    ],
+    "Jacob Goldstein": [
+      "Jacob Goldstein"
+    ],
+    "Jacqueline Detwiler": [
+      "Jacqueline Detwiler"
+    ],
+    "Jacqueline Kennedy Onassis": [
+      "Jacqueline Kennedy Onassis"
+    ],
+    "Jacquelyn Birdsall": [
+      "Jacquelyn Birdsall"
+    ],
+    "Jacques Lang": [
+      "Jacques Lang"
+    ],
+    "Jacqui Safra": [
+      "Jacqui Safra"
+    ],
+    "Jacquie Johnson": [
+      "Jacquie Johnson"
+    ],
+    "Jake Tapper": [
+      "Jake Tapper"
+    ],
+    "Jakob Kollhofer": [
+      "Jakob Kdllhofer",
+      "Jakob Kellhofer",
+      "Jakob Kollhofer",
+      "Jakob K\u00e9llhofer"
+    ],
+    "Jameela Jamil": [
+      "Jameela Jamil"
+    ],
+    "James Baker": [
+      "James Baker"
+    ],
+    "James Bartakowski": [
+      "James Bartakowski"
+    ],
+    "James Bond": [
+      "James Bond"
+    ],
+    "James Cayne": [
+      "James Cayne"
+    ],
+    "James Cohen": [
+      "James Cohen"
+    ],
+    "James Drougas": [
+      "James Drougas"
+    ],
+    "James Green": [
+      "James Green"
+    ],
+    "James Griffiths": [
+      "James Griffiths"
+    ],
+    "James Holzhauer": [
+      "James Holzhauer"
+    ],
+    "James Patterson": [
+      "James Patterson",
+      "Patterson"
+    ],
+    "James Ramsey": [
+      "James Ramsey"
+    ],
+    "James Rybicki": [
+      "James Rybicki"
+    ],
+    "Jamie C. Glick": [
+      "Jamie C. Glick",
+      "Jamie Glick"
+    ],
+    "Jamie Rosenwald": [
+      "Jamie Rosenwald"
+    ],
+    "Jamie Zuieback": [
+      "Jamie Zuieback"
+    ],
+    "Jane Doe": [
+      "Jane Doe"
+    ],
+    "Jane Fonda": [
+      "Jane Fonda"
+    ],
+    "Jane Heller": [
+      "Jane Heller"
+    ],
+    "Janet Katka": [
+      "Janct Katka",
+      "Janet Kafka",
+      "Janet Katka"
+    ],
+    "Janis McGrory": [
+      "Janis McGrory"
+    ],
+    "Janusz Banasiak": [
+      "Januiz Banasiak",
+      "Janusz"
+    ],
+    "Jared Kushner": [
+      "Jared Kushner"
+    ],
+    "Jaron Lanier": [
+      "Jaron Lanier"
+    ],
+    "Jason Blum": [
+      "Jason Blum"
+    ],
+    "Jason Miller": [
+      "Jason Miller"
+    ],
+    "Jason Richards": [
+      "Jason Richards"
+    ],
+    "Jason Weinstein": [
+      "Jason Weinstein"
+    ],
+    "Jay Clayton": [
+      "Jay Clayton"
+    ],
+    "Jay Lefkowitz": [
+      "Jay Lefkowitz",
+      "Lefkowitz"
+    ],
+    "Jay Levin": [
+      "Jay Levin",
+      "Levin"
+    ],
+    "Jean Huguen": [
+      "Jean HUGUEN",
+      "Jean Huguen"
+    ],
+    "Jean Luc Brunel": [
+      "Jean Luc",
+      "Jean Luc Brune",
+      "Jean Luc Brunel",
+      "Jeanluc"
+    ],
+    "Jean Pigozzi": [
+      "Jean Pigozzi"
+    ],
+    "Jean-Michel Saliba": [
+      "Jean-Michel Saliba"
+    ],
+    "Jeanne Pockel": [
+      "Jeanne Pockel"
+    ],
+    "Jeannie Rhee": [
+      "Jeannie Rhee"
+    ],
+    "Jeb Bush": [
+      "Jeb Bush"
+    ],
+    "Jeff Bezos": [
+      "Jeff Bezos"
+    ],
+    "Jeff Fuller": [
+      "Jeff Fuller"
+    ],
+    "Jeff Klein": [
+      "Jeff Klein"
+    ],
+    "Jeff Kriendler": [
+      "Jeff Kriendler"
+    ],
+    "Jeff Sessions": [
+      "Jeff Sessions",
+      "Sessions"
+    ],
+    "Jeff Skoll": [
+      "Jeff Skoll"
+    ],
+    "Jeff Tollefson": [
+      "Jeff Tollefson"
+    ],
+    "Jeff Weiner": [
+      "Jeff Weiner"
+    ],
+    "Jeffery Edwards": [
+      "Jeffery Edwards"
+    ],
+    "Jeffrey Greenberg": [
+      "Jeffrey Greenberg"
+    ],
+    "Jeffrey H. Sloman": [
+      "Jeffrey H. Sloman",
+      "Jeffrey Sloman"
+    ],
+    "Jeffrey Trump": [
+      "Jeffrey Trump",
+      "jeffrey trump"
+    ],
+    "Jeffrey Wernick": [
+      "Jeffrey Wernick"
+    ],
+    "Jelani Cobb": [
+      "Jelani Cobb"
+    ],
+    "Jenna Greene": [
+      "Jenna Greene"
+    ],
+    "Jennifer Jacquet": [
+      "Jennifer Jacquet"
+    ],
+    "Jennifer Lawrence": [
+      "Jennifer Lawrence",
+      "Lawrence"
+    ],
+    "Jennifer Piepszak": [
+      "Jennifer Piepszak"
+    ],
+    "Jennifer Rademaker": [
+      "Jennifer Rademaker"
+    ],
+    "Jennifer Westfeldt": [
+      "Jennifer Westfeldt"
+    ],
+    "Jeremy Rubin": [
+      "Jeremy Rubin"
+    ],
+    "Jerrold Nadler": [
+      "Jerrold Nadler",
+      "Nadler"
+    ],
+    "Jerry Brown": [
+      "Jerry Brown"
+    ],
+    "Jerry Chen": [
+      "Jerry Chen"
+    ],
+    "Jerry Fodor": [
+      "Jerry Fodor"
+    ],
+    "Jerry Hirsh": [
+      "Jerry Hirsh"
+    ],
+    "Jerry Springer": [
+      "Jerry Springer"
+    ],
+    "Jes Staley": [
+      "Jes",
+      "Jes Staley",
+      "Jes Staleyk",
+      "Jess",
+      "Staley"
+    ],
+    "Jesse Eisinger": [
+      "Jesse Eisinger"
+    ],
+    "Jesse Kornbluth": [
+      "Jesse Kornbluth"
+    ],
+    "Jessica Cadwell": [
+      "Jessica Cadwe",
+      "Jessica Cadwel",
+      "Jessica Cadwell",
+      "Jessica Cadwell Po"
+    ],
+    "Jessica Chastain": [
+      "Jessica Chastain"
+    ],
+    "Jessica Joffe": [
+      "Jessica Joffe"
+    ],
+    "Jide Zeitlin": [
+      "Jide",
+      "Jide Zeitlin"
+    ],
+    "Jill Grant": [
+      "Jill Grant"
+    ],
+    "Jim Bowser": [
+      "Jim Bowser"
+    ],
+    "Jim Brown": [
+      "Jim Brown"
+    ],
+    "Jim Coleman": [
+      "Jim Coleman"
+    ],
+    "Jim Costa": [
+      "Jim Costa"
+    ],
+    "Jim Drougas": [
+      "Jim Drougas"
+    ],
+    "Jim Kerr": [
+      "Jim Kerr"
+    ],
+    "Jim Krane": [
+      "Jim Krane"
+    ],
+    "Jim Simons": [
+      "Jim Simons"
+    ],
+    "Jim Watson": [
+      "Jim Watson",
+      "Jin Watson"
+    ],
+    "Jim Yong Kim": [
+      "Jim Yong Kim"
+    ],
+    "Jimmy Wales": [
+      "Jimmy Wales"
+    ],
+    "Joan Severance": [
+      "Joan Severance",
+      "Joan Severane"
+    ],
+    "Joan Williams": [
+      "Joan Williams"
+    ],
+    "Joana Vicente": [
+      "Joana Vicente"
+    ],
+    "Joanna Coles": [
+      "Joanna Coles"
+    ],
+    "Joe Allen": [
+      "Joe Allen"
+    ],
+    "Joe Berlinger": [
+      "Joe Berlinger"
+    ],
+    "Joe Biden": [
+      "Joe Biden"
+    ],
+    "Joe Bridges": [
+      "Joe Bridges"
+    ],
+    "Joe Crandall": [
+      "Joe Crandall"
+    ],
+    "Joe Friday": [
+      "Joe Friday"
+    ],
+    "Joe Lewis": [
+      "Joe Lewis"
+    ],
+    "Joe Lockhart": [
+      "Joe Lockhart"
+    ],
+    "Joe McCarthy": [
+      "Joe McCarthy"
+    ],
+    "Joe Palazzolo": [
+      "Joe Palazzolo"
+    ],
+    "Joe Perry": [
+      "Joe Perry"
+    ],
+    "Joe Torre": [
+      "Joe Torre"
+    ],
+    "Joel Dunn": [
+      "Joel Dunn"
+    ],
+    "Joel Klein": [
+      "Joel Klein"
+    ],
+    "Joey No Socks": [
+      "Joey No Socks"
+    ],
+    "Johanna Walderdorff": [
+      "Johanna Walderdorff"
+    ],
+    "John Castrucci": [
+      "John Castrucci"
+    ],
+    "John Connolly": [
+      "John Conally",
+      "John Connolly"
+    ],
+    "John Doerr": [
+      "John Doerr"
+    ],
+    "John Duffy": [
+      "John Duffy"
+    ],
+    "John F. Kennedy": [
+      "John F. Kennedy"
+    ],
+    "John Fugelsang": [
+      "John Fugelsang"
+    ],
+    "John Goodman": [
+      "John Goodman"
+    ],
+    "John Hannon": [
+      "John Hannon"
+    ],
+    "John Heilemann": [
+      "John Heilemann"
+    ],
+    "John Humphrys": [
+      "John Humphrys"
+    ],
+    "John Kerry": [
+      "John Kerry"
+    ],
+    "John Lithgow": [
+      "John Lithgow"
+    ],
+    "John Mallen": [
+      "John Mallen"
+    ],
+    "John McCain": [
+      "John McCain",
+      "McCain"
+    ],
+    "John McFarlane": [
+      "John McFarlane",
+      "McFarlane"
+    ],
+    "John Milton": [
+      "John Milton"
+    ],
+    "John Murphy": [
+      "John Murphy"
+    ],
+    "John Noto": [
+      "John Noto"
+    ],
+    "John O'Connell": [
+      "John O'Connell"
+    ],
+    "John Page": [
+      "John Page"
+    ],
+    "John Pinette": [
+      "John Pinette"
+    ],
+    "John Porter": [
+      "John Porter"
+    ],
+    "John Roberts": [
+      "John Roberts"
+    ],
+    "John Sanders": [
+      "John Sanders"
+    ],
+    "John Stepek": [
+      "John Stepck",
+      "John Stepek"
+    ],
+    "John Sullivan": [
+      "John Sullivan",
+      "Sullivan"
+    ],
+    "John Wagner": [
+      "John Wagner"
+    ],
+    "John Zouzelka": [
+      "John Zouzelka"
+    ],
+    "Johnny El Hachem": [
+      "Johnny El Hachem"
+    ],
+    "Joi Ito": [
+      "Joi",
+      "Joi Ito",
+      "Joichi",
+      "Joichi Ito"
+    ],
+    "Jojo Fontanilla": [
+      "Jojo",
+      "Jojo Fontanilla"
+    ],
+    "Jolanta Sadauskiene": [
+      "Jolanta Modilinos",
+      "Jolanta Sadauskiene"
+    ],
+    "Jon Hamm": [
+      "Jon Hamm"
+    ],
+    "Jon Snow": [
+      "Jon Snow"
+    ],
+    "Jonathan Aitken": [
+      "Jonathan Aitken"
+    ],
+    "Jonathan Farkas": [
+      "Jonathan Areca",
+      "Jonathan Farka",
+      "Jonathan Farkas",
+      "Jonathan Farkasiii"
+    ],
+    "Jonathan Matson": [
+      "Jonathan Matson"
+    ],
+    "Jonathan Victor": [
+      "Jonathan Victor"
+    ],
+    "Joon Yun": [
+      "Joon Yun"
+    ],
+    "Jordan Fabian": [
+      "Jordan Fabian"
+    ],
+    "Joscha Bach": [
+      "Joscha",
+      "Joscha Bach"
+    ],
+    "Joseph Bernstein": [
+      "Joseph Bernstein"
+    ],
+    "Joseph Cinque": [
+      "Joseph Cinque"
+    ],
+    "Joseph Evangelisti": [
+      "Joseph Evangelist",
+      "Joseph Evangelisti"
+    ],
+    "Joseph Hatchett": [
+      "Joseph Hatchett"
+    ],
+    "Joseph Meyer": [
+      "Joseph Meyer"
+    ],
+    "Joseph Palazzolo": [
+      "Joseph Palazzolo",
+      "Palazzolo"
+    ],
+    "Joseph Vinciguerra": [
+      "Joseph Vinciguerra"
+    ],
+    "Josephus Eggleston": [
+      "Josephus Eggleston"
+    ],
+    "Josh Dawsey": [
+      "Josh Dawsey"
+    ],
+    "Josh Gerstein": [
+      "Josh Gerstein"
+    ],
+    "Joshua Cooper Ramo": [
+      "Joshua Cooper Ram",
+      "Joshua Cooper Ramo"
+    ],
+    "Joy Nash": [
+      "Joy Nash"
+    ],
+    "Joy Toboroff": [
+      "Joy Tabora",
+      "Joy Toboroff"
+    ],
+    "Joy-Ann Reid": [
+      "Joy-Ann Reid"
+    ],
+    "Juan Alessi": [
+      "Juan Alessi"
+    ],
+    "Judge Marra": [
+      "Judge Marra"
+    ],
+    "Judge Sweet": [
+      "Judge Sweet"
+    ],
+    "Judge Thomas": [
+      "Judge Thomas"
+    ],
+    "Judie Taylor": [
+      "Judie Taylor"
+    ],
+    "Juju Chang": [
+      "Juju Chang"
+    ],
+    "Juleanna Glover": [
+      "Juleanna Glover"
+    ],
+    "Julia Harte": [
+      "Julia Harte"
+    ],
+    "Julianna Margulies": [
+      "Julianna Margulies"
+    ],
+    "Julie K. Brown": [
+      "Julie Brown",
+      "Julie K Brown",
+      "Julie K. Brown"
+    ],
+    "Julie Taymor": [
+      "Julie Taymor"
+    ],
+    "Julius Caesar": [
+      "Julius Caesar"
+    ],
+    "Justice Breyer": [
+      "Justice Breyer"
+    ],
+    "Justin Blackhall": [
+      "Justin Blackhall"
+    ],
+    "Justin Sink": [
+      "Justin Sink"
+    ],
+    "Justin Webb": [
+      "Justin Webb"
+    ],
+    "Kanye West": [
+      "Kanye West"
+    ],
+    "Kara Swisher": [
+      "Kara Swisher"
+    ],
+    "Karen Minkel": [
+      "Karen Minkel"
+    ],
+    "Karim Sadjadpour": [
+      "Karim Sadjadpour"
+    ],
+    "Karim Terje": [
+      "Karim Terje"
+    ],
+    "Karim Wade": [
+      "Karim Wade",
+      "Wade"
+    ],
+    "Kary Mullis": [
+      "Kary Mullis"
+    ],
+    "Kate Briquelet": [
+      "Kate Briquelet"
+    ],
+    "Kate Burton": [
+      "Kate Burton"
+    ],
+    "Kate McClain": [
+      "Kate McClain"
+    ],
+    "Kate Muir": [
+      "Kate Muir"
+    ],
+    "Katelyn Wohlford": [
+      "Katelyn Wohlfold",
+      "Katelyn Wohlford"
+    ],
+    "Katherine Ezell": [
+      "Katherine Ezell"
+    ],
+    "Katherine Keating": [
+      "Katherine Keating"
+    ],
+    "Katherine Towle": [
+      "Katherine Towle"
+    ],
+    "Kathleen Ruderman": [
+      "Kathleen Ruderman"
+    ],
+    "Kathryn Alexeeff": [
+      "Kathryn Alexeeff"
+    ],
+    "Kathryn King": [
+      "Kathryn King",
+      "King, Kathryn"
+    ],
+    "Kathryn Miller": [
+      "Kathryn Miller"
+    ],
+    "Kathryn Ruemmler": [
+      "Kathryn Ruemmler",
+      "Kathy Alexander",
+      "Kathy Konmnes",
+      "Kathy Rucmm",
+      "Kathy Rue",
+      "Kathy Rue ler",
+      "Kathy Ruemm",
+      "Kathy Ruemm'er",
+      "Kathy Ruemmeler",
+      "Kathy Ruemmer",
+      "Kathy Ruemmier",
+      "Kathy Ruemmle",
+      "Kathy Ruemmler",
+      "Kathy Ruemm|er",
+      "Kathy Ruemnler",
+      "Kathy Ruenmler",
+      "Kathy Ruennler",
+      "Kathy Ruer",
+      "Katily Ruemmler",
+      "Ruemmler",
+      "Rucmmler"
+    ],
+    "Kathy Griffin": [
+      "Kathy Griffin"
+    ],
+    "Katie Beckler": [
+      "Katie Beckler"
+    ],
+    "Katie Couric": [
+      "Katie Couric"
+    ],
+    "Katie Holmes": [
+      "Katie Holmes"
+    ],
+    "Katie Johnson": [
+      "Katie Johnson"
+    ],
+    "Katy L. Huberty": [
+      "Katy L. Huberty"
+    ],
+    "Katy Tur": [
+      "Katy Tur"
+    ],
+    "Keith Larsen": [
+      "Keith Larsen"
+    ],
+    "Kellyanne Conway": [
+      "Kelly Ann Conway",
+      "Kelly Conway",
+      "Kellyanne Conway"
+    ],
+    "Kelly Lynch": [
+      "Kelly Lynch"
+    ],
+    "Kenneth E. Mapp": [
+      "Kenneth E. Mapp"
+    ],
+    "Kenneth Starr": [
+      "Ken Star",
+      "Ken Starr",
+      "Ken Str rr",
+      "Kenneth Starr"
+    ],
+    "Kerry Lavrov": [
+      "Kerry Lavrov"
+    ],
+    "Kevin Maxwell": [
+      "Kevin Maxwell"
+    ],
+    "Kevin Spacey": [
+      "Kevin Spacey"
+    ],
+    "King George VI": [
+      "King George VI"
+    ],
+    "Lawrence Krause": [
+      "Krause"
+    ],
+    "Lawrence Krauss": [
+      "Krauss",
+      "Lawrence Kraus",
+      "Lawrence Krause",
+      "Lawrence Krauss"
+    ],
+    "Lawrence M. Krauss": [
+      "Lawrence M. Krauss"
+    ],
+    "Thomas Jr. Landon": [
+      "Landon",
+      "Landon A",
+      "Landon I Thomas Jr.",
+      "Landon Po",
+      "Landon Po Thomas Jr",
+      "Landon Po Thomas Jr.",
+      "Landon Thomas",
+      "Landon Thomas J. iii",
+      "Landon Thomas Jr",
+      "Landon Thomas Jr.",
+      "Landon Thorns",
+      "Landor Thomas Jr."
+    ],
+    "Larry Summers": [
+      "Larry Summer",
+      "Larry Summers",
+      "Larry Sunes"
+    ],
+    "Larry Visoski": [
+      "Larry Visosk",
+      "Larry Visoski",
+      "Larry Visoskii",
+      "Lawrance Visoski"
+    ],
+    "Lawrence H. Summers": [
+      "Lawrence H.",
+      "Lawrence H. Summers",
+      "Lawrence Henry Summers",
+      "Lawrence Summers"
+    ],
+    "Marc Leon": [
+      "Leon",
+      "leon",
+      "leon black"
+    ],
+    "Loretta E. Lynch": [
+      "Loretta E. Lynch",
+      "Loretta Lynch",
+      "Lynch"
+    ],
+    "Prince Mbs": [
+      "MBS",
+      "mbs"
+    ],
+    "Saks Mandelbrot": [
+      "Mandelbrot"
+    ],
+    "Lord Mandelson": [
+      "Lord Mandelson",
+      "Mandelson"
+    ],
+    "Gov Mapp": [
+      "Mapp"
+    ],
+    "Ann Marie": [
+      "Marie"
+    ],
+    "Lonnie Martin": [
+      "Lonnie Martin",
+      "Martin"
+    ],
+    "Mary Matalin": [
+      "Mary Matalin",
+      "Matalin"
+    ],
+    "NY Max": [
+      "Max"
+    ],
+    "Princess Melusine": [
+      "Melusine",
+      "Princess Melusine"
+    ],
+    "Princess Mette": [
+      "Mette",
+      "Princess Mette"
+    ],
+    "Michael A. Keough": [
+      "Keough",
+      "Keough, Michael",
+      "Michael A. Keough",
+      "Michael Keough"
+    ],
+    "Michael C. Miller": [
+      "Michael C Miller",
+      "Michael C. Miller",
+      "Michael Miller",
+      "Miller, Michael"
+    ],
+    "Forrest Miller": [
+      "Miller"
+    ],
+    "Marvin Minsky": [
+      "Marvin Minsky",
+      "Minsky"
+    ],
+    "Rajeev Misra": [
+      "Misra",
+      "Rajeev",
+      "Rajeev Misra"
+    ],
+    "Steven Mnuchin": [
+      "Mnuchin",
+      "mnuchin",
+      "Steven Mnuchin"
+    ],
+    "Nima Mohebbi": [
+      "Mohebbi",
+      "Nima Mohebbi",
+      "Nima"
+    ],
+    "Michael Moore": [
+      "Moore"
+    ],
+    "Piers Morgan": [
+      "Morgan",
+      "Piers Morgan"
+    ],
+    "Paul Morris": [
+      "Morris",
+      "Paul Morris"
+    ],
+    "Paul V. Morris": [
+      "Paul V Morris",
+      "Paul V. Morris"
+    ],
+    "Matthew Mosk": [
+      "Mosk"
+    ],
+    "Robert Mueller": [
+      "Mueller",
+      "Robert Mueller",
+      "mueller"
+    ],
+    "Ralph Nader": [
+      "Nader",
+      "Ralph Nader"
+    ],
+    "Richard Nixon": [
+      "Nixon",
+      "Richard Nixon"
+    ],
+    "Martin Nowak": [
+      "Nowak"
+    ],
+    "Michael Ovitz": [
+      "Ovitz"
+    ],
+    "Sean Parker": [
+      "Parker",
+      "Sean Parker"
+    ],
+    "Prosperi Paul": [
+      "Paul",
+      "Prosperi Paul"
+    ],
+    "Mike Pence": [
+      "Pence"
+    ],
+    "Rick Perry": [
+      "Perry",
+      "Rick Perry"
+    ],
+    "Lauren Petrella": [
+      "Petrella"
+    ],
+    "Linda Pinto": [
+      "Pinto"
+    ],
+    "Johnny Po": [
+      "Po"
+    ],
+    "Nick Pritzker": [
+      "Pritzker",
+      "Nick Pritzker"
+    ],
+    "Penny Pritzker": [
+      "Penny Pritzker"
+    ],
+    "Vladimir Putin": [
+      "Putin",
+      "Prime Minister Putin",
+      "Vladimir Putin"
+    ],
+    "Ronald Reagan": [
+      "Reagan",
+      "Ronald Reagan"
+    ],
+    "Patrick M. Regan": [
+      "Regan",
+      "Patrick M. Regan"
+    ],
+    "Nicholas Ribis": [
+      "Ribis",
+      "Nicholas Ribis",
+      "Nicholas Ribi",
+      "Nicholas Ribs",
+      "Nicholas Riis",
+      "Nicholas Rit",
+      "Nicholas Ritis",
+      "Nick Ribbis"
+    ],
+    "Stephen Ross": [
+      "Ross",
+      "Stephen Ross"
+    ],
+    "Mitchell Bard": [
+      "Mitchell Bard"
+    ],
+    "Mitchell Kerry": [
+      "Mitchell Kerry"
+    ],
+    "Mitt Romney": [
+      "Mitt Romney"
+    ],
+    "Miuccia Prada": [
+      "Miuccia Prada"
+    ],
+    "Mohamed Seydou Diagne": [
+      "Mohamed Seydou Diagne"
+    ],
+    "Mohamed Waheed Hassan": [
+      "Mohamed Waheed Hassan",
+      "Mohammed Waheed Hassan"
+    ],
+    "Mohammad Bin Nayef": [
+      "Mohammad Bin Nayef",
+      "Mohammad bin Nayef"
+    ],
+    "Mohammad Bin Salman": [
+      "Mohammad Bin Salman",
+      "Mohammad bin Salman",
+      "Mohammed bin Salman"
+    ],
+    "Monica Lewinsky": [
+      "Monica Lewinsky"
+    ],
+    "Monica M. Kaczorowski": [
+      "Monica M. Kaczorowski",
+      "Monice M. Kaczorowski"
+    ],
+    "Monika Gruter Cheney": [
+      "Monika Gruter Cheney"
+    ],
+    "Morgan Fairchild": [
+      "Morgan Fairchild"
+    ],
+    "Morgan Gstalter": [
+      "Morgan Gstalter"
+    ],
+    "Morad Tahbaz": [
+      "Morad Tahbaz"
+    ],
+    "Mortimer Zuckerman": [
+      "Mortimer Zuckerman",
+      "Mortimer Zuckernan",
+      "Zuckerman"
+    ],
+    "Moshe Hoffman": [
+      "Moshe Hoffa",
+      "Moshe Hoffman"
+    ],
+    "Nancy Pelosi": [
+      "Nancy Pelosi"
+    ],
+    "Nancy Dahl": [
+      "Nancy Dahl"
+    ],
+    "Nancy Lublin": [
+      "Nancy Lublin"
+    ],
+    "Nancy Mitchell": [
+      "Nancy Mitchell"
+    ],
+    "Nancy Portland": [
+      "Nancy Portland"
+    ],
+    "Narciso Rodriguez": [
+      "Narciso Rodriguez"
+    ],
+    "Natalia Veselnitskaya": [
+      "Natalia Veselnitskaya",
+      "Natalya Veselnitskaya"
+    ],
+    "Nate McClain": [
+      "Nate McClain"
+    ],
+    "Nate White": [
+      "Nate White"
+    ],
+    "Nathan Myhrvold": [
+      "Nathan Myhrvold",
+      "Nathan Myrvold"
+    ],
+    "Nathan Wolf": [
+      "Nathan Wolf"
+    ],
+    "Nathaniel Hawthorne": [
+      "Nathaniel Hawthorne"
+    ],
+    "Neal Kassell": [
+      "Neal Kassel",
+      "Neal Kassell"
+    ],
+    "Nedra Pickler": [
+      "Nedra Pickler"
+    ],
+    "Neil Anderson": [
+      "Neil Anderson"
+    ],
+    "Neil Gershenfeld": [
+      "Neil Gershenfeld"
+    ],
+    "Neil deGrasse Tyson": [
+      "Neil deGrasse Tyson"
+    ],
+    "Neilson Barnard": [
+      "Neilson Barnard"
+    ],
+    "Niall McCarthy": [
+      "Niall McCarthy"
+    ],
+    "Nicholas Drinkwater": [
+      "Nicholas Drinkwater"
+    ],
+    "Nicholas Gahhos": [
+      "Nicholas Gahhos"
+    ],
+    "Nick Burns": [
+      "Nick Burns"
+    ],
+    "Nick Christophalos": [
+      "Nick Christophalos"
+    ],
+    "Nick Kazan": [
+      "Nick Kazan"
+    ],
+    "Nick Pyke": [
+      "Nick Pykc",
+      "Nick Pyke"
+    ],
+    "Nick Wingfield": [
+      "Nick Wingfield"
+    ],
+    "Nicolas Maduro": [
+      "Nicolas Maduro"
+    ],
+    "Nicolas Sarkozy": [
+      "Nicolas Sarkozy",
+      "Sarkozy",
+      "sarkozy"
+    ],
+    "Nicole Junkerman": [
+      "Nicole Junkerman"
+    ],
+    "Nicole Kidman": [
+      "Nicole Kidman"
+    ],
+    "Nigel Farage": [
+      "Nigel Farage"
+    ],
+    "Nigel Tupper": [
+      "Nigel Tupper"
+    ],
+    "Nil Priell Barak": [
+      "Nil Priell Barak"
+    ],
+    "Nina Bernstein": [
+      "Nina Bernstein"
+    ],
+    "Nina Schick": [
+      "Nina Schick"
+    ],
+    "Nirj Deva": [
+      "Nirj Deva"
+    ],
+    "Noel Kalb": [
+      "Noel Kalb"
+    ],
+    "Norm Lubow": [
+      "Norm Lubow"
+    ],
+    "Norman D. Rau": [
+      "Norman D. Rau"
+    ],
+    "Norman Jewison": [
+      "Norman Jewison"
+    ],
+    "O. J. Simpson": [
+      "O. J. Simpson"
+    ],
+    "Okey Enelamah": [
+      "Okey Enelamah"
+    ],
+    "Oleg Deripaska": [
+      "Oleg Deripaska"
+    ],
+    "Oleksandr Vilkul": [
+      "Oleksandr Vilkul"
+    ],
+    "Olga Persson": [
+      "Olga Persson"
+    ],
+    "Oliver Goodenough": [
+      "Oliver Goodenough"
+    ],
+    "Oliver Lane": [
+      "Oliver Lane"
+    ],
+    "Oliver Sacks": [
+      "Oliver Sacks"
+    ],
+    "Oliver Stone": [
+      "Oliver Stone"
+    ],
+    "Oprah Winfrey": [
+      "Oprah",
+      "Oprah Winfrey"
+    ],
+    "Orrin Hatch": [
+      "Orrin Hatch"
+    ],
+    "Osama Bin Laden": [
+      "Osama Bin Laden",
+      "Osama Bin-Laden"
+    ],
+    "Oscar de la Renta": [
+      "Oscar de la Renta"
+    ],
+    "Osman Oz": [
+      "Osman",
+      "Osman Oz"
+    ],
+    "Owen Blicksilver": [
+      "Owen Blicksilver"
+    ],
+    "Ozan Tarman": [
+      "Ozan Tarman"
+    ],
+    "Ozdil Nami": [
+      "Ozdil Nami"
+    ],
+    "Parth Parulekar": [
+      "Parth Parulekar"
+    ],
+    "Patricia Gonzalez": [
+      "Patricia Gonzalez"
+    ],
+    "Patricia Kluge": [
+      "Patricia Kluge"
+    ],
+    "Patrick Henry": [
+      "Patrick Henry"
+    ],
+    "Patrick McNamara": [
+      "Patrick McNamara"
+    ],
+    "Patrick Murck": [
+      "Patrick Murck"
+    ],
+    "Paul Allen": [
+      "Paul Allen"
+    ],
+    "Paul Barrett": [
+      "Paul Barred",
+      "Paul Barrett"
+    ],
+    "Paul Batista": [
+      "Paul Batista"
+    ],
+    "Paul Blake": [
+      "Paul Blake"
+    ],
+    "Paul Cassell": [
+      "Paul Cassell"
+    ],
+    "Paul Farmer": [
+      "Paul Farmer"
+    ],
+    "Paul Gallant": [
+      "Paul Gallant"
+    ],
+    "Paul Keating": [
+      "Paul Keating"
+    ],
+    "Paul Kelly": [
+      "Paul Kelly"
+    ],
+    "Paul Krassner": [
+      "Paul Krassner"
+    ],
+    "Paul Krugman": [
+      "Paul Krugman"
+    ],
+    "Paul Manafort": [
+      "Paul Manafort"
+    ],
+    "Paul Prosperi": [
+      "Paul Prosperi"
+    ],
+    "Paul Rampell": [
+      "Paul Rampell"
+    ],
+    "Paul Romer": [
+      "Paul Romer"
+    ],
+    "Paul Schulte": [
+      "Paul Schulte"
+    ],
+    "Paul Weiss": [
+      "Paul Weiss",
+      "Paul Weisss"
+    ],
+    "Paul Zak": [
+      "Paul Zak"
+    ],
+    "Paula Wagner": [
+      "Paula Wagner"
+    ],
+    "Peggy Siegal": [
+      "Pegey Sicga",
+      "Pegey Siegal",
+      "Peggy",
+      "Peggy Sicgal",
+      "Peggy Siega",
+      "Peggy Siegal",
+      "Pegsy Siegal"
+    ],
+    "Penn Jillette": [
+      "Penn Jillette"
+    ],
+    "Peter Aldhous": [
+      "Peter Aldhos",
+      "Peter Aldhous"
+    ],
+    "Peter Attia": [
+      "Peter Attia"
+    ],
+    "Peter B Elwell": [
+      "Peter B Elwell"
+    ],
+    "Peter Gallison": [
+      "Peter Gallison"
+    ],
+    "Peter Getzels": [
+      "Peter Getzels"
+    ],
+    "Peter Green": [
+      "Peter Green"
+    ],
+    "Peter Kaplan": [
+      "Peter Kaplan"
+    ],
+    "Peter Mandelson": [
+      "Peter Mandelson"
+    ],
+    "Peter Martins": [
+      "Peter Martins"
+    ],
+    "Peter Michael": [
+      "Peter Michael"
+    ],
+    "Peter Power": [
+      "Peter Power"
+    ],
+    "Peter Richerson": [
+      "Peter Richerson"
+    ],
+    "Peter Scher": [
+      "Peter Scher"
+    ],
+    "Peter Thiel": [
+      "Peter Thiel",
+      "Thiel",
+      "thiel"
+    ],
+    "Peter Thomas Roth": [
+      "Peter Thomas Roth"
+    ],
+    "Peter Ticktin": [
+      "Peter Ticktin"
+    ],
+    "Peter Weiss": [
+      "Peter Weiss"
+    ],
+    "Peter Winter": [
+      "Peter Winter"
+    ],
+    "Philip Barden": [
+      "Philip Barden"
+    ],
+    "Philip Kafka": [
+      "Philip Kafka",
+      "Philip Katka"
+    ],
+    "Philip Levine": [
+      "Philip Levine"
+    ],
+    "Philip Roth": [
+      "Philip Roth"
+    ],
+    "Philip Weiss": [
+      "Philip Weiss"
+    ],
+    "Philippe Castro": [
+      "Philippe Castro"
+    ],
+    "Pierre Omidyar": [
+      "Pierre Omidyar"
+    ],
+    "Pope Francis": [
+      "Pope Francis"
+    ],
+    "Poppy Northcutt": [
+      "Poppy Northcutt"
+    ],
+    "Prateek Jain": [
+      "Prateek Jain"
+    ],
+    "Preet Bharara": [
+      "Preet Bharara"
+    ],
+    "Prince Albert": [
+      "Prince Albert"
+    ],
+    "Prince Andrew": [
+      "Prince Andrew",
+      "andrew",
+      "prince andrew"
+    ],
+    "Princess Alexandra": [
+      "Princess Alexandra"
+    ],
+    "Princess Sophie": [
+      "Princess Sophie"
+    ],
+    "Purevsuren Lundeg": [
+      "Purevsuren Lundeg"
+    ],
+    "R. Couri Hay": [
+      "R. Couri Hay"
+    ],
+    "Raafat Alsabbagh": [
+      "Raafat",
+      "Raafat Alsabbagh"
+    ],
+    "Rachel Brand": [
+      "Rachel Brand"
+    ],
+    "Rachel Horovitz": [
+      "Rachel Horovitz"
+    ],
+    "Rachel Wolfson": [
+      "Rachel Wolfson"
+    ],
+    "Rafael Bardaji": [
+      "Rafael Bardaji"
+    ],
+    "Rafael Ergo": [
+      "Rafael Ergo"
+    ],
+    "Raheem Kassam": [
+      "Raheem Kassam"
+    ],
+    "Rahm Emanuel": [
+      "Rahm Emanuel"
+    ],
+    "Ralph Bernstein": [
+      "Ralph Bernstein"
+    ],
+    "Ralph Lerner": [
+      "Ralph Lerner"
+    ],
+    "Ralph Simon": [
+      "Ralph Simon"
+    ],
+    "Ramsey Elkholy": [
+      "Ramsey Elkholy"
+    ],
+    "Ran Harnevo": [
+      "Ran Harnevo"
+    ],
+    "Randy Schultz": [
+      "Randy Schultz"
+    ],
+    "Ray Kelly": [
+      "Ray Kelly"
+    ],
+    "Ray Rice": [
+      "Ray Rice"
+    ],
+    "Ray Royce": [
+      "Ray Royce"
+    ],
+    "Ray Takeyh": [
+      "Ray Takeyh"
+    ],
+    "Rebecca Brendel": [
+      "Rebecca Brendel"
+    ],
+    "Rebecca Risman": [
+      "Rebecca Risman"
+    ],
+    "Rebecca Watson": [
+      "Rebecca Watson"
+    ],
+    "Reese Jones": [
+      "Reese Jones"
+    ],
+    "Reid Hoffman": [
+      "Reid Hoffman",
+      "Reid Hofman"
+    ],
+    "Reid Weingarten": [
+      "Reid Weingarten",
+      "Weingarten"
+    ],
+    "Reinaldo Herrera": [
+      "Reinaldo Herrera"
+    ],
+    "Michael Reiter": [
+      "Reiter"
+    ],
+    "Remi Gulen": [
+      "Remi Gulen"
+    ],
+    "Remzi Kulen": [
+      "Remzi Kulen",
+      "Remzi Kuler"
+    ],
+    "Ricardo Salinas Pilego": [
+      "Ricardo Salinas Pilego"
+    ],
+    "Rich Beckler": [
+      "Rich Beckler"
+    ],
+    "Rich Kahn": [
+      "Rich Kah",
+      "Rich Kahn"
+    ],
+    "Richard Barnnet": [
+      "Richard Barnnet"
+    ],
+    "Richard Beckler": [
+      "Richard Beckler"
+    ],
+    "Richard Branson": [
+      "Richard Branson"
+    ],
+    "Richard Dawkins": [
+      "Richard Dawkins"
+    ],
+    "Richard E. Hoagland": [
+      "Richard E. Hoagland"
+    ],
+    "Richard Hofstadter": [
+      "Richard Hofstadter"
+    ],
+    "Richard Holmes": [
+      "Richard Holmes"
+    ],
+    "Richard Ireland": [
+      "Richard Ireland"
+    ],
+    "Richard John Nawrot": [
+      "Richard John Nawrot"
+    ],
+    "Richard Joslin": [
+      "Richard Joslin"
+    ],
+    "Richard Kahn": [
+      "Richard Kah",
+      "Richard Kahn",
+      "Richard Kahr"
+    ],
+    "Richard Kohn": [
+      "Richard Kohn"
+    ],
+    "Richard LeFrak": [
+      "Richard LeFrak"
+    ],
+    "Richard Li": [
+      "Richard Li"
+    ],
+    "Richard Merkin": [
+      "Richard Merkin"
+    ],
+    "Richard Reeves": [
+      "Richard Reeves"
+    ],
+    "Richard Savino": [
+      "Richard Savin",
+      "Richard Savino"
+    ],
+    "Richard Tubb": [
+      "Richard Tubb"
+    ],
+    "Lawrence I. Richman": [
+      "Richman"
+    ],
+    "Rick Gates": [
+      "Rick Gates"
+    ],
+    "Rick Newman": [
+      "Rick Newman"
+    ],
+    "Riley Kiraly": [
+      "Riley Kiraly"
+    ],
+    "Rita Hortenstine": [
+      "Rita Hortenstinc",
+      "Rita Hortenstine"
+    ],
+    "David Rivkin": [
+      "Rivkin",
+      "Rivkin David"
+    ],
+    "Rob Lowe": [
+      "Rob Lowe"
+    ],
+    "Rob Marstrand": [
+      "Rob Marstrand"
+    ],
+    "Rob Walton": [
+      "Rob Walton"
+    ],
+    "Robert A. Solomon": [
+      "Robert A. Solomon"
+    ],
+    "Robert Barnett": [
+      "Robert Barnett"
+    ],
+    "Robert Breslin": [
+      "Robert Breslin"
+    ],
+    "Robert C. Buschel": [
+      "Robert C. Buschel"
+    ],
+    "Robert Costa": [
+      "Robert Costa"
+    ],
+    "Robert D. Critton Jr.": [
+      "Robert Critton",
+      "Robert D Critton Jr",
+      "Robert D. Critton",
+      "Robert D. Critton Jr",
+      "Robert D. Critton Jr."
+    ],
+    "Robert Gold": [
+      "Robert Gold"
+    ],
+    "Robert Grusky": [
+      "Robert Grusky"
+    ],
+    "Robert Harrington": [
+      "Robert Harrington"
+    ],
+    "Robert John": [
+      "Robert John"
+    ],
+    "Robert Kraft": [
+      "Robert Kraft"
+    ],
+    "Robert L. Kuhn": [
+      "Robert Kuhn",
+      "Robert L. Kuhn",
+      "Robert Lawrence Kuhn"
+    ],
+    "Robert Lynch": [
+      "Robert Lynch"
+    ],
+    "Robert Maxwell": [
+      "Robert Maxwell"
+    ],
+    "Robert Morgenthau": [
+      "Robert Morgenthau"
+    ],
+    "Robert Pattinson": [
+      "Robert Pattinson",
+      "Robert Pattison"
+    ],
+    "Robert Sawyer": [
+      "Robert Sawyer"
+    ],
+    "Robert Simon": [
+      "Robert Simon"
+    ],
+    "Robert Sweet": [
+      "Robert Sweet"
+    ],
+    "Robert Trivers": [
+      "Robert Trivers"
+    ],
+    "Rod Blagojevich": [
+      "Rod Blagojevich"
+    ],
+    "Rod Rosenstein": [
+      "Rod Rosenstein"
+    ],
+    "Roger Edelen": [
+      "Roger Edelen"
+    ],
+    "Roger Schank": [
+      "Roger Schank"
+    ],
+    "Roger Stone": [
+      "Roger Stone"
+    ],
+    "Roman Polanski": [
+      "Roman Polanski"
+    ],
+    "Ron Bailey": [
+      "Ron Bailey"
+    ],
+    "Ron Blagojevich": [
+      "Ron Blagojevich"
+    ],
+    "Ronald Dellums": [
+      "Ron Dellums",
+      "Ronald Dellums"
+    ],
+    "Ron Leshnower": [
+      "Ron Leshnower"
+    ],
+    "Ron O. Perelman": [
+      "Ron O. Perelman"
+    ],
+    "Ron Soffer": [
+      "Ron Soffer"
+    ],
+    "Ronan Farrow": [
+      "Ronan",
+      "Ronan Farrow"
+    ],
+    "Rose McGowan": [
+      "Rose McGowan",
+      "Rose Megowan"
+    ],
+    "Rosie O'Donnell": [
+      "Rosie O'Donnell"
+    ],
+    "Ross Gow": [
+      "Ross Gow"
+    ],
+    "Roy Black": [
+      "Roy Blac Jack Goldberger",
+      "Roy Black"
+    ],
+    "Roy Cohn": [
+      "Roy Cohn"
+    ],
+    "Royce N. Jalazo": [
+      "Royce N. Jalazo"
+    ],
+    "Rudolph E. Tanzi": [
+      "Rudolph",
+      "Rudolph E. Tanzi"
+    ],
+    "Russell Gold": [
+      "Russell Gold"
+    ],
+    "Ruth Ginsburg": [
+      "Ruth Ginsburg"
+    ],
+    "Ruth Wimer": [
+      "Ruth Wimer"
+    ],
+    "Ryan McIntosh": [
+      "Ryan McIntosh",
+      "Ryan Mcintosh"
+    ],
+    "Sabrina Siddiqui": [
+      "Sabrina Siddiqui"
+    ],
+    "Salam Fayyad": [
+      "Salam Fayyad"
+    ],
+    "Salar Kamangar": [
+      "Salar Kamangar"
+    ],
+    "Sale Stojanovic": [
+      "Sale Stojanovic"
+    ],
+    "Kenny Shirley": [
+      "Shirley"
+    ],
+    "Sarah Silverman": [
+      "Silverman",
+      "Sarah Silverman"
+    ],
+    "Steven Sinofsky": [
+      "Sinofsky",
+      "Steven Sinofsky"
+    ],
+    "Masayoshi Son": [
+      "Son"
+    ],
+    "Lara Spencer": [
+      "Spencer"
+    ],
+    "Lorin Stein": [
+      "Stein"
+    ],
+    "President Struppa": [
+      "Struppa"
+    ],
+    "Subotnick Stuart": [
+      "Stuart",
+      "Stuart Subotnick",
+      "Subotnick Stuart"
+    ],
+    "Lawrence Summers": [
+      "Summers",
+      "Larry Summers",
+      "summer",
+      "summers"
+    ],
+    "Tiffany Trump": [
+      "Tiffany Trump"
+    ],
+    "Vanessa Trump": [
+      "Vanessa Trump"
+    ],
+    "A. Marie Villafana": [
+      "Villafana"
+    ],
+    "Mohamed Waheed": [
+      "Waheed"
+    ],
+    "Melanie Walker": [
+      "Walker"
+    ],
+    "Martin Weinberg": [
+      "Weinberg",
+      "Vartin Weinberg",
+      "Viartin Weinberg"
+    ],
+    "Les Wexner": [
+      "Wexner"
+    ],
+    "Michael Wolff": [
+      "Wolff",
+      "michael wolffe",
+      "michael-wolff"
+    ],
+    "E. Jeffrey": [
+      "jeffrey",
+      "Jeffrey E",
+      "jeffrey E.",
+      "Jeffrey Epstein"
+    ],
+    "Sam Fields": [
+      "Sam Fields"
+    ],
+    "Sam Harris": [
+      "Sam Harris"
+    ],
+    "Sam Leff": [
+      "Sam Leff"
+    ],
+    "Sam Lett": [
+      "Sam Lett"
+    ],
+    "Sam Waksal": [
+      "Sam Waksal"
+    ],
+    "Samantha Power": [
+      "Samantha Power"
+    ],
+    "Samuel Huntington": [
+      "Samuel Huntington"
+    ],
+    "Samuel Leff": [
+      "Samuel Leff"
+    ],
+    "Sandhya Somashekhar": [
+      "Sandhya Somashekhar"
+    ],
+    "Sandy Gallin": [
+      "Sandy Gallin"
+    ],
+    "Sara Fischer": [
+      "Sara Fischer"
+    ],
+    "Sarah E Hannah": [
+      "Sarah E Hannah"
+    ],
+    "Sarah Kliff": [
+      "Sarah Kliff"
+    ],
+    "Sarah Ransome": [
+      "Sarah Ransome"
+    ],
+    "Sarah Tavel": [
+      "Sarah Tavel"
+    ],
+    "Saxby Chambliss": [
+      "Saxby Chambliss"
+    ],
+    "Scott Brown": [
+      "Scott Brown"
+    ],
+    "Scott Dene": [
+      "Scott Dene"
+    ],
+    "Scott Denett": [
+      "Scott Denett"
+    ],
+    "Scott J. Link": [
+      "Scott J. Lin",
+      "Scott J. Link"
+    ],
+    "Scott Stambaugh": [
+      "Scott Stambaugh"
+    ],
+    "Sean Banno": [
+      "Sean Banno"
+    ],
+    "Sean Bannon": [
+      "Sean Bannon"
+    ],
+    "Sean J. Lancaster": [
+      "Sean J. Lancaster"
+    ],
+    "Sean T Lehane": [
+      "Sean T Lehane"
+    ],
+    "Serge Moati": [
+      "Serge Moati"
+    ],
+    "Sergey Brin": [
+      "Sergey Brin"
+    ],
+    "Shahien Nasiripour": [
+      "Shahien Nasiripour"
+    ],
+    "Sharmin Mossavar-Rahmani": [
+      "Sharmin Mossavar-Rahmani"
+    ],
+    "Sharon Churcher": [
+      "Sharon Churcher"
+    ],
+    "Sharon Osborne": [
+      "Sharon Osborne"
+    ],
+    "Shawn Lancaster": [
+      "Shawn Lancaster"
+    ],
+    "Sheldon Adelson": [
+      "Sheldon Adelson"
+    ],
+    "Sheryl Sandberg": [
+      "Sheryl Sandberg",
+      "sheryl"
+    ],
+    "Shirley MacLaine": [
+      "Shirley MacLaine",
+      "Shirley Maclaine"
+    ],
+    "Shimon Ullman": [
+      "Shimon Ullman"
+    ],
+    "Sidney Blumenthal": [
+      "Sidney Blumenthal"
+    ],
+    "Simone Foxman": [
+      "Simone Foxman"
+    ],
+    "Sofia Coppola": [
+      "Sofia Coppola"
+    ],
+    "Soon-Yi Previn": [
+      "Soon Yi Previn",
+      "Soon-Yi",
+      "Soon-Yi Previn",
+      "soon yi previn"
+    ],
+    "Stanley Rosenberg": [
+      "Stanley Rosenberg"
+    ],
+    "Stephan Shakespeare": [
+      "Stephan Shakespeare"
+    ],
+    "Stephanie Winston Wolkoff": [
+      "Stephanie Winston Wolkoff"
+    ],
+    "Stephen Bannon": [
+      "Stephen Bannon",
+      "Stephen K. Bannon",
+      "Steve Bannon",
+      "steve bannon"
+    ],
+    "Stephen Halper": [
+      "Stephen Halper"
+    ],
+    "Stephen Hanson": [
+      "Stephen Hanso",
+      "Stephen Hanson",
+      "Steve Hanson"
+    ],
+    "Stephen Hawking": [
+      "Stephen Hawking",
+      "Steven Hawking"
+    ],
+    "Stephen J. Immelt": [
+      "Stephen J Immelt",
+      "Stephen J.",
+      "Stephen J. Immelt"
+    ],
+    "Stephen Moore": [
+      "Stephen Moore",
+      "Steve Moore"
+    ],
+    "Stephen Rubin": [
+      "Stephen Rubin"
+    ],
+    "Stephen Schwarzman": [
+      "Stephen Schwarzman",
+      "Steve Schwarzman"
+    ],
+    "Steve Bollenbach": [
+      "Steve Bollenbach"
+    ],
+    "Steve Case": [
+      "Steve Case"
+    ],
+    "Steve Forbes": [
+      "Steve Forbes"
+    ],
+    "Steve Tisch": [
+      "Steve Tisch"
+    ],
+    "Steve Wynn": [
+      "Steve Wynn"
+    ],
+    "Steven Hoffenberg": [
+      "Steven Hoffenberg",
+      "Steven Hoftenber",
+      "Steven J Hoffenberg",
+      "Steven J. Hoffenberg",
+      "steven hoffenberg"
+    ],
+    "Steven Spielberg": [
+      "Steven Spielberg"
+    ],
+    "Stewart Oldfield": [
+      "Stewart Oldfield"
+    ],
+    "Stormy Daniels": [
+      "Stormy Daniels"
+    ],
+    "Stuart Grossman": [
+      "Stuart Grossman"
+    ],
+    "Stuart Hameroff": [
+      "Stuart Hameroff"
+    ],
+    "Stuart Kurlander": [
+      "Stuart Kurlander"
+    ],
+    "Sultan Ahmed Bin Sulayem": [
+      "Sultan Ahmed Bin Sulayem",
+      "Sultan Ahmed Bin Sulayen",
+      "Sultan Bin Sulayem",
+      "Sultan Bin Sulayem Po",
+      "Sultan Bin Sulayer",
+      "Sultan Bin Sulayern",
+      "Sultan Bin Sulayr",
+      "bin Sulayem",
+      "sultan"
+    ],
+    "Susan Dominus": [
+      "Susan Dominus"
+    ],
+    "Susan Lyne": [
+      "Susan Lyne"
+    ],
+    "Susan Moss": [
+      "Susan Moss"
+    ],
+    "Susan Rice": [
+      "Susan Rice"
+    ],
+    "Suzanne Johnson": [
+      "Suzanne Johnson"
+    ],
+    "Ta-Nehisi Coates": [
+      "Ta-Nehisi Coates"
+    ],
+    "Taal Safdie": [
+      "Taal Safdie"
+    ],
+    "Tae Kim": [
+      "Tae Kim"
+    ],
+    "Tama Beth Kudman": [
+      "Tama Beth Kudman"
+    ],
+    "Tarek El Sayed": [
+      "Tarek El Sayed"
+    ],
+    "Tazia Smith": [
+      "Tazia Smith"
+    ],
+    "Ted Babbitt": [
+      "Ted Babbitt"
+    ],
+    "Ted Heath": [
+      "Ted Heath"
+    ],
+    "Ted Kennedy": [
+      "Ted Kennedy"
+    ],
+    "Ted Olson": [
+      "Ted Olson"
+    ],
+    "Terje Rod-Larsen": [
+      "Terje Rod-Larsen"
+    ],
+    "Terry Anderson": [
+      "Terry Anderson"
+    ],
+    "Terry Lundgren": [
+      "Terry Lundgren"
+    ],
+    "Theodore Sturgeon": [
+      "Theodore Sturgeon"
+    ],
+    "Thomas E. Scott": [
+      "Thomas E. Scott"
+    ],
+    "Thomas Jefferson": [
+      "Thomas Jefferson"
+    ],
+    "Landon Thomas": [
+      "Thomas Jr",
+      "Thomas Jr Landon",
+      "Thomas Jr.",
+      "Thomas Jr. Landon",
+      "Thomas Jr., Landon",
+      "Thomas Landon"
+    ],
+    "Thomas Meagher": [
+      "Thomas Meagher"
+    ],
+    "Thomas Pynchon": [
+      "Thomas Pynchon"
+    ],
+    "Tiger Woods": [
+      "Tiger Woods"
+    ],
+    "Tim Cook": [
+      "Tim Cook"
+    ],
+    "Tim Frank": [
+      "Tim Frank"
+    ],
+    "Tim Zagat": [
+      "Tim Zagat",
+      "Tim zagat"
+    ],
+    "Timothy Geithner": [
+      "Timothy Geithner"
+    ],
+    "Timothy Garton Ash": [
+      "Timothy Garton Ash"
+    ],
+    "Timothy Jones": [
+      "Timothy Jones"
+    ],
+    "Tina Brown": [
+      "Tina Brown"
+    ],
+    "Todd Kozel": [
+      "Todd Kozel"
+    ],
+    "Tom Arnold": [
+      "Tom Arnold"
+    ],
+    "Tom Cruise": [
+      "Tom Cruise"
+    ],
+    "Tom Ford": [
+      "Tom Ford"
+    ],
+    "Tom Friedman": [
+      "Tom Friedman"
+    ],
+    "Tom Jacques": [
+      "Tom Jacques",
+      "tom jacques"
+    ],
+    "Tom LoBianco": [
+      "Tom LoBianco"
+    ],
+    "Tom McMillen": [
+      "Tom McMillen"
+    ],
+    "Tom Menino": [
+      "Tom Menino"
+    ],
+    "Tom Pritzker": [
+      "Tom Pritzker",
+      "Torn Pritzker",
+      "tom pritzker"
+    ],
+    "Tonja Haddad Coleman": [
+      "Tonja Haddad Coleman"
+    ],
+    "Tony Fadell": [
+      "Tony Fadell"
+    ],
+    "Tony Kushner": [
+      "Tony Kushner"
+    ],
+    "Tory Burch": [
+      "Tory Burch"
+    ],
+    "Tracy Kidder": [
+      "Tracy Kidder"
+    ],
+    "Travis Gettys": [
+      "Travis Gettys"
+    ],
+    "Travis Pangburn": [
+      "Travis Pangburn"
+    ],
+    "Tyler Shears": [
+      "Tyler Shears"
+    ],
+    "Uma Sanghvi": [
+      "Uma Sanghvi"
+    ],
+    "Uri Fouzailov": [
+      "Uri Fouzailcv",
+      "Uri Fouzailov"
+    ],
+    "V. S. Naipaul": [
+      "V. S. Naipaul"
+    ],
+    "Val Sherman": [
+      "Val Sherman"
+    ],
+    "Valeria Chomsky": [
+      "Valeria Chomsky"
+    ],
+    "Vanessa Eng": [
+      "Vanessa Eng"
+    ],
+    "Vanessa Williams": [
+      "Vanessa Williams"
+    ],
+    "Vicky Ward": [
+      "Vicky Ward"
+    ],
+    "Victoria Roberts": [
+      "Victoria Roberts"
+    ],
+    "Vince Foster": [
+      "Vince Foster"
+    ],
+    "Vincenzo Iozzo": [
+      "Vincenzo Iozzo",
+      "Vincenzo Lozzo"
+    ],
+    "Vinit Sahni": [
+      "Vinit Sahni"
+    ],
+    "Vinod Khosla": [
+      "Vinod Khosla"
+    ],
+    "Vinoda Basnayake": [
+      "Vinoda Basnayake"
+    ],
+    "Virginia Giuffre": [
+      "Virginia Giuffre"
+    ],
+    "Virginia Hughes": [
+      "Virginia Hughes"
+    ],
+    "Virginia Roberts": [
+      "Virginia Roberts"
+    ],
+    "Vladimir Yudashkin": [
+      "Vladimir Yudashkin"
+    ],
+    "Walli Leff": [
+      "Walli Leff",
+      "Walli Leff Po",
+      "Walli Lett"
+    ],
+    "Walter Cobath": [
+      "Walter Cobath"
+    ],
+    "Walter Isaacson": [
+      "Walter Isaacson"
+    ],
+    "Walter Swett": [
+      "Walter Swett"
+    ],
+    "Wang Yi": [
+      "Wang Yi"
+    ],
+    "Warren Buffet": [
+      "Warren Buffet"
+    ],
+    "Warren Christopher": [
+      "Warren Christopher"
+    ],
+    "Warren Eisenstein": [
+      "Warren Eisenstein"
+    ],
+    "Wayne Magor": [
+      "Wayne Magor"
+    ],
+    "Wayne Owens": [
+      "Wayne Owens"
+    ],
+    "Wendell Steavenson": [
+      "Wendell Steavenson"
+    ],
+    "Wendy Dolman": [
+      "Wendy Dolman"
+    ],
+    "Wendy Moore": [
+      "Wendy Moore"
+    ],
+    "Wilbur Ross": [
+      "Wilbur Ross",
+      "Wilbur ross"
+    ],
+    "Will Bohlen": [
+      "Will Bohlen"
+    ],
+    "Willem Dafoe": [
+      "Willem Dafoe"
+    ],
+    "William Barr": [
+      "William Barr"
+    ],
+    "William Carlos Williams": [
+      "William Carlos Williams"
+    ],
+    "William J. Zloch": [
+      "William J. Zloch"
+    ],
+    "William L. Blum": [
+      "William L. Blum"
+    ],
+    "William Riley": [
+      "William Riley"
+    ],
+    "William Saroyan": [
+      "William Saroyan",
+      "William Saroyman"
+    ],
+    "Willie Friedman": [
+      "Willie Friedman"
+    ],
+    "Wolfgang Puck": [
+      "Wolfgang Puck"
+    ],
+    "Woody Allen": [
+      "Woody Allen",
+      "woody allen"
+    ],
+    "Woody Harrelson": [
+      "Woody Harrelson"
+    ],
+    "Woody Johnson": [
+      "Woody Johnson"
+    ],
+    "Xi Jinping": [
+      "XI Jinping",
+      "Xi Jinping"
+    ],
+    "Y. Alp Aslandogan": [
+      "Y. Alp Asiandogan",
+      "Y. Alp Aslandogan"
+    ],
+    "Yair Fatal": [
+      "Yair Fatal"
+    ],
+    "Yasser Arafat": [
+      "Yasser Arafat"
+    ],
+    "Yusuf Kanli": [
+      "Yusuf Kanli"
+    ],
+    "Yves Bouvier": [
+      "Yves Bouvier"
+    ],
+    "Yvette Robbins": [
+      "Yvette Robbins"
+    ],
+    "Zoltan Istvan": [
+      "Zoltan Istvan"
+    ],
+    "Zooey Deschanel": [
+      "Zooey Deschanel"
+    ],
+    "Zubair Khan": [
+      "Zubair Khan"
+    ]
+  }
+}
